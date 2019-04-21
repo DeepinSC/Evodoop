@@ -8,7 +8,5 @@ mvn clean
 mvn cobertura:cobertura 
 mvn cobertura:dump-datafile
 
-java -classpath $(RANDOOP_JAR) randoop.main.Main gentests --classlist=myclasses.txt --time-limit=60  --flaky-test-behavior=DISCARD
 
-
-java -classpath $(RANDOOP_JAR) randoop.main.Main gentests --classlist=myclasses.txt --time-limit=60  --flaky-test-behavior=DISCARD --junit-output-dir=src/test/java/brain/ga/
+java -classpath $(RANDOOP_JAR):gaj.jar randoop.main.Main gentests --classlist=myclasses.txt --time-limit=60  --flaky-test-behavior=DISCARD --junit-output-dir=src/test/java/brain/ga/
