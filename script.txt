@@ -2,8 +2,11 @@
 // mvn -DmemoryInMB=2000 -Dcores=2 evosuite:generate evosuite:export  test
 
 
-mvn evosuite:generate evosuite:export
-mvn clean cobertura:cobertura cobertura:dump-datafile
+mvn evosuite:generate 
+mvn evosuite:export
+mvn clean 
+mvn cobertura:cobertura 
+mvn cobertura:dump-datafile
 
 java -classpath $(RANDOOP_JAR) randoop.main.Main gentests --classlist=myclasses.txt --time-limit=60  --flaky-test-behavior=DISCARD
 
