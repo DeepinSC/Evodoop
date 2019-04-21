@@ -1,7 +1,3 @@
-// mvn clean test jacoco:restore-instrumented-classes jacoco:report  #broken
-// mvn -DmemoryInMB=2000 -Dcores=2 evosuite:generate evosuite:export  test
-
-
 mvn evosuite:generate 
 mvn evosuite:export
 mvn clean 
