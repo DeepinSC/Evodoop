@@ -1,0 +1,14 @@
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/UniformCrossover.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/SectMutator.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/VectorGenome.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/GAEnumAllelesSet.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/Population.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/RankSelector.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/Genome.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/Mutator.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/VectorAllelesGenome.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/GAUtilities.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/SexualCrossover.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/Selector.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/Evaluator.java
+/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java/brain/ga/GAAlgorithm.java

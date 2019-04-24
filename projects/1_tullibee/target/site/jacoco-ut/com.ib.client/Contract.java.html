@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Contract.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tullibee-jacoco-offline</a> &gt; <a href="index.source.html" class="el_package">com.ib.client</a> &gt; <span class="el_source">Contract.java</span></div><h1>Contract.java</h1><pre class="source lang-java linenums">// Copyright 2010-2012 Christopher Redekop
+//  
+// This file is part of the Tullibee API, a modified version of Interactive
+// Brokers' Java API (the IB API).
+//  
+// The Tullibee API is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at your
+// option) any later version.
+//  
+// The Tullibee API is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+// License for more details.
+//  
+// You should have received a copy of the GNU Lesser General Public License
+// along with the Tullibee API.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+/*
+ * Contract.java
+ *
+ */
+package com.ib.client;
+
+import java.util.Vector;
+
+public class Contract implements Cloneable {
+
+	public int    m_conId;
+    public String m_symbol;
+    public String m_secType;
+    public String m_expiry;
+    public double m_strike;
+    public String m_right;
+    public String m_multiplier;
+    public String m_exchange;
+
+    public String m_currency;
+    public String m_localSymbol;
+    public String m_primaryExch;      // pick a non-aggregate (ie not the SMART exchange) exchange that the contract trades on.  DO NOT SET TO SMART.
+    public boolean m_includeExpired;  // can not be set to true for orders.
+    
+    public String m_secIdType;        // CUSIP;SEDOL;ISIN;RIC
+    public String m_secId;
+    
+    // COMBOS
+    public String m_comboLegsDescrip; // received in open order version 14 and up for all combos
+<span class="nc" id="L48">    public Vector m_comboLegs = new Vector();</span>
+    
+    // delta neutral
+    public UnderComp m_underComp;
+
+<span class="nc" id="L53">    public Contract() {</span>
+<span class="nc" id="L54">    	m_conId = 0;</span>
+<span class="nc" id="L55">        m_strike = 0;</span>
+<span class="nc" id="L56">        m_includeExpired = false;</span>
+<span class="nc" id="L57">    }</span>
+
+    public Object clone() throws CloneNotSupportedException {
+<span class="nc" id="L60">        Contract retval = (Contract)super.clone();</span>
+<span class="nc" id="L61">        retval.m_comboLegs = (Vector)retval.m_comboLegs.clone();</span>
+<span class="nc" id="L62">        return retval;</span>
+    }
+
+    public Contract(int p_conId, String p_symbol, String p_secType, String p_expiry,
+                    double p_strike, String p_right, String p_multiplier,
+                    String p_exchange, String p_currency, String p_localSymbol,
+                    Vector p_comboLegs, String p_primaryExch, boolean p_includeExpired, 
+<span class="nc" id="L69">                    String p_secIdType, String p_secId) {</span>
+<span class="nc" id="L70">    	m_conId = p_conId;</span>
+<span class="nc" id="L71">        m_symbol = p_symbol;</span>
+<span class="nc" id="L72">        m_secType = p_secType;</span>
+<span class="nc" id="L73">        m_expiry = p_expiry;</span>
+<span class="nc" id="L74">        m_strike = p_strike;</span>
+<span class="nc" id="L75">        m_right = p_right;</span>
+<span class="nc" id="L76">        m_multiplier = p_multiplier;</span>
+<span class="nc" id="L77">        m_exchange = p_exchange;</span>
+<span class="nc" id="L78">        m_currency = p_currency;</span>
+<span class="nc" id="L79">        m_includeExpired = p_includeExpired;</span>
+<span class="nc" id="L80">        m_localSymbol = p_localSymbol;</span>
+<span class="nc" id="L81">        m_comboLegs = p_comboLegs;</span>
+<span class="nc" id="L82">        m_primaryExch = p_primaryExch;</span>
+<span class="nc" id="L83">        m_secIdType = p_secIdType;</span>
+<span class="nc" id="L84">        m_secId = p_secId ;</span>
+<span class="nc" id="L85">    }</span>
+
+    public boolean equals(Object p_other) {
+
+<span class="nc bnc" id="L89" title="All 2 branches missed.">    	if (this == p_other) {</span>
+<span class="nc" id="L90">    		return true;</span>
+    	}
+
+<span class="nc bnc" id="L93" title="All 4 branches missed.">    	if (p_other == null || !(p_other instanceof Contract)) {</span>
+<span class="nc" id="L94">    		return false;</span>
+    	}
+
+<span class="nc" id="L97">        Contract l_theOther = (Contract)p_other;</span>
+        
+<span class="nc bnc" id="L99" title="All 2 branches missed.">        if (m_conId != l_theOther.m_conId) {</span>
+<span class="nc" id="L100">        	return false;</span>
+        }
+
+<span class="nc bnc" id="L103" title="All 2 branches missed.">        if (Util.StringCompare(m_secType, l_theOther.m_secType) != 0) {</span>
+<span class="nc" id="L104">        	return false;</span>
+        }
+
+<span class="nc bnc" id="L107" title="All 2 branches missed.">        if (Util.StringCompare(m_symbol, l_theOther.m_symbol) != 0 ||</span>
+<span class="nc bnc" id="L108" title="All 2 branches missed.">        	Util.StringCompare(m_exchange, l_theOther.m_exchange) != 0 ||</span>
+<span class="nc bnc" id="L109" title="All 2 branches missed.">        	Util.StringCompare(m_primaryExch, l_theOther.m_primaryExch) != 0 ||</span>
+<span class="nc bnc" id="L110" title="All 2 branches missed.">        	Util.StringCompare(m_currency, l_theOther.m_currency) != 0) {</span>
+<span class="nc" id="L111">        	return false;</span>
+        }
+
+<span class="nc bnc" id="L114" title="All 2 branches missed.">        if (!Util.NormalizeString(m_secType).equals(&quot;BOND&quot;)) {</span>
+
+<span class="nc bnc" id="L116" title="All 2 branches missed.">        	if (m_strike != l_theOther.m_strike) {</span>
+<span class="nc" id="L117">        		return false;</span>
+        	}
+
+<span class="nc bnc" id="L120" title="All 2 branches missed.">        	if (Util.StringCompare(m_expiry, l_theOther.m_expiry) != 0 ||</span>
+<span class="nc bnc" id="L121" title="All 2 branches missed.">        		Util.StringCompare(m_right, l_theOther.m_right) != 0 ||</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">        		Util.StringCompare(m_multiplier, l_theOther.m_multiplier) != 0 ||</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">        		Util.StringCompare(m_localSymbol, l_theOther.m_localSymbol) != 0) {</span>
+<span class="nc" id="L124">        		return false;</span>
+        	}
+        }
+
+<span class="nc bnc" id="L128" title="All 2 branches missed.">        if (Util.StringCompare(m_secIdType, l_theOther.m_secIdType) != 0) {</span>
+<span class="nc" id="L129">        	return false;</span>
+        }
+        
+<span class="nc bnc" id="L132" title="All 2 branches missed.">        if (Util.StringCompare(m_secId, l_theOther.m_secId) != 0) {</span>
+<span class="nc" id="L133">        	return false;</span>
+        }
+
+    	// compare combo legs
+<span class="nc bnc" id="L137" title="All 2 branches missed.">        if (!Util.VectorEqualsUnordered(m_comboLegs, l_theOther.m_comboLegs)) {</span>
+<span class="nc" id="L138">        	return false;</span>
+        }
+        
+<span class="nc bnc" id="L141" title="All 2 branches missed.">        if (m_underComp != l_theOther.m_underComp) {</span>
+<span class="nc bnc" id="L142" title="All 4 branches missed.">        	if (m_underComp == null || l_theOther.m_underComp == null) {</span>
+<span class="nc" id="L143">        		return false;</span>
+        	}
+<span class="nc bnc" id="L145" title="All 2 branches missed.">        	if (!m_underComp.equals(l_theOther.m_underComp)) {</span>
+<span class="nc" id="L146">        		return false;</span>
+        	}
+        }
+
+<span class="nc" id="L150">        return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

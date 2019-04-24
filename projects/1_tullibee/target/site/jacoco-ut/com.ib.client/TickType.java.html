@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TickType.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tullibee-jacoco-offline</a> &gt; <a href="index.source.html" class="el_package">com.ib.client</a> &gt; <span class="el_source">TickType.java</span></div><h1>TickType.java</h1><pre class="source lang-java linenums">// Copyright 2010-2012 Christopher Redekop
+//  
+// This file is part of the Tullibee API, a modified version of Interactive
+// Brokers' Java API (the IB API).
+//  
+// The Tullibee API is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at your
+// option) any later version.
+//  
+// The Tullibee API is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+// License for more details.
+//  
+// You should have received a copy of the GNU Lesser General Public License
+// along with the Tullibee API.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+/*
+ * TickType.java
+ *
+ */
+package com.ib.client;
+
+<span class="nc" id="L25">public class TickType {</span>
+    // constants - tick types
+    public static final int BID_SIZE   = 0;
+    public static final int BID        = 1;
+    public static final int ASK        = 2;
+    public static final int ASK_SIZE   = 3;
+    public static final int LAST       = 4;
+    public static final int LAST_SIZE  = 5;
+    public static final int HIGH       = 6;
+    public static final int LOW        = 7;
+    public static final int VOLUME     = 8;
+    public static final int CLOSE      = 9;
+    public static final int BID_OPTION = 10;
+    public static final int ASK_OPTION = 11;
+    public static final int LAST_OPTION = 12;
+    public static final int MODEL_OPTION = 13;
+    public static final int OPEN         = 14;
+    public static final int LOW_13_WEEK  = 15;
+    public static final int HIGH_13_WEEK = 16;
+    public static final int LOW_26_WEEK  = 17;
+    public static final int HIGH_26_WEEK = 18;
+    public static final int LOW_52_WEEK  = 19;
+    public static final int HIGH_52_WEEK = 20;
+    public static final int AVG_VOLUME   = 21;
+    public static final int OPEN_INTEREST = 22;
+    public static final int OPTION_HISTORICAL_VOL = 23;
+    public static final int OPTION_IMPLIED_VOL = 24;
+    public static final int OPTION_BID_EXCH = 25;
+    public static final int OPTION_ASK_EXCH = 26;
+    public static final int OPTION_CALL_OPEN_INTEREST = 27;
+    public static final int OPTION_PUT_OPEN_INTEREST = 28;
+    public static final int OPTION_CALL_VOLUME = 29;
+    public static final int OPTION_PUT_VOLUME = 30;
+    public static final int INDEX_FUTURE_PREMIUM = 31;
+    public static final int BID_EXCH = 32;
+    public static final int ASK_EXCH = 33;
+    public static final int AUCTION_VOLUME = 34;
+    public static final int AUCTION_PRICE = 35;
+    public static final int AUCTION_IMBALANCE = 36;
+    public static final int MARK_PRICE = 37;
+    public static final int BID_EFP_COMPUTATION  = 38;
+    public static final int ASK_EFP_COMPUTATION  = 39;
+    public static final int LAST_EFP_COMPUTATION = 40;
+    public static final int OPEN_EFP_COMPUTATION = 41;
+    public static final int HIGH_EFP_COMPUTATION = 42;
+    public static final int LOW_EFP_COMPUTATION = 43;
+    public static final int CLOSE_EFP_COMPUTATION = 44;
+    public static final int LAST_TIMESTAMP = 45;
+    public static final int SHORTABLE = 46;
+    public static final int FUNDAMENTAL_RATIOS = 47;
+    public static final int RT_VOLUME = 48;
+    public static final int HALTED = 49;
+
+    public static String getField( int tickType) {
+<span class="nc bnc" id="L79" title="All 51 branches missed.">        switch( tickType) {</span>
+<span class="nc" id="L80">            case BID_SIZE:                    return &quot;bidSize&quot;;</span>
+<span class="nc" id="L81">            case BID:                         return &quot;bidPrice&quot;;</span>
+<span class="nc" id="L82">            case ASK:                         return &quot;askPrice&quot;;</span>
+<span class="nc" id="L83">            case ASK_SIZE:                    return &quot;askSize&quot;;</span>
+<span class="nc" id="L84">            case LAST:                        return &quot;lastPrice&quot;;</span>
+<span class="nc" id="L85">            case LAST_SIZE:                   return &quot;lastSize&quot;;</span>
+<span class="nc" id="L86">            case HIGH:                        return &quot;high&quot;;</span>
+<span class="nc" id="L87">            case LOW:                         return &quot;low&quot;;</span>
+<span class="nc" id="L88">            case VOLUME:                      return &quot;volume&quot;;</span>
+<span class="nc" id="L89">            case CLOSE:                       return &quot;close&quot;;</span>
+<span class="nc" id="L90">            case BID_OPTION:                  return &quot;bidOptComp&quot;;</span>
+<span class="nc" id="L91">            case ASK_OPTION:                  return &quot;askOptComp&quot;;</span>
+<span class="nc" id="L92">            case LAST_OPTION:                 return &quot;lastOptComp&quot;;</span>
+<span class="nc" id="L93">            case MODEL_OPTION:                return &quot;modelOptComp&quot;;</span>
+<span class="nc" id="L94">            case OPEN:                        return &quot;open&quot;;</span>
+<span class="nc" id="L95">            case LOW_13_WEEK:                 return &quot;13WeekLow&quot;;</span>
+<span class="nc" id="L96">            case HIGH_13_WEEK:                return &quot;13WeekHigh&quot;;</span>
+<span class="nc" id="L97">            case LOW_26_WEEK:                 return &quot;26WeekLow&quot;;</span>
+<span class="nc" id="L98">            case HIGH_26_WEEK:                return &quot;26WeekHigh&quot;;</span>
+<span class="nc" id="L99">            case LOW_52_WEEK:                 return &quot;52WeekLow&quot;;</span>
+<span class="nc" id="L100">            case HIGH_52_WEEK:                return &quot;52WeekHigh&quot;;</span>
+<span class="nc" id="L101">            case AVG_VOLUME:                  return &quot;AvgVolume&quot;;</span>
+<span class="nc" id="L102">            case OPEN_INTEREST:               return &quot;OpenInterest&quot;;</span>
+<span class="nc" id="L103">            case OPTION_HISTORICAL_VOL:       return &quot;OptionHistoricalVolatility&quot;;</span>
+<span class="nc" id="L104">            case OPTION_IMPLIED_VOL:          return &quot;OptionImpliedVolatility&quot;;</span>
+<span class="nc" id="L105">            case OPTION_BID_EXCH:             return &quot;OptionBidExchStr&quot;;</span>
+<span class="nc" id="L106">            case OPTION_ASK_EXCH:             return &quot;OptionAskExchStr&quot;;</span>
+<span class="nc" id="L107">            case OPTION_CALL_OPEN_INTEREST:   return &quot;OptionCallOpenInterest&quot;;</span>
+<span class="nc" id="L108">            case OPTION_PUT_OPEN_INTEREST:    return &quot;OptionPutOpenInterest&quot;;</span>
+<span class="nc" id="L109">            case OPTION_CALL_VOLUME:          return &quot;OptionCallVolume&quot;;</span>
+<span class="nc" id="L110">            case OPTION_PUT_VOLUME:           return &quot;OptionPutVolume&quot;;</span>
+<span class="nc" id="L111">            case INDEX_FUTURE_PREMIUM:        return &quot;IndexFuturePremium&quot;;</span>
+<span class="nc" id="L112">            case BID_EXCH:                    return &quot;bidExch&quot;;</span>
+<span class="nc" id="L113">            case ASK_EXCH:                    return &quot;askExch&quot;;</span>
+<span class="nc" id="L114">            case AUCTION_VOLUME:              return &quot;auctionVolume&quot;;</span>
+<span class="nc" id="L115">            case AUCTION_PRICE:               return &quot;auctionPrice&quot;;</span>
+<span class="nc" id="L116">            case AUCTION_IMBALANCE:           return &quot;auctionImbalance&quot;;</span>
+<span class="nc" id="L117">            case MARK_PRICE:                  return &quot;markPrice&quot;;</span>
+<span class="nc" id="L118">            case BID_EFP_COMPUTATION:         return &quot;bidEFP&quot;;</span>
+<span class="nc" id="L119">            case ASK_EFP_COMPUTATION:         return &quot;askEFP&quot;;</span>
+<span class="nc" id="L120">            case LAST_EFP_COMPUTATION:        return &quot;lastEFP&quot;;</span>
+<span class="nc" id="L121">            case OPEN_EFP_COMPUTATION:        return &quot;openEFP&quot;;</span>
+<span class="nc" id="L122">            case HIGH_EFP_COMPUTATION:        return &quot;highEFP&quot;;</span>
+<span class="nc" id="L123">            case LOW_EFP_COMPUTATION:         return &quot;lowEFP&quot;;</span>
+<span class="nc" id="L124">            case CLOSE_EFP_COMPUTATION:       return &quot;closeEFP&quot;;</span>
+<span class="nc" id="L125">            case LAST_TIMESTAMP:              return &quot;lastTimestamp&quot;;</span>
+<span class="nc" id="L126">            case SHORTABLE:                   return &quot;shortable&quot;;</span>
+<span class="nc" id="L127">            case FUNDAMENTAL_RATIOS:          return &quot;fundamentals&quot;;</span>
+<span class="nc" id="L128">            case RT_VOLUME:                   return &quot;RTVolume&quot;;</span>
+<span class="nc" id="L129">            case HALTED:                      return &quot;halted&quot;;</span>
+<span class="nc" id="L130">            default:                          return &quot;unknown&quot;;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

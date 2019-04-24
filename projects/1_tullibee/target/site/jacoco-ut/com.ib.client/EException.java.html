@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EException.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tullibee-jacoco-offline</a> &gt; <a href="index.source.html" class="el_package">com.ib.client</a> &gt; <span class="el_source">EException.java</span></div><h1>EException.java</h1><pre class="source lang-java linenums">// Copyright 2010-2012 Christopher Redekop
+//  
+// This file is part of the Tullibee API, a modified version of Interactive
+// Brokers' Java API (the IB API).
+//  
+// The Tullibee API is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at your
+// option) any later version.
+//  
+// The Tullibee API is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+// License for more details.
+//  
+// You should have received a copy of the GNU Lesser General Public License
+// along with the Tullibee API.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+package com.ib.client;
+
+import static com.ib.client.EClientErrors.NO_VALID_ID;
+
+@SuppressWarnings(&quot;serial&quot;)
+public class EException extends Exception {
+	public final static int NO_VALID_CODE = -1;
+	
+	private final int m_id;
+	private final int m_errorCode;
+
+	public EException(String message) {
+<span class="fc" id="L31">		this(NO_VALID_ID, NO_VALID_CODE, message);</span>
+<span class="fc" id="L32">	}</span>
+
+	public EException(int id, EClientErrors.CodeMsgPair codeMsgPair) {
+<span class="fc" id="L35">		this(id, codeMsgPair.code(), codeMsgPair.msg());</span>
+<span class="fc" id="L36">	}</span>
+	
+	public EException(int id, int errorCode, String errorMsg) {
+<span class="fc" id="L39">		super(errorMsg);</span>
+
+<span class="fc" id="L41">		m_id = id;</span>
+<span class="fc" id="L42">		m_errorCode = errorCode;</span>
+<span class="fc" id="L43">	}</span>
+
+	/**
+	 * Provides read access to the {@code id} property.
+	 * 
+	 * @return id
+	 */
+	public int getId() {
+<span class="fc" id="L51">		return m_id;</span>
+	}
+
+	/**
+	 * Provides read access to the {@code errorCode} property.
+	 * 
+	 * @return errorCode
+	 */
+	public int getErrorCode() {
+<span class="fc" id="L60">		return m_errorCode;</span>
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public String getMessage() {
+<span class="fc" id="L68">		return String.format(&quot;%s [id = %d, errorCode = %d]&quot;,</span>
+<span class="fc" id="L69">				super.getMessage(), m_id, m_errorCode);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>

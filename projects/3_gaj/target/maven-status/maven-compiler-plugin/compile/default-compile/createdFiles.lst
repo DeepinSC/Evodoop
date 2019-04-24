@@ -1,0 +1,14 @@
+brain/ga/Genome.class
+brain/ga/VectorAllelesGenome.class
+brain/ga/SexualCrossover.class
+brain/ga/Evaluator.class
+brain/ga/Population.class
+brain/ga/Selector.class
+brain/ga/RankSelector.class
+brain/ga/GAEnumAllelesSet.class
+brain/ga/GAAlgorithm.class
+brain/ga/UniformCrossover.class
+brain/ga/VectorGenome.class
+brain/ga/SectMutator.class
+brain/ga/Mutator.class
+brain/ga/GAUtilities.class

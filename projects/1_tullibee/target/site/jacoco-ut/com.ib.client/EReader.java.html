@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EReader.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tullibee-jacoco-offline</a> &gt; <a href="index.source.html" class="el_package">com.ib.client</a> &gt; <span class="el_source">EReader.java</span></div><h1>EReader.java</h1><pre class="source lang-java linenums">// Copyright 2010-2012 Christopher Redekop
+//  
+// This file is part of the Tullibee API, a modified version of Interactive
+// Brokers' Java API (the IB API).
+//  
+// The Tullibee API is free software: you can redistribute it and/or modify it
+// under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or (at your
+// option) any later version.
+//  
+// The Tullibee API is distributed in the hope that it will be useful, but
+// WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+// or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public
+// License for more details.
+//  
+// You should have received a copy of the GNU Lesser General Public License
+// along with the Tullibee API.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+/*
+ * EReader.java
+ *
+ */
+
+package com.ib.client;
+
+import static com.ib.client.EClientErrors.NO_VALID_ID;
+import static com.ib.client.EClientErrors.UNKNOWN_ID;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.util.Vector;
+
+import com.ib.client.EClientErrors.CodeMsgPair;
+
+public class EReader implements Runnable {
+
+	// incoming msg id's
+	static final int TICK_PRICE = 1;
+	static final int TICK_SIZE = 2;
+	static final int ORDER_STATUS = 3;
+	static final int ERR_MSG = 4;
+	static final int OPEN_ORDER = 5;
+	static final int ACCT_VALUE = 6;
+	static final int PORTFOLIO_VALUE = 7;
+	static final int ACCT_UPDATE_TIME = 8;
+	static final int NEXT_VALID_ID = 9;
+	static final int CONTRACT_DATA = 10;
+	static final int EXECUTION_DATA = 11;
+	static final int MARKET_DEPTH = 12;
+	static final int MARKET_DEPTH_L2 = 13;
+	static final int NEWS_BULLETINS = 14;
+	static final int MANAGED_ACCTS = 15;
+	static final int RECEIVE_FA = 16;
+	static final int HISTORICAL_DATA = 17;
+	static final int BOND_CONTRACT_DATA = 18;
+	static final int SCANNER_PARAMETERS = 19;
+	static final int SCANNER_DATA = 20;
+	static final int TICK_OPTION_COMPUTATION = 21;
+	static final int TICK_GENERIC = 45;
+	static final int TICK_STRING = 46;
+	static final int TICK_EFP = 47;
+	static final int CURRENT_TIME = 49;
+	static final int REAL_TIME_BARS = 50;
+	static final int FUNDAMENTAL_DATA = 51;
+	static final int CONTRACT_DATA_END = 52;
+	static final int OPEN_ORDER_END = 53;
+	static final int ACCT_DOWNLOAD_END = 54;
+	static final int EXECUTION_DATA_END = 55;
+	static final int DELTA_NEUTRAL_VALIDATION = 56;
+	static final int TICK_SNAPSHOT_END = 57;
+
+	private final DataInputStream m_dis;
+	private final EWrapper m_eWrapper;
+	private final int m_serverVersion;
+
+	private volatile boolean m_stopRequested;
+
+	private EWrapper eWrapper() {
+<span class="nc" id="L79">		return m_eWrapper;</span>
+	}
+
+<span class="fc" id="L82">	public EReader(DataInputStream dis, EWrapper eWrapper, int serverVersion) {</span>
+<span class="fc" id="L83">		m_dis = dis;</span>
+<span class="fc" id="L84">		m_eWrapper = eWrapper;</span>
+<span class="fc" id="L85">		m_serverVersion = serverVersion;</span>
+<span class="fc" id="L86">	}</span>
+
+	public void run() {
+<span class="fc" id="L89">			boolean stopRequested = false;</span>
+<span class="fc" id="L90">			boolean continueProcessing = false;</span>
+
+			try {
+				// loop until thread is terminated
+<span class="fc bfc" id="L94" title="All 2 branches covered.">				while (!(stopRequested = m_stopRequested)</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">						&amp;&amp; (continueProcessing = processMsg(readInt())));</span>
+
+<span class="fc bfc" id="L97" title="All 2 branches covered.">				if (stopRequested) {</span>
+<span class="fc" id="L98">					m_eWrapper.stopRequested();</span>
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">				} else if (!continueProcessing) {</span>
+<span class="fc" id="L100">					m_eWrapper.connectionClosed();</span>
+				}
+<span class="fc" id="L102">			} catch (Exception ex) {</span>
+<span class="fc" id="L103">				m_eWrapper.error(ex);</span>
+<span class="fc" id="L104">			}</span>
+<span class="fc" id="L105">	}</span>
+
+	/** Overridden in subclass. */
+	protected boolean processMsg(int msgId) throws IOException, EException {
+<span class="fc bfc" id="L109" title="All 2 branches covered.">		if (msgId == -1) {</span>
+<span class="fc" id="L110">			return false;</span>
+		}
+
+<span class="pc bpc" id="L113" title="33 of 34 branches missed.">		switch (msgId) {</span>
+		case TICK_PRICE: {
+<span class="nc" id="L115">			int version = readInt();</span>
+<span class="nc" id="L116">			int tickerId = readInt();</span>
+<span class="nc" id="L117">			int tickType = readInt();</span>
+<span class="nc" id="L118">			double price = readDouble();</span>
+<span class="nc" id="L119">			int size = 0;</span>
+<span class="nc bnc" id="L120" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L121">				size = readInt();</span>
+			}
+<span class="nc" id="L123">			int canAutoExecute = 0;</span>
+<span class="nc bnc" id="L124" title="All 2 branches missed.">			if (version &gt;= 3) {</span>
+<span class="nc" id="L125">				canAutoExecute = readInt();</span>
+			}
+<span class="nc" id="L127">			eWrapper().tickPrice(tickerId, tickType, price, canAutoExecute);</span>
+
+<span class="nc bnc" id="L129" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L130">				int sizeTickType = -1; // not a tick</span>
+<span class="nc bnc" id="L131" title="All 4 branches missed.">				switch (tickType) {</span>
+				case 1: // BID
+<span class="nc" id="L133">					sizeTickType = 0; // BID_SIZE</span>
+<span class="nc" id="L134">					break;</span>
+				case 2: // ASK
+<span class="nc" id="L136">					sizeTickType = 3; // ASK_SIZE</span>
+<span class="nc" id="L137">					break;</span>
+				case 4: // LAST
+<span class="nc" id="L139">					sizeTickType = 5; // LAST_SIZE</span>
+					break;
+				}
+<span class="nc bnc" id="L142" title="All 2 branches missed.">				if (sizeTickType != -1) {</span>
+<span class="nc" id="L143">					eWrapper().tickSize(tickerId, sizeTickType, size);</span>
+				}
+<span class="nc" id="L145">			}</span>
+			break;
+		}
+		case TICK_SIZE: {
+<span class="nc" id="L149">			int version = readInt();</span>
+<span class="nc" id="L150">			int tickerId = readInt();</span>
+<span class="nc" id="L151">			int tickType = readInt();</span>
+<span class="nc" id="L152">			int size = readInt();</span>
+
+<span class="nc" id="L154">			eWrapper().tickSize(tickerId, tickType, size);</span>
+<span class="nc" id="L155">			break;</span>
+		}
+
+		case TICK_OPTION_COMPUTATION: {
+<span class="nc" id="L159">			int version = readInt();</span>
+<span class="nc" id="L160">			int tickerId = readInt();</span>
+<span class="nc" id="L161">			int tickType = readInt();</span>
+<span class="nc" id="L162">			double impliedVol = readDouble();</span>
+<span class="nc bnc" id="L163" title="All 2 branches missed.">			if (impliedVol &lt; 0) { // -1 is the &quot;not yet computed&quot; indicator</span>
+<span class="nc" id="L164">				impliedVol = Double.MAX_VALUE;</span>
+			}
+<span class="nc" id="L166">			double delta = readDouble();</span>
+<span class="nc bnc" id="L167" title="All 2 branches missed.">			if (Math.abs(delta) &gt; 1) { // -2 is the &quot;not yet computed&quot; indicator</span>
+<span class="nc" id="L168">				delta = Double.MAX_VALUE;</span>
+			}
+			double modelPrice, pvDividend;
+<span class="nc bnc" id="L171" title="All 2 branches missed.">			if (tickType == TickType.MODEL_OPTION) { // introduced in version ==</span>
+				// 5
+<span class="nc" id="L173">				modelPrice = readDouble();</span>
+<span class="nc" id="L174">				pvDividend = readDouble();</span>
+			} else {
+<span class="nc" id="L176">				modelPrice = pvDividend = Double.MAX_VALUE;</span>
+			}
+<span class="nc" id="L178">			eWrapper().tickOptionComputation(tickerId, tickType, impliedVol,</span>
+					delta, modelPrice, pvDividend);
+<span class="nc" id="L180">			break;</span>
+		}
+
+		case TICK_GENERIC: {
+<span class="nc" id="L184">			int version = readInt();</span>
+<span class="nc" id="L185">			int tickerId = readInt();</span>
+<span class="nc" id="L186">			int tickType = readInt();</span>
+<span class="nc" id="L187">			double value = readDouble();</span>
+
+<span class="nc" id="L189">			eWrapper().tickGeneric(tickerId, tickType, value);</span>
+<span class="nc" id="L190">			break;</span>
+		}
+
+		case TICK_STRING: {
+<span class="nc" id="L194">			int version = readInt();</span>
+<span class="nc" id="L195">			int tickerId = readInt();</span>
+<span class="nc" id="L196">			int tickType = readInt();</span>
+<span class="nc" id="L197">			String value = readStr();</span>
+
+<span class="nc" id="L199">			eWrapper().tickString(tickerId, tickType, value);</span>
+<span class="nc" id="L200">			break;</span>
+		}
+
+		case TICK_EFP: {
+<span class="nc" id="L204">			int version = readInt();</span>
+<span class="nc" id="L205">			int tickerId = readInt();</span>
+<span class="nc" id="L206">			int tickType = readInt();</span>
+<span class="nc" id="L207">			double basisPoints = readDouble();</span>
+<span class="nc" id="L208">			String formattedBasisPoints = readStr();</span>
+<span class="nc" id="L209">			double impliedFuturesPrice = readDouble();</span>
+<span class="nc" id="L210">			int holdDays = readInt();</span>
+<span class="nc" id="L211">			String futureExpiry = readStr();</span>
+<span class="nc" id="L212">			double dividendImpact = readDouble();</span>
+<span class="nc" id="L213">			double dividendsToExpiry = readDouble();</span>
+<span class="nc" id="L214">			eWrapper().tickEFP(tickerId, tickType, basisPoints,</span>
+					formattedBasisPoints, impliedFuturesPrice, holdDays,
+					futureExpiry, dividendImpact, dividendsToExpiry);
+<span class="nc" id="L217">			break;</span>
+		}
+
+		case ORDER_STATUS: {
+<span class="nc" id="L221">			int version = readInt();</span>
+<span class="nc" id="L222">			int id = readInt();</span>
+<span class="nc" id="L223">			String status = readStr();</span>
+<span class="nc" id="L224">			int filled = readInt();</span>
+<span class="nc" id="L225">			int remaining = readInt();</span>
+<span class="nc" id="L226">			double avgFillPrice = readDouble();</span>
+
+<span class="nc" id="L228">			int permId = 0;</span>
+<span class="nc bnc" id="L229" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L230">				permId = readInt();</span>
+			}
+
+<span class="nc" id="L233">			int parentId = 0;</span>
+<span class="nc bnc" id="L234" title="All 2 branches missed.">			if (version &gt;= 3) {</span>
+<span class="nc" id="L235">				parentId = readInt();</span>
+			}
+
+<span class="nc" id="L238">			double lastFillPrice = 0;</span>
+<span class="nc bnc" id="L239" title="All 2 branches missed.">			if (version &gt;= 4) {</span>
+<span class="nc" id="L240">				lastFillPrice = readDouble();</span>
+			}
+
+<span class="nc" id="L243">			int clientId = 0;</span>
+<span class="nc bnc" id="L244" title="All 2 branches missed.">			if (version &gt;= 5) {</span>
+<span class="nc" id="L245">				clientId = readInt();</span>
+			}
+
+<span class="nc" id="L248">			String whyHeld = null;</span>
+<span class="nc bnc" id="L249" title="All 2 branches missed.">			if (version &gt;= 6) {</span>
+<span class="nc" id="L250">				whyHeld = readStr();</span>
+			}
+
+<span class="nc" id="L253">			eWrapper().orderStatus(id, status, filled, remaining, avgFillPrice,</span>
+					permId, parentId, lastFillPrice, clientId, whyHeld);
+<span class="nc" id="L255">			break;</span>
+		}
+
+		case ACCT_VALUE: {
+<span class="nc" id="L259">			int version = readInt();</span>
+<span class="nc" id="L260">			String key = readStr();</span>
+<span class="nc" id="L261">			String val = readStr();</span>
+<span class="nc" id="L262">			String cur = readStr();</span>
+<span class="nc" id="L263">			String accountName = null;</span>
+<span class="nc bnc" id="L264" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L265">				accountName = readStr();</span>
+			}
+<span class="nc" id="L267">			eWrapper().updateAccountValue(key, val, cur, accountName);</span>
+<span class="nc" id="L268">			break;</span>
+		}
+
+		case PORTFOLIO_VALUE: {
+<span class="nc" id="L272">			int version = readInt();</span>
+<span class="nc" id="L273">			Contract contract = new Contract();</span>
+<span class="nc bnc" id="L274" title="All 2 branches missed.">			if (version &gt;= 6) {</span>
+<span class="nc" id="L275">				contract.m_conId = readInt();</span>
+			}
+<span class="nc" id="L277">			contract.m_symbol = readStr();</span>
+<span class="nc" id="L278">			contract.m_secType = readStr();</span>
+<span class="nc" id="L279">			contract.m_expiry = readStr();</span>
+<span class="nc" id="L280">			contract.m_strike = readDouble();</span>
+<span class="nc" id="L281">			contract.m_right = readStr();</span>
+<span class="nc bnc" id="L282" title="All 2 branches missed.">			if (version &gt;= 7) {</span>
+<span class="nc" id="L283">				contract.m_multiplier = readStr();</span>
+<span class="nc" id="L284">				contract.m_primaryExch = readStr();</span>
+			}
+<span class="nc" id="L286">			contract.m_currency = readStr();</span>
+<span class="nc bnc" id="L287" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L288">				contract.m_localSymbol = readStr();</span>
+			}
+
+<span class="nc" id="L291">			int position = readInt();</span>
+<span class="nc" id="L292">			double marketPrice = readDouble();</span>
+<span class="nc" id="L293">			double marketValue = readDouble();</span>
+<span class="nc" id="L294">			double averageCost = 0.0;</span>
+<span class="nc" id="L295">			double unrealizedPNL = 0.0;</span>
+<span class="nc" id="L296">			double realizedPNL = 0.0;</span>
+<span class="nc bnc" id="L297" title="All 2 branches missed.">			if (version &gt;= 3) {</span>
+<span class="nc" id="L298">				averageCost = readDouble();</span>
+<span class="nc" id="L299">				unrealizedPNL = readDouble();</span>
+<span class="nc" id="L300">				realizedPNL = readDouble();</span>
+			}
+
+<span class="nc" id="L303">			String accountName = null;</span>
+<span class="nc bnc" id="L304" title="All 2 branches missed.">			if (version &gt;= 4) {</span>
+<span class="nc" id="L305">				accountName = readStr();</span>
+			}
+
+<span class="nc bnc" id="L308" title="All 4 branches missed.">			if (version == 6 &amp;&amp; m_serverVersion == 39) {</span>
+<span class="nc" id="L309">				contract.m_primaryExch = readStr();</span>
+			}
+
+<span class="nc" id="L312">			eWrapper().updatePortfolio(contract, position, marketPrice,</span>
+					marketValue, averageCost, unrealizedPNL, realizedPNL,
+					accountName);
+
+<span class="nc" id="L316">			break;</span>
+		}
+
+		case ACCT_UPDATE_TIME: {
+<span class="nc" id="L320">			int version = readInt();</span>
+<span class="nc" id="L321">			String timeStamp = readStr();</span>
+<span class="nc" id="L322">			eWrapper().updateAccountTime(timeStamp);</span>
+<span class="nc" id="L323">			break;</span>
+		}
+
+		case ERR_MSG: {
+<span class="nc" id="L327">			int version = readInt();</span>
+<span class="nc bnc" id="L328" title="All 2 branches missed.">			if (version &lt; 2) {</span>
+<span class="nc" id="L329">				String msg = readStr();</span>
+<span class="nc" id="L330">				m_eWrapper.error(msg);</span>
+<span class="nc" id="L331">			} else {</span>
+<span class="nc" id="L332">				int id = readInt();</span>
+<span class="nc" id="L333">				int errorCode = readInt();</span>
+<span class="nc" id="L334">				String errorMsg = readStr();</span>
+<span class="nc" id="L335">				m_eWrapper.error(id, errorCode, errorMsg);</span>
+			}
+<span class="nc" id="L337">			break;</span>
+		}
+
+		case OPEN_ORDER: {
+			// read version
+<span class="nc" id="L342">			int version = readInt();</span>
+
+			// read order id
+<span class="nc" id="L345">			Order order = new Order();</span>
+<span class="nc" id="L346">			order.m_orderId = readInt();</span>
+
+			// read contract fields
+<span class="nc" id="L349">			Contract contract = new Contract();</span>
+<span class="nc bnc" id="L350" title="All 2 branches missed.">			if (version &gt;= 17) {</span>
+<span class="nc" id="L351">				contract.m_conId = readInt();</span>
+			}
+<span class="nc" id="L353">			contract.m_symbol = readStr();</span>
+<span class="nc" id="L354">			contract.m_secType = readStr();</span>
+<span class="nc" id="L355">			contract.m_expiry = readStr();</span>
+<span class="nc" id="L356">			contract.m_strike = readDouble();</span>
+<span class="nc" id="L357">			contract.m_right = readStr();</span>
+<span class="nc" id="L358">			contract.m_exchange = readStr();</span>
+<span class="nc" id="L359">			contract.m_currency = readStr();</span>
+<span class="nc bnc" id="L360" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L361">				contract.m_localSymbol = readStr();</span>
+			}
+
+			// read order fields
+<span class="nc" id="L365">			order.m_action = readStr();</span>
+<span class="nc" id="L366">			order.m_totalQuantity = readInt();</span>
+<span class="nc" id="L367">			order.m_orderType = readStr();</span>
+<span class="nc" id="L368">			order.m_lmtPrice = readDouble();</span>
+<span class="nc" id="L369">			order.m_auxPrice = readDouble();</span>
+<span class="nc" id="L370">			order.m_tif = readStr();</span>
+<span class="nc" id="L371">			order.m_ocaGroup = readStr();</span>
+<span class="nc" id="L372">			order.m_account = readStr();</span>
+<span class="nc" id="L373">			order.m_openClose = readStr();</span>
+<span class="nc" id="L374">			order.m_origin = readInt();</span>
+<span class="nc" id="L375">			order.m_orderRef = readStr();</span>
+
+<span class="nc bnc" id="L377" title="All 2 branches missed.">			if (version &gt;= 3) {</span>
+<span class="nc" id="L378">				order.m_clientId = readInt();</span>
+			}
+
+<span class="nc bnc" id="L381" title="All 2 branches missed.">			if (version &gt;= 4) {</span>
+<span class="nc" id="L382">				order.m_permId = readInt();</span>
+<span class="nc bnc" id="L383" title="All 2 branches missed.">				if (version &lt; 18) {</span>
+					// will never happen
+<span class="nc" id="L385">					/* order.m_ignoreRth = */readBoolFromInt();</span>
+				} else {
+<span class="nc" id="L387">					order.m_outsideRth = readBoolFromInt();</span>
+				}
+<span class="nc bnc" id="L389" title="All 2 branches missed.">				order.m_hidden = readInt() == 1;</span>
+<span class="nc" id="L390">				order.m_discretionaryAmt = readDouble();</span>
+			}
+
+<span class="nc bnc" id="L393" title="All 2 branches missed.">			if (version &gt;= 5) {</span>
+<span class="nc" id="L394">				order.m_goodAfterTime = readStr();</span>
+			}
+
+<span class="nc bnc" id="L397" title="All 2 branches missed.">			if (version &gt;= 6) {</span>
+				// skip deprecated sharesAllocation field
+<span class="nc" id="L399">				readStr();</span>
+			}
+
+<span class="nc bnc" id="L402" title="All 2 branches missed.">			if (version &gt;= 7) {</span>
+<span class="nc" id="L403">				order.m_faGroup = readStr();</span>
+<span class="nc" id="L404">				order.m_faMethod = readStr();</span>
+<span class="nc" id="L405">				order.m_faPercentage = readStr();</span>
+<span class="nc" id="L406">				order.m_faProfile = readStr();</span>
+			}
+
+<span class="nc bnc" id="L409" title="All 2 branches missed.">			if (version &gt;= 8) {</span>
+<span class="nc" id="L410">				order.m_goodTillDate = readStr();</span>
+			}
+
+<span class="nc bnc" id="L413" title="All 2 branches missed.">			if (version &gt;= 9) {</span>
+<span class="nc" id="L414">				order.m_rule80A = readStr();</span>
+<span class="nc" id="L415">				order.m_percentOffset = readDouble();</span>
+<span class="nc" id="L416">				order.m_settlingFirm = readStr();</span>
+<span class="nc" id="L417">				order.m_shortSaleSlot = readInt();</span>
+<span class="nc" id="L418">				order.m_designatedLocation = readStr();</span>
+<span class="nc" id="L419">				order.m_auctionStrategy = readInt();</span>
+<span class="nc" id="L420">				order.m_startingPrice = readDouble();</span>
+<span class="nc" id="L421">				order.m_stockRefPrice = readDouble();</span>
+<span class="nc" id="L422">				order.m_delta = readDouble();</span>
+<span class="nc" id="L423">				order.m_stockRangeLower = readDouble();</span>
+<span class="nc" id="L424">				order.m_stockRangeUpper = readDouble();</span>
+<span class="nc" id="L425">				order.m_displaySize = readInt();</span>
+<span class="nc bnc" id="L426" title="All 2 branches missed.">				if (version &lt; 18) {</span>
+					// will never happen
+<span class="nc" id="L428">					/* order.m_rthOnly = */readBoolFromInt();</span>
+				}
+<span class="nc" id="L430">				order.m_blockOrder = readBoolFromInt();</span>
+<span class="nc" id="L431">				order.m_sweepToFill = readBoolFromInt();</span>
+<span class="nc" id="L432">				order.m_allOrNone = readBoolFromInt();</span>
+<span class="nc" id="L433">				order.m_minQty = readInt();</span>
+<span class="nc" id="L434">				order.m_ocaType = readInt();</span>
+<span class="nc" id="L435">				order.m_eTradeOnly = readBoolFromInt();</span>
+<span class="nc" id="L436">				order.m_firmQuoteOnly = readBoolFromInt();</span>
+<span class="nc" id="L437">				order.m_nbboPriceCap = readDouble();</span>
+			}
+
+<span class="nc bnc" id="L440" title="All 2 branches missed.">			if (version &gt;= 10) {</span>
+<span class="nc" id="L441">				order.m_parentId = readInt();</span>
+<span class="nc" id="L442">				order.m_triggerMethod = readInt();</span>
+			}
+
+<span class="nc bnc" id="L445" title="All 2 branches missed.">			if (version &gt;= 11) {</span>
+<span class="nc" id="L446">				order.m_volatility = readDouble();</span>
+<span class="nc" id="L447">				order.m_volatilityType = readInt();</span>
+<span class="nc bnc" id="L448" title="All 2 branches missed.">				if (version == 11) {</span>
+<span class="nc" id="L449">					int receivedInt = readInt();</span>
+<span class="nc bnc" id="L450" title="All 2 branches missed.">					order.m_deltaNeutralOrderType = ((receivedInt == 0) ? &quot;NONE&quot;</span>
+							: &quot;MKT&quot;);
+<span class="nc" id="L452">				} else { // version 12 and up</span>
+<span class="nc" id="L453">					order.m_deltaNeutralOrderType = readStr();</span>
+<span class="nc" id="L454">					order.m_deltaNeutralAuxPrice = readDouble();</span>
+				}
+<span class="nc" id="L456">				order.m_continuousUpdate = readInt();</span>
+<span class="nc bnc" id="L457" title="All 2 branches missed.">				if (m_serverVersion == 26) {</span>
+<span class="nc" id="L458">					order.m_stockRangeLower = readDouble();</span>
+<span class="nc" id="L459">					order.m_stockRangeUpper = readDouble();</span>
+				}
+<span class="nc" id="L461">				order.m_referencePriceType = readInt();</span>
+			}
+
+<span class="nc bnc" id="L464" title="All 2 branches missed.">			if (version &gt;= 13) {</span>
+<span class="nc" id="L465">				order.m_trailStopPrice = readDouble();</span>
+			}
+
+<span class="nc bnc" id="L468" title="All 2 branches missed.">			if (version &gt;= 14) {</span>
+<span class="nc" id="L469">				order.m_basisPoints = readDouble();</span>
+<span class="nc" id="L470">				order.m_basisPointsType = readInt();</span>
+<span class="nc" id="L471">				contract.m_comboLegsDescrip = readStr();</span>
+			}
+
+<span class="nc bnc" id="L474" title="All 2 branches missed.">			if (version &gt;= 15) {</span>
+<span class="nc bnc" id="L475" title="All 2 branches missed.">				if (version &gt;= 20) {</span>
+<span class="nc" id="L476">					order.m_scaleInitLevelSize = readIntMax();</span>
+<span class="nc" id="L477">					order.m_scaleSubsLevelSize = readIntMax();</span>
+				} else {
+<span class="nc" id="L479">					/* int notSuppScaleNumComponents = */readIntMax();</span>
+<span class="nc" id="L480">					order.m_scaleInitLevelSize = readIntMax();</span>
+				}
+<span class="nc" id="L482">				order.m_scalePriceIncrement = readDoubleMax();</span>
+			}
+
+<span class="nc bnc" id="L485" title="All 2 branches missed.">			if (version &gt;= 19) {</span>
+<span class="nc" id="L486">				order.m_clearingAccount = readStr();</span>
+<span class="nc" id="L487">				order.m_clearingIntent = readStr();</span>
+			}
+
+<span class="nc bnc" id="L490" title="All 2 branches missed.">			if (version &gt;= 22) {</span>
+<span class="nc" id="L491">				order.m_notHeld = readBoolFromInt();</span>
+			}
+
+<span class="nc bnc" id="L494" title="All 2 branches missed.">			if (version &gt;= 20) {</span>
+<span class="nc bnc" id="L495" title="All 2 branches missed.">				if (readBoolFromInt()) {</span>
+<span class="nc" id="L496">					UnderComp underComp = new UnderComp();</span>
+<span class="nc" id="L497">					underComp.m_conId = readInt();</span>
+<span class="nc" id="L498">					underComp.m_delta = readDouble();</span>
+<span class="nc" id="L499">					underComp.m_price = readDouble();</span>
+<span class="nc" id="L500">					contract.m_underComp = underComp;</span>
+				}
+			}
+
+<span class="nc bnc" id="L504" title="All 2 branches missed.">			if (version &gt;= 21) {</span>
+<span class="nc" id="L505">				order.m_algoStrategy = readStr();</span>
+<span class="nc bnc" id="L506" title="All 2 branches missed.">				if (!Util.StringIsEmpty(order.m_algoStrategy)) {</span>
+<span class="nc" id="L507">					int algoParamsCount = readInt();</span>
+<span class="nc bnc" id="L508" title="All 2 branches missed.">					if (algoParamsCount &gt; 0) {</span>
+<span class="nc" id="L509">						order.m_algoParams = new Vector(algoParamsCount);</span>
+<span class="nc bnc" id="L510" title="All 2 branches missed.">						for (int i = 0; i &lt; algoParamsCount; ++i) {</span>
+<span class="nc" id="L511">							TagValue tagValue = new TagValue();</span>
+<span class="nc" id="L512">							tagValue.m_tag = readStr();</span>
+<span class="nc" id="L513">							tagValue.m_value = readStr();</span>
+<span class="nc" id="L514">							order.m_algoParams.add(tagValue);</span>
+						}
+					}
+				}
+			}
+
+<span class="nc" id="L520">			OrderState orderState = new OrderState();</span>
+
+<span class="nc bnc" id="L522" title="All 2 branches missed.">			if (version &gt;= 16) {</span>
+
+<span class="nc" id="L524">				order.m_whatIf = readBoolFromInt();</span>
+
+<span class="nc" id="L526">				orderState.m_status = readStr();</span>
+<span class="nc" id="L527">				orderState.m_initMargin = readStr();</span>
+<span class="nc" id="L528">				orderState.m_maintMargin = readStr();</span>
+<span class="nc" id="L529">				orderState.m_equityWithLoan = readStr();</span>
+<span class="nc" id="L530">				orderState.m_commission = readDoubleMax();</span>
+<span class="nc" id="L531">				orderState.m_minCommission = readDoubleMax();</span>
+<span class="nc" id="L532">				orderState.m_maxCommission = readDoubleMax();</span>
+<span class="nc" id="L533">				orderState.m_commissionCurrency = readStr();</span>
+<span class="nc" id="L534">				orderState.m_warningText = readStr();</span>
+			}
+
+<span class="nc" id="L537">			eWrapper().openOrder(order.m_orderId, contract, order, orderState);</span>
+<span class="nc" id="L538">			break;</span>
+		}
+
+		case NEXT_VALID_ID: {
+<span class="nc" id="L542">			int version = readInt();</span>
+<span class="nc" id="L543">			int orderId = readInt();</span>
+<span class="nc" id="L544">			eWrapper().nextValidId(orderId);</span>
+<span class="nc" id="L545">			break;</span>
+		}
+
+		case SCANNER_DATA: {
+<span class="nc" id="L549">			ContractDetails contract = new ContractDetails();</span>
+<span class="nc" id="L550">			int version = readInt();</span>
+<span class="nc" id="L551">			int tickerId = readInt();</span>
+<span class="nc" id="L552">			int numberOfElements = readInt();</span>
+<span class="nc bnc" id="L553" title="All 2 branches missed.">			for (int ctr = 0; ctr &lt; numberOfElements; ctr++) {</span>
+<span class="nc" id="L554">				int rank = readInt();</span>
+<span class="nc bnc" id="L555" title="All 2 branches missed.">				if (version &gt;= 3) {</span>
+<span class="nc" id="L556">					contract.m_summary.m_conId = readInt();</span>
+				}
+<span class="nc" id="L558">				contract.m_summary.m_symbol = readStr();</span>
+<span class="nc" id="L559">				contract.m_summary.m_secType = readStr();</span>
+<span class="nc" id="L560">				contract.m_summary.m_expiry = readStr();</span>
+<span class="nc" id="L561">				contract.m_summary.m_strike = readDouble();</span>
+<span class="nc" id="L562">				contract.m_summary.m_right = readStr();</span>
+<span class="nc" id="L563">				contract.m_summary.m_exchange = readStr();</span>
+<span class="nc" id="L564">				contract.m_summary.m_currency = readStr();</span>
+<span class="nc" id="L565">				contract.m_summary.m_localSymbol = readStr();</span>
+<span class="nc" id="L566">				contract.m_marketName = readStr();</span>
+<span class="nc" id="L567">				contract.m_tradingClass = readStr();</span>
+<span class="nc" id="L568">				String distance = readStr();</span>
+<span class="nc" id="L569">				String benchmark = readStr();</span>
+<span class="nc" id="L570">				String projection = readStr();</span>
+<span class="nc" id="L571">				String legsStr = null;</span>
+<span class="nc bnc" id="L572" title="All 2 branches missed.">				if (version &gt;= 2) {</span>
+<span class="nc" id="L573">					legsStr = readStr();</span>
+				}
+<span class="nc" id="L575">				eWrapper().scannerData(tickerId, rank, contract, distance,</span>
+						benchmark, projection, legsStr);
+			}
+<span class="nc" id="L578">			eWrapper().scannerDataEnd(tickerId);</span>
+<span class="nc" id="L579">			break;</span>
+		}
+
+		case CONTRACT_DATA: {
+<span class="nc" id="L583">			int version = readInt();</span>
+
+<span class="nc" id="L585">			int reqId = -1;</span>
+<span class="nc bnc" id="L586" title="All 2 branches missed.">			if (version &gt;= 3) {</span>
+<span class="nc" id="L587">				reqId = readInt();</span>
+			}
+
+<span class="nc" id="L590">			ContractDetails contract = new ContractDetails();</span>
+<span class="nc" id="L591">			contract.m_summary.m_symbol = readStr();</span>
+<span class="nc" id="L592">			contract.m_summary.m_secType = readStr();</span>
+<span class="nc" id="L593">			contract.m_summary.m_expiry = readStr();</span>
+<span class="nc" id="L594">			contract.m_summary.m_strike = readDouble();</span>
+<span class="nc" id="L595">			contract.m_summary.m_right = readStr();</span>
+<span class="nc" id="L596">			contract.m_summary.m_exchange = readStr();</span>
+<span class="nc" id="L597">			contract.m_summary.m_currency = readStr();</span>
+<span class="nc" id="L598">			contract.m_summary.m_localSymbol = readStr();</span>
+<span class="nc" id="L599">			contract.m_marketName = readStr();</span>
+<span class="nc" id="L600">			contract.m_tradingClass = readStr();</span>
+<span class="nc" id="L601">			contract.m_summary.m_conId = readInt();</span>
+<span class="nc" id="L602">			contract.m_minTick = readDouble();</span>
+<span class="nc" id="L603">			contract.m_summary.m_multiplier = readStr();</span>
+<span class="nc" id="L604">			contract.m_orderTypes = readStr();</span>
+<span class="nc" id="L605">			contract.m_validExchanges = readStr();</span>
+<span class="nc bnc" id="L606" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L607">				contract.m_priceMagnifier = readInt();</span>
+			}
+<span class="nc bnc" id="L609" title="All 2 branches missed.">			if (version &gt;= 4) {</span>
+<span class="nc" id="L610">				contract.m_underConId = readInt();</span>
+			}
+<span class="nc bnc" id="L612" title="All 2 branches missed.">			if (version &gt;= 5) {</span>
+<span class="nc" id="L613">				contract.m_longName = readStr();</span>
+<span class="nc" id="L614">				contract.m_summary.m_primaryExch = readStr();</span>
+			}
+<span class="nc bnc" id="L616" title="All 2 branches missed.">			if (version &gt;= 6) {</span>
+<span class="nc" id="L617">				contract.m_contractMonth = readStr();</span>
+<span class="nc" id="L618">				contract.m_industry = readStr();</span>
+<span class="nc" id="L619">				contract.m_category = readStr();</span>
+<span class="nc" id="L620">				contract.m_subcategory = readStr();</span>
+<span class="nc" id="L621">				contract.m_timeZoneId = readStr();</span>
+<span class="nc" id="L622">				contract.m_tradingHours = readStr();</span>
+<span class="nc" id="L623">				contract.m_liquidHours = readStr();</span>
+			}
+<span class="nc" id="L625">			eWrapper().contractDetails(reqId, contract);</span>
+<span class="nc" id="L626">			break;</span>
+		}
+		case BOND_CONTRACT_DATA: {
+<span class="nc" id="L629">			int version = readInt();</span>
+
+<span class="nc" id="L631">			int reqId = -1;</span>
+<span class="nc bnc" id="L632" title="All 2 branches missed.">			if (version &gt;= 3) {</span>
+<span class="nc" id="L633">				reqId = readInt();</span>
+			}
+
+<span class="nc" id="L636">			ContractDetails contract = new ContractDetails();</span>
+
+<span class="nc" id="L638">			contract.m_summary.m_symbol = readStr();</span>
+<span class="nc" id="L639">			contract.m_summary.m_secType = readStr();</span>
+<span class="nc" id="L640">			contract.m_cusip = readStr();</span>
+<span class="nc" id="L641">			contract.m_coupon = readDouble();</span>
+<span class="nc" id="L642">			contract.m_maturity = readStr();</span>
+<span class="nc" id="L643">			contract.m_issueDate = readStr();</span>
+<span class="nc" id="L644">			contract.m_ratings = readStr();</span>
+<span class="nc" id="L645">			contract.m_bondType = readStr();</span>
+<span class="nc" id="L646">			contract.m_couponType = readStr();</span>
+<span class="nc" id="L647">			contract.m_convertible = readBoolFromInt();</span>
+<span class="nc" id="L648">			contract.m_callable = readBoolFromInt();</span>
+<span class="nc" id="L649">			contract.m_putable = readBoolFromInt();</span>
+<span class="nc" id="L650">			contract.m_descAppend = readStr();</span>
+<span class="nc" id="L651">			contract.m_summary.m_exchange = readStr();</span>
+<span class="nc" id="L652">			contract.m_summary.m_currency = readStr();</span>
+<span class="nc" id="L653">			contract.m_marketName = readStr();</span>
+<span class="nc" id="L654">			contract.m_tradingClass = readStr();</span>
+<span class="nc" id="L655">			contract.m_summary.m_conId = readInt();</span>
+<span class="nc" id="L656">			contract.m_minTick = readDouble();</span>
+<span class="nc" id="L657">			contract.m_orderTypes = readStr();</span>
+<span class="nc" id="L658">			contract.m_validExchanges = readStr();</span>
+<span class="nc bnc" id="L659" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L660">				contract.m_nextOptionDate = readStr();</span>
+<span class="nc" id="L661">				contract.m_nextOptionType = readStr();</span>
+<span class="nc" id="L662">				contract.m_nextOptionPartial = readBoolFromInt();</span>
+<span class="nc" id="L663">				contract.m_notes = readStr();</span>
+			}
+<span class="nc bnc" id="L665" title="All 2 branches missed.">			if (version &gt;= 4) {</span>
+<span class="nc" id="L666">				contract.m_longName = readStr();</span>
+			}
+<span class="nc" id="L668">			eWrapper().bondContractDetails(reqId, contract);</span>
+<span class="nc" id="L669">			break;</span>
+		}
+		case EXECUTION_DATA: {
+<span class="nc" id="L672">			int version = readInt();</span>
+
+<span class="nc" id="L674">			int reqId = -1;</span>
+<span class="nc bnc" id="L675" title="All 2 branches missed.">			if (version &gt;= 7) {</span>
+<span class="nc" id="L676">				reqId = readInt();</span>
+			}
+
+<span class="nc" id="L679">			int orderId = readInt();</span>
+
+			// read contract fields
+<span class="nc" id="L682">			Contract contract = new Contract();</span>
+<span class="nc bnc" id="L683" title="All 2 branches missed.">			if (version &gt;= 5) {</span>
+<span class="nc" id="L684">				contract.m_conId = readInt();</span>
+			}
+<span class="nc" id="L686">			contract.m_symbol = readStr();</span>
+<span class="nc" id="L687">			contract.m_secType = readStr();</span>
+<span class="nc" id="L688">			contract.m_expiry = readStr();</span>
+<span class="nc" id="L689">			contract.m_strike = readDouble();</span>
+<span class="nc" id="L690">			contract.m_right = readStr();</span>
+<span class="nc" id="L691">			contract.m_exchange = readStr();</span>
+<span class="nc" id="L692">			contract.m_currency = readStr();</span>
+<span class="nc" id="L693">			contract.m_localSymbol = readStr();</span>
+
+<span class="nc" id="L695">			Execution exec = new Execution();</span>
+<span class="nc" id="L696">			exec.m_orderId = orderId;</span>
+<span class="nc" id="L697">			exec.m_execId = readStr();</span>
+<span class="nc" id="L698">			exec.m_time = readStr();</span>
+<span class="nc" id="L699">			exec.m_acctNumber = readStr();</span>
+<span class="nc" id="L700">			exec.m_exchange = readStr();</span>
+<span class="nc" id="L701">			exec.m_side = readStr();</span>
+<span class="nc" id="L702">			exec.m_shares = readInt();</span>
+<span class="nc" id="L703">			exec.m_price = readDouble();</span>
+<span class="nc bnc" id="L704" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L705">				exec.m_permId = readInt();</span>
+			}
+<span class="nc bnc" id="L707" title="All 2 branches missed.">			if (version &gt;= 3) {</span>
+<span class="nc" id="L708">				exec.m_clientId = readInt();</span>
+			}
+<span class="nc bnc" id="L710" title="All 2 branches missed.">			if (version &gt;= 4) {</span>
+<span class="nc" id="L711">				exec.m_liquidation = readInt();</span>
+			}
+<span class="nc bnc" id="L713" title="All 2 branches missed.">			if (version &gt;= 6) {</span>
+<span class="nc" id="L714">				exec.m_cumQty = readInt();</span>
+<span class="nc" id="L715">				exec.m_avgPrice = readDouble();</span>
+			}
+
+<span class="nc" id="L718">			eWrapper().execDetails(reqId, contract, exec);</span>
+<span class="nc" id="L719">			break;</span>
+		}
+		case MARKET_DEPTH: {
+<span class="nc" id="L722">			int version = readInt();</span>
+<span class="nc" id="L723">			int id = readInt();</span>
+
+<span class="nc" id="L725">			int position = readInt();</span>
+<span class="nc" id="L726">			int operation = readInt();</span>
+<span class="nc" id="L727">			int side = readInt();</span>
+<span class="nc" id="L728">			double price = readDouble();</span>
+<span class="nc" id="L729">			int size = readInt();</span>
+
+<span class="nc" id="L731">			eWrapper().updateMktDepth(id, position, operation, side, price,</span>
+					size);
+<span class="nc" id="L733">			break;</span>
+		}
+		case MARKET_DEPTH_L2: {
+<span class="nc" id="L736">			int version = readInt();</span>
+<span class="nc" id="L737">			int id = readInt();</span>
+
+<span class="nc" id="L739">			int position = readInt();</span>
+<span class="nc" id="L740">			String marketMaker = readStr();</span>
+<span class="nc" id="L741">			int operation = readInt();</span>
+<span class="nc" id="L742">			int side = readInt();</span>
+<span class="nc" id="L743">			double price = readDouble();</span>
+<span class="nc" id="L744">			int size = readInt();</span>
+
+<span class="nc" id="L746">			eWrapper().updateMktDepthL2(id, position, marketMaker, operation,</span>
+					side, price, size);
+<span class="nc" id="L748">			break;</span>
+		}
+		case NEWS_BULLETINS: {
+<span class="nc" id="L751">			int version = readInt();</span>
+<span class="nc" id="L752">			int newsMsgId = readInt();</span>
+<span class="nc" id="L753">			int newsMsgType = readInt();</span>
+<span class="nc" id="L754">			String newsMessage = readStr();</span>
+<span class="nc" id="L755">			String originatingExch = readStr();</span>
+
+<span class="nc" id="L757">			eWrapper().updateNewsBulletin(newsMsgId, newsMsgType, newsMessage,</span>
+					originatingExch);
+<span class="nc" id="L759">			break;</span>
+		}
+		case MANAGED_ACCTS: {
+<span class="nc" id="L762">			int version = readInt();</span>
+<span class="nc" id="L763">			String accountsList = readStr();</span>
+
+<span class="nc" id="L765">			eWrapper().managedAccounts(accountsList);</span>
+<span class="nc" id="L766">			break;</span>
+		}
+		case RECEIVE_FA: {
+<span class="nc" id="L769">			int version = readInt();</span>
+<span class="nc" id="L770">			int faDataType = readInt();</span>
+<span class="nc" id="L771">			String xml = readStr();</span>
+
+<span class="nc" id="L773">			eWrapper().receiveFA(faDataType, xml);</span>
+<span class="nc" id="L774">			break;</span>
+		}
+		case HISTORICAL_DATA: {
+<span class="nc" id="L777">			int version = readInt();</span>
+<span class="nc" id="L778">			int reqId = readInt();</span>
+			String startDateStr;
+			String endDateStr;
+<span class="nc" id="L781">			String completedIndicator = &quot;finished&quot;;</span>
+<span class="nc bnc" id="L782" title="All 2 branches missed.">			if (version &gt;= 2) {</span>
+<span class="nc" id="L783">				startDateStr = readStr();</span>
+<span class="nc" id="L784">				endDateStr = readStr();</span>
+<span class="nc" id="L785">				completedIndicator += &quot;-&quot; + startDateStr + &quot;-&quot; + endDateStr;</span>
+			}
+<span class="nc" id="L787">			int itemCount = readInt();</span>
+<span class="nc bnc" id="L788" title="All 2 branches missed.">			for (int ctr = 0; ctr &lt; itemCount; ctr++) {</span>
+<span class="nc" id="L789">				String date = readStr();</span>
+<span class="nc" id="L790">				double open = readDouble();</span>
+<span class="nc" id="L791">				double high = readDouble();</span>
+<span class="nc" id="L792">				double low = readDouble();</span>
+<span class="nc" id="L793">				double close = readDouble();</span>
+<span class="nc" id="L794">				int volume = readInt();</span>
+<span class="nc" id="L795">				double WAP = readDouble();</span>
+<span class="nc" id="L796">				String hasGaps = readStr();</span>
+<span class="nc" id="L797">				int barCount = -1;</span>
+<span class="nc bnc" id="L798" title="All 2 branches missed.">				if (version &gt;= 3) {</span>
+<span class="nc" id="L799">					barCount = readInt();</span>
+				}
+<span class="nc" id="L801">				eWrapper().historicalData(reqId, date, open, high, low, close,</span>
+						volume, barCount, WAP,
+<span class="nc" id="L803">						Boolean.valueOf(hasGaps).booleanValue());</span>
+			}
+			// send end of dataset marker
+<span class="nc" id="L806">			eWrapper().historicalData(reqId, completedIndicator, -1, -1, -1,</span>
+					-1, -1, -1, -1, false);
+<span class="nc" id="L808">			break;</span>
+		}
+		case SCANNER_PARAMETERS: {
+<span class="nc" id="L811">			int version = readInt();</span>
+<span class="nc" id="L812">			String xml = readStr();</span>
+<span class="nc" id="L813">			eWrapper().scannerParameters(xml);</span>
+<span class="nc" id="L814">			break;</span>
+		}
+		case CURRENT_TIME: {
+<span class="nc" id="L817">			/* int version = */readInt();</span>
+<span class="nc" id="L818">			long time = readLong();</span>
+<span class="nc" id="L819">			eWrapper().currentTime(time);</span>
+<span class="nc" id="L820">			break;</span>
+		}
+		case REAL_TIME_BARS: {
+<span class="nc" id="L823">			/* int version = */readInt();</span>
+<span class="nc" id="L824">			int reqId = readInt();</span>
+<span class="nc" id="L825">			long time = readLong();</span>
+<span class="nc" id="L826">			double open = readDouble();</span>
+<span class="nc" id="L827">			double high = readDouble();</span>
+<span class="nc" id="L828">			double low = readDouble();</span>
+<span class="nc" id="L829">			double close = readDouble();</span>
+<span class="nc" id="L830">			long volume = readLong();</span>
+<span class="nc" id="L831">			double wap = readDouble();</span>
+<span class="nc" id="L832">			int count = readInt();</span>
+<span class="nc" id="L833">			eWrapper().realtimeBar(reqId, time, open, high, low, close, volume,</span>
+					wap, count);
+<span class="nc" id="L835">			break;</span>
+		}
+		case FUNDAMENTAL_DATA: {
+<span class="nc" id="L838">			/* int version = */readInt();</span>
+<span class="nc" id="L839">			int reqId = readInt();</span>
+<span class="nc" id="L840">			String data = readStr();</span>
+<span class="nc" id="L841">			eWrapper().fundamentalData(reqId, data);</span>
+<span class="nc" id="L842">			break;</span>
+		}
+		case CONTRACT_DATA_END: {
+<span class="nc" id="L845">			/* int version = */readInt();</span>
+<span class="nc" id="L846">			int reqId = readInt();</span>
+<span class="nc" id="L847">			eWrapper().contractDetailsEnd(reqId);</span>
+<span class="nc" id="L848">			break;</span>
+		}
+		case OPEN_ORDER_END: {
+<span class="nc" id="L851">			/* int version = */readInt();</span>
+<span class="nc" id="L852">			eWrapper().openOrderEnd();</span>
+<span class="nc" id="L853">			break;</span>
+		}
+		case ACCT_DOWNLOAD_END: {
+<span class="nc" id="L856">			/* int version = */readInt();</span>
+<span class="nc" id="L857">			String accountName = readStr();</span>
+<span class="nc" id="L858">			eWrapper().accountDownloadEnd(accountName);</span>
+<span class="nc" id="L859">			break;</span>
+		}
+		case EXECUTION_DATA_END: {
+<span class="nc" id="L862">			/* int version = */readInt();</span>
+<span class="nc" id="L863">			int reqId = readInt();</span>
+<span class="nc" id="L864">			eWrapper().execDetailsEnd(reqId);</span>
+<span class="nc" id="L865">			break;</span>
+		}
+		case DELTA_NEUTRAL_VALIDATION: {
+<span class="nc" id="L868">			/* int version = */readInt();</span>
+<span class="nc" id="L869">			int reqId = readInt();</span>
+
+<span class="nc" id="L871">			UnderComp underComp = new UnderComp();</span>
+<span class="nc" id="L872">			underComp.m_conId = readInt();</span>
+<span class="nc" id="L873">			underComp.m_delta = readDouble();</span>
+<span class="nc" id="L874">			underComp.m_price = readDouble();</span>
+
+<span class="nc" id="L876">			eWrapper().deltaNeutralValidation(reqId, underComp);</span>
+<span class="nc" id="L877">			break;</span>
+		}
+		case TICK_SNAPSHOT_END: {
+<span class="nc" id="L880">			/* int version = */readInt();</span>
+<span class="nc" id="L881">			int reqId = readInt();</span>
+
+<span class="nc" id="L883">			eWrapper().tickSnapshotEnd(reqId);</span>
+<span class="nc" id="L884">			break;</span>
+		}
+
+		default: {
+<span class="fc" id="L888">			throw createEException(NO_VALID_ID, UNKNOWN_ID);</span>
+		}
+		}
+<span class="nc" id="L891">		return true;</span>
+	}
+
+	protected String readStr() throws IOException {
+<span class="nc" id="L895">		return readStr(m_dis);</span>
+	}
+
+	protected static String readStr(DataInputStream dis) throws IOException {
+<span class="fc" id="L899">		StringBuffer buf = new StringBuffer();</span>
+		while (true) {
+<span class="fc" id="L901">			byte c = dis.readByte();</span>
+<span class="fc bfc" id="L902" title="All 2 branches covered.">			if (c == 0) {</span>
+<span class="fc" id="L903">				break;</span>
+			}
+<span class="fc" id="L905">			buf.append((char) c);</span>
+<span class="fc" id="L906">		}</span>
+
+<span class="fc" id="L908">		String str = buf.toString();</span>
+<span class="pc bpc" id="L909" title="1 of 2 branches missed.">		return str.length() == 0 ? null : str;</span>
+	}
+
+	boolean readBoolFromInt() throws IOException {
+<span class="nc" id="L913">		String str = readStr();</span>
+<span class="nc bnc" id="L914" title="All 4 branches missed.">		return str == null ? false : (Integer.parseInt(str) != 0);</span>
+	}
+
+	protected int readInt() throws IOException {
+<span class="fc" id="L918">		return readInt(m_dis);</span>
+	}
+
+	protected static int readInt(DataInputStream dis) throws IOException {
+<span class="fc" id="L922">		String str = readStr(dis);</span>
+<span class="pc bpc" id="L923" title="1 of 2 branches missed.">		return str == null ? 0 : Integer.parseInt(str);</span>
+	}
+
+	protected int readIntMax() throws IOException {
+<span class="nc" id="L927">		String str = readStr();</span>
+<span class="nc bnc" id="L928" title="All 4 branches missed.">		return (str == null || str.length() == 0) ? Integer.MAX_VALUE : Integer</span>
+<span class="nc" id="L929">				.parseInt(str);</span>
+	}
+
+	protected long readLong() throws IOException {
+<span class="nc" id="L933">		String str = readStr();</span>
+<span class="nc bnc" id="L934" title="All 2 branches missed.">		return str == null ? 0l : Long.parseLong(str);</span>
+	}
+
+	protected double readDouble() throws IOException {
+<span class="nc" id="L938">		String str = readStr();</span>
+<span class="nc bnc" id="L939" title="All 2 branches missed.">		return str == null ? 0 : Double.parseDouble(str);</span>
+	}
+
+	protected double readDoubleMax() throws IOException {
+<span class="nc" id="L943">		String str = readStr();</span>
+<span class="nc bnc" id="L944" title="All 4 branches missed.">		return (str == null || str.length() == 0) ? Double.MAX_VALUE : Double</span>
+<span class="nc" id="L945">				.parseDouble(str);</span>
+	}
+
+	public void stop() {
+<span class="fc" id="L949">		m_stopRequested = true;</span>
+<span class="fc" id="L950">	}</span>
+
+	EException createEException(int id, CodeMsgPair codeMsgPair) {
+<span class="fc" id="L953">		return new EException(id, codeMsgPair);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>
