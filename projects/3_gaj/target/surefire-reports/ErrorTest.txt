@@ -1,18 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: ErrorTest
 -------------------------------------------------------------------------------
-Tests run: 23, Failures: 0, Errors: 23, Skipped: 0, Time elapsed: 0.309 sec <<< FAILURE! - in ErrorTest
-test01(ErrorTest0)  Time elapsed: 0.109 sec  <<< ERROR!
+Tests run: 23, Failures: 0, Errors: 23, Skipped: 0, Time elapsed: 0.002 sec <<< FAILURE! - in ErrorTest
+test01(ErrorTest0)  Time elapsed: 0.001 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test01(ErrorTest0.java:15)
 
-test02(ErrorTest0)  Time elapsed: 0.006 sec  <<< ERROR!
+test02(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:19)
 	at ErrorTest0.test02(ErrorTest0.java:23)
 
-test03(ErrorTest0)  Time elapsed: 0.004 sec  <<< ERROR!
+test03(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.size(GAEnumAllelesSet.java:31)
 	at ErrorTest0.test03(ErrorTest0.java:31)
@@ -32,12 +32,12 @@ java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test06(ErrorTest0.java:55)
 
-test07(ErrorTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+test07(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test07(ErrorTest0.java:63)
 
-test08(ErrorTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+test08(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test08(ErrorTest0.java:71)
@@ -57,7 +57,7 @@ java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test11(ErrorTest0.java:98)
 
-test12(ErrorTest0)  Time elapsed: 0.004 sec  <<< ERROR!
+test12(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test12(ErrorTest0.java:106)
@@ -72,7 +72,7 @@ java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test14(ErrorTest0.java:123)
 
-test15(ErrorTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+test15(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test15(ErrorTest0.java:132)
@@ -87,12 +87,12 @@ java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test17(ErrorTest0.java:150)
 
-test18(ErrorTest0)  Time elapsed: 0.003 sec  <<< ERROR!
+test18(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test18(ErrorTest0.java:159)
 
-test19(ErrorTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+test19(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test19(ErrorTest0.java:168)
@@ -102,7 +102,7 @@ java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test20(ErrorTest0.java:177)
 
-test21(ErrorTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+test21(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test21(ErrorTest0.java:185)
@@ -112,7 +112,7 @@ java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test22(ErrorTest0.java:194)
 
-test23(ErrorTest0)  Time elapsed: 0.001 sec  <<< ERROR!
+test23(ErrorTest0)  Time elapsed: 0 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at brain.ga.GAEnumAllelesSet.allele(GAEnumAllelesSet.java:23)
 	at ErrorTest0.test23(ErrorTest0.java:203)

@@ -4,7 +4,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.evosuite</groupId>
-  <artifactId>gaj-jacoco-offline</artifactId>
+  <artifactId>gaj</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <properties>
@@ -32,19 +32,6 @@
       <version>1.0.6</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-nop</artifactId>
-      <version>1.7.25</version>
-      <scope>test</scope>
-    </dependency>        
-    <dependency>
-      <groupId>org.jacoco</groupId>
-      <artifactId>org.jacoco.agent</artifactId>
-      <classifier>runtime</classifier>
-      <version>0.8.0</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
 
@@ -62,36 +49,6 @@
         <groupId>org.evosuite.plugins</groupId>
         <artifactId>evosuite-maven-plugin</artifactId>
         <version>1.0.6</version>
-      </plugin>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.8.0</version>
-        <configuration>
-          <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
-          <destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
-          <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
-        </configuration>
-        <executions>
-          <execution>
-            <id>default-instrument</id>
-            <goals>
-              <goal>instrument</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>default-restore-instrumented-classes</id>
-            <goals>
-              <goal>restore-instrumented-classes</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>default-report</id>
-            <goals>
-              <goal>report</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
 
       <plugin>
@@ -111,12 +68,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.15</version>
-
-        <configuration>
-          <systemPropertyVariables>
-            <jacoco-agent.destfile>${project.build.directory}/coverage-reports/jacoco-ut.exec</jacoco-agent.destfile>
-          </systemPropertyVariables>
-        </configuration>
 
       </plugin>
     </plugins>

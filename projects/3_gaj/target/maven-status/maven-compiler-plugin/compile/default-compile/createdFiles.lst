@@ -1,7 +1,7 @@
-brain/ga/Genome.class
 brain/ga/VectorAllelesGenome.class
-brain/ga/SexualCrossover.class
+brain/ga/Genome.class
 brain/ga/Evaluator.class
+brain/ga/SexualCrossover.class
 brain/ga/Population.class
 brain/ga/Selector.class
 brain/ga/RankSelector.class
