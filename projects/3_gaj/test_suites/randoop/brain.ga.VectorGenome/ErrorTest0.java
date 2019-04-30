@@ -198,44 +198,5 @@ public class ErrorTest0 {
         java.lang.Class<?> wildcardClass5 = vectorGenome0.getClass();
         double double6 = vectorGenome0.getScore();
     }
-
-    @Test
-    public void test17() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "ErrorTest0.test17");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
-        int int2 = vectorGenome0.getGenesCount();
-        int int3 = vectorGenome0.getGenesCount();
-        brain.ga.VectorGenome vectorGenome4 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator5 = vectorGenome4.getEvaluator();
-        int int6 = vectorGenome4.getGenesCount();
-        java.lang.Class<?> wildcardClass7 = vectorGenome4.getClass();
-        int int8 = vectorGenome0.compareTo((java.lang.Object) vectorGenome4);
-    }
-
-    @Test
-    public void test18() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "ErrorTest0.test18");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        int int1 = vectorGenome0.getGenesCount();
-        brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
-        double double3 = vectorGenome0.getScore();
-    }
-
-    @Test
-    public void test19() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "ErrorTest0.test19");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        int int1 = vectorGenome0.getGenesCount();
-        int int2 = vectorGenome0.getGenesCount();
-        brain.ga.VectorGenome vectorGenome3 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator4 = vectorGenome3.getEvaluator();
-        int int5 = vectorGenome3.getGenesCount();
-        java.lang.Class<?> wildcardClass6 = vectorGenome3.getClass();
-        int int7 = vectorGenome0.compareTo((java.lang.Object) vectorGenome3);
-    }
 }
 

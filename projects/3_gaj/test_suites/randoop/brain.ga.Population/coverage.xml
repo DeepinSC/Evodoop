@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.19642857142857142" branch-rate="0.045454545454545456" lines-covered="22" lines-valid="112" branches-covered="1" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556160462118">
+<coverage line-rate="0.19642857142857142" branch-rate="0.045454545454545456" lines-covered="22" lines-valid="112" branches-covered="1" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556578111864">
 	<sources>
 		<source>--source</source>
 		<source>/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java</source>
@@ -301,26 +301,26 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="7" hits="79" branch="false"/>
-								<line number="10" hits="79" branch="false"/>
-								<line number="12" hits="79" branch="false"/>
-								<line number="13" hits="79" branch="false"/>
-								<line number="14" hits="79" branch="false"/>
+								<line number="7" hits="82" branch="false"/>
+								<line number="10" hits="82" branch="false"/>
+								<line number="12" hits="82" branch="false"/>
+								<line number="13" hits="82" branch="false"/>
+								<line number="14" hits="82" branch="false"/>
 							</lines>
 						</method>
 						<method name="get" signature="(I)Lbrain/ga/Genome;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="45" hits="12" branch="false"/>
+								<line number="45" hits="15" branch="false"/>
 							</lines>
 						</method>
 						<method name="getEvaluator" signature="()Lbrain/ga/Evaluator;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="40" hits="9" branch="false"/>
+								<line number="40" hits="10" branch="false"/>
 							</lines>
 						</method>
 						<method name="getGenomeSize" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="69" hits="37" branch="false"/>
+								<line number="69" hits="40" branch="false"/>
 							</lines>
 						</method>
 						<method name="getSelector" signature="()Lbrain/ga/Selector;" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -330,7 +330,7 @@
 						</method>
 						<method name="getSize" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="49" hits="7" branch="false"/>
+								<line number="49" hits="8" branch="false"/>
 							</lines>
 						</method>
 						<method name="initialize" signature="(Lbrain/ga/GAEnumAllelesSet;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
@@ -345,20 +345,20 @@
 						</method>
 						<method name="setEvaluator" signature="(Lbrain/ga/Evaluator;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="35" hits="36" branch="false"/>
-								<line number="36" hits="36" branch="false"/>
+								<line number="35" hits="37" branch="false"/>
+								<line number="36" hits="37" branch="false"/>
 							</lines>
 						</method>
 						<method name="setGenomeSize" signature="(I)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="64" hits="17" branch="false"/>
-								<line number="65" hits="17" branch="false"/>
+								<line number="64" hits="18" branch="false"/>
+								<line number="65" hits="18" branch="false"/>
 							</lines>
 						</method>
 						<method name="setSelector" signature="(Lbrain/ga/Selector;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="25" hits="29" branch="false"/>
-								<line number="26" hits="29" branch="false"/>
+								<line number="25" hits="31" branch="false"/>
+								<line number="26" hits="31" branch="false"/>
 							</lines>
 						</method>
 						<method name="sort" signature="()V" line-rate="0.5714285714285714" branch-rate="0.5" complexity="0">
@@ -378,21 +378,21 @@
 						</method>
 					</methods>
 					<lines>
-						<line number="7" hits="79" branch="false"/>
-						<line number="10" hits="79" branch="false"/>
-						<line number="12" hits="79" branch="false"/>
-						<line number="13" hits="79" branch="false"/>
-						<line number="14" hits="79" branch="false"/>
+						<line number="7" hits="82" branch="false"/>
+						<line number="10" hits="82" branch="false"/>
+						<line number="12" hits="82" branch="false"/>
+						<line number="13" hits="82" branch="false"/>
+						<line number="14" hits="82" branch="false"/>
 						<line number="18" hits="8" branch="false"/>
 						<line number="21" hits="12" branch="false"/>
-						<line number="25" hits="29" branch="false"/>
-						<line number="26" hits="29" branch="false"/>
+						<line number="25" hits="31" branch="false"/>
+						<line number="26" hits="31" branch="false"/>
 						<line number="30" hits="43" branch="false"/>
-						<line number="35" hits="36" branch="false"/>
-						<line number="36" hits="36" branch="false"/>
-						<line number="40" hits="9" branch="false"/>
-						<line number="45" hits="12" branch="false"/>
-						<line number="49" hits="7" branch="false"/>
+						<line number="35" hits="37" branch="false"/>
+						<line number="36" hits="37" branch="false"/>
+						<line number="40" hits="10" branch="false"/>
+						<line number="45" hits="15" branch="false"/>
+						<line number="49" hits="8" branch="false"/>
 						<line number="53" hits="22" branch="false"/>
 						<line number="54" hits="22" branch="false"/>
 						<line number="55" hits="22" branch="true" condition-coverage="50% (1/2)">
@@ -404,9 +404,9 @@
 						<line number="57" hits="0" branch="false"/>
 						<line number="58" hits="0" branch="false"/>
 						<line number="60" hits="22" branch="false"/>
-						<line number="64" hits="17" branch="false"/>
-						<line number="65" hits="17" branch="false"/>
-						<line number="69" hits="37" branch="false"/>
+						<line number="64" hits="18" branch="false"/>
+						<line number="65" hits="18" branch="false"/>
+						<line number="69" hits="40" branch="false"/>
 					</lines>
 				</class>
 				<class name="brain.ga.RankSelector" filename="brain/ga/RankSelector.java" line-rate="0.0" branch-rate="1.0" complexity="1.0">

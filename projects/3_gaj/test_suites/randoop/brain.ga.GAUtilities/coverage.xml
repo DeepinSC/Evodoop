@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.05357142857142857" branch-rate="0.18181818181818182" lines-covered="6" lines-valid="112" branches-covered="4" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556160391353">
+<coverage line-rate="0.05357142857142857" branch-rate="0.18181818181818182" lines-covered="6" lines-valid="112" branches-covered="4" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556578039739">
 	<sources>
 		<source>--source</source>
 		<source>/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java</source>
@@ -183,34 +183,34 @@
 						</method>
 						<method name="flipCoin" signature="(D)Z" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="11" hits="50" branch="false"/>
+								<line number="11" hits="52" branch="false"/>
 							</lines>
 						</method>
 						<method name="nextPos" signature="(I)I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="18" hits="35" branch="false"/>
-								<line number="21" hits="29" branch="true" condition-coverage="100% (4/4)">
+								<line number="18" hits="37" branch="false"/>
+								<line number="21" hits="31" branch="true" condition-coverage="100% (4/4)">
 									<conditions>
 										<condition number="0" type="jump" coverage="100%"/>
 										<condition number="1" type="jump" coverage="100%"/>
 									</conditions>
 								</line>
-								<line number="22" hits="29" branch="false"/>
+								<line number="22" hits="31" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
 						<line number="4" hits="1" branch="false"/>
 						<line number="6" hits="1" branch="false"/>
-						<line number="11" hits="50" branch="false"/>
-						<line number="18" hits="35" branch="false"/>
-						<line number="21" hits="29" branch="true" condition-coverage="100% (4/4)">
+						<line number="11" hits="52" branch="false"/>
+						<line number="18" hits="37" branch="false"/>
+						<line number="21" hits="31" branch="true" condition-coverage="100% (4/4)">
 							<conditions>
 								<condition number="0" type="jump" coverage="100%"/>
 								<condition number="1" type="jump" coverage="100%"/>
 							</conditions>
 						</line>
-						<line number="22" hits="29" branch="false"/>
+						<line number="22" hits="31" branch="false"/>
 					</lines>
 				</class>
 				<class name="brain.ga.Genome" filename="brain/ga/Genome.java" line-rate="0.0" branch-rate="0.0" complexity="1.6">

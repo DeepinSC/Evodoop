@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.05357142857142857" branch-rate="0.0" lines-covered="6" lines-valid="112" branches-covered="0" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556160409337">
+<coverage line-rate="0.05357142857142857" branch-rate="0.0" lines-covered="6" lines-valid="112" branches-covered="0" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556578057871">
 	<sources>
 		<source>--source</source>
 		<source>/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java</source>
@@ -435,14 +435,14 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="5" hits="111" branch="false"/>
-								<line number="7" hits="111" branch="false"/>
+								<line number="5" hits="117" branch="false"/>
+								<line number="7" hits="117" branch="false"/>
 							</lines>
 						</method>
 						<method name="mutate" signature="(Lbrain/ga/Genome;D)I" line-rate="0.3333333333333333" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="18" hits="92" branch="false"/>
-								<line number="19" hits="92" branch="true" condition-coverage="0% (0/2)">
+								<line number="18" hits="96" branch="false"/>
+								<line number="19" hits="96" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
@@ -459,18 +459,18 @@
 						</method>
 						<method name="setAllelesSet" signature="(Lbrain/ga/GAEnumAllelesSet;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="11" hits="355" branch="false"/>
-								<line number="12" hits="355" branch="false"/>
+								<line number="11" hits="376" branch="false"/>
+								<line number="12" hits="376" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="5" hits="111" branch="false"/>
-						<line number="7" hits="111" branch="false"/>
-						<line number="11" hits="355" branch="false"/>
-						<line number="12" hits="355" branch="false"/>
-						<line number="18" hits="92" branch="false"/>
-						<line number="19" hits="92" branch="true" condition-coverage="0% (0/2)">
+						<line number="5" hits="117" branch="false"/>
+						<line number="7" hits="117" branch="false"/>
+						<line number="11" hits="376" branch="false"/>
+						<line number="12" hits="376" branch="false"/>
+						<line number="18" hits="96" branch="false"/>
+						<line number="19" hits="96" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>

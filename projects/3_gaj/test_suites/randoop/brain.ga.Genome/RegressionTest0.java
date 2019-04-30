@@ -1122,6 +1122,23 @@ public class RegressionTest0 {
         genome0.initialize();
         brain.ga.Evaluator evaluator5 = genome0.getEvaluator();
         brain.ga.Evaluator evaluator6 = genome0.getEvaluator();
+        genome0.initialize();
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNull(evaluator5);
+        org.junit.Assert.assertNull(evaluator6);
+    }
+
+    @Test
+    public void test62() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test62");
+        brain.ga.Genome genome0 = new brain.ga.Genome();
+        java.lang.Class<?> wildcardClass1 = genome0.getClass();
+        genome0.initialize();
+        genome0.initialize();
+        genome0.initialize();
+        brain.ga.Evaluator evaluator5 = genome0.getEvaluator();
+        brain.ga.Evaluator evaluator6 = genome0.getEvaluator();
         try {
             int int8 = genome0.compareTo((java.lang.Object) 100.0f);
             org.junit.Assert.fail("Expected exception of type java.lang.ClassCastException; message: java.lang.Float cannot be cast to brain.ga.Genome");
@@ -1133,9 +1150,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test62() throws Throwable {
+    public void test63() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test62");
+            System.out.format("%n%s%n", "RegressionTest0.test63");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         java.lang.Class<?> wildcardClass2 = genome0.getClass();
@@ -1151,9 +1168,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test63() throws Throwable {
+    public void test64() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test63");
+            System.out.format("%n%s%n", "RegressionTest0.test64");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         java.lang.Class<?> wildcardClass2 = genome0.getClass();
@@ -1172,9 +1189,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test64() throws Throwable {
+    public void test65() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test64");
+            System.out.format("%n%s%n", "RegressionTest0.test65");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         brain.ga.Evaluator evaluator2 = genome0.getEvaluator();
@@ -1200,9 +1217,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test65() throws Throwable {
+    public void test66() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test65");
+            System.out.format("%n%s%n", "RegressionTest0.test66");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         genome0.initialize();
         brain.ga.Evaluator evaluator2 = genome0.getEvaluator();
@@ -1216,9 +1233,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test66() throws Throwable {
+    public void test67() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test66");
+            System.out.format("%n%s%n", "RegressionTest0.test67");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         genome0.initialize();
@@ -1234,9 +1251,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test67() throws Throwable {
+    public void test68() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test67");
+            System.out.format("%n%s%n", "RegressionTest0.test68");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         java.lang.Class<?> wildcardClass2 = genome0.getClass();
@@ -1254,9 +1271,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test68() throws Throwable {
+    public void test69() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test68");
+            System.out.format("%n%s%n", "RegressionTest0.test69");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         java.lang.Class<?> wildcardClass2 = genome0.getClass();
@@ -1272,9 +1289,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test69() throws Throwable {
+    public void test70() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test69");
+            System.out.format("%n%s%n", "RegressionTest0.test70");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         java.lang.Class<?> wildcardClass2 = genome0.getClass();
@@ -1288,9 +1305,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test70() throws Throwable {
+    public void test71() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test70");
+            System.out.format("%n%s%n", "RegressionTest0.test71");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         brain.ga.Evaluator evaluator1 = genome0.getEvaluator();
         genome0.initialize();
@@ -1302,9 +1319,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test71() throws Throwable {
+    public void test72() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test71");
+            System.out.format("%n%s%n", "RegressionTest0.test72");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         brain.ga.Evaluator evaluator1 = genome0.getEvaluator();
         brain.ga.Evaluator evaluator2 = genome0.getEvaluator();
@@ -1316,9 +1333,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test72() throws Throwable {
+    public void test73() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test72");
+            System.out.format("%n%s%n", "RegressionTest0.test73");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         genome0.initialize();
@@ -1334,9 +1351,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test73() throws Throwable {
+    public void test74() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test73");
+            System.out.format("%n%s%n", "RegressionTest0.test74");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         java.lang.Class<?> wildcardClass2 = genome0.getClass();
@@ -1358,9 +1375,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test74() throws Throwable {
+    public void test75() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test74");
+            System.out.format("%n%s%n", "RegressionTest0.test75");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         genome0.initialize();
@@ -1379,9 +1396,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test75() throws Throwable {
+    public void test76() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test75");
+            System.out.format("%n%s%n", "RegressionTest0.test76");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         java.lang.Class<?> wildcardClass2 = genome0.getClass();
@@ -1398,9 +1415,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test76() throws Throwable {
+    public void test77() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test76");
+            System.out.format("%n%s%n", "RegressionTest0.test77");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         java.lang.Class<?> wildcardClass2 = genome0.getClass();
@@ -1417,9 +1434,29 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test77() throws Throwable {
+    public void test78() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test77");
+            System.out.format("%n%s%n", "RegressionTest0.test78");
+        brain.ga.Genome genome0 = new brain.ga.Genome();
+        java.lang.Class<?> wildcardClass1 = genome0.getClass();
+        genome0.initialize();
+        genome0.initialize();
+        genome0.initialize();
+        genome0.initialize();
+        genome0.initialize();
+        java.lang.Class<?> wildcardClass7 = genome0.getClass();
+        java.lang.Class<?> wildcardClass8 = genome0.getClass();
+        brain.ga.Evaluator evaluator9 = genome0.getEvaluator();
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNotNull(wildcardClass7);
+        org.junit.Assert.assertNotNull(wildcardClass8);
+        org.junit.Assert.assertNull(evaluator9);
+    }
+
+    @Test
+    public void test79() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test79");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         brain.ga.Evaluator evaluator2 = genome0.getEvaluator();
@@ -1438,9 +1475,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test78() throws Throwable {
+    public void test80() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test78");
+            System.out.format("%n%s%n", "RegressionTest0.test80");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         brain.ga.Evaluator evaluator2 = genome0.getEvaluator();
@@ -1454,9 +1491,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test79() throws Throwable {
+    public void test81() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test79");
+            System.out.format("%n%s%n", "RegressionTest0.test81");
         brain.ga.Genome genome0 = new brain.ga.Genome();
         java.lang.Class<?> wildcardClass1 = genome0.getClass();
         genome0.initialize();
@@ -1470,79 +1507,6 @@ public class RegressionTest0 {
         org.junit.Assert.assertNull(evaluator5);
         org.junit.Assert.assertNull(evaluator6);
         org.junit.Assert.assertNull(evaluator7);
-    }
-
-    @Test
-    public void test80() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test80");
-        brain.ga.Genome genome0 = new brain.ga.Genome();
-        java.lang.Class<?> wildcardClass1 = genome0.getClass();
-        genome0.initialize();
-        genome0.initialize();
-        genome0.initialize();
-        brain.ga.Evaluator evaluator5 = genome0.getEvaluator();
-        brain.ga.Evaluator evaluator6 = genome0.getEvaluator();
-        genome0.initialize();
-        genome0.initialize();
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNull(evaluator5);
-        org.junit.Assert.assertNull(evaluator6);
-    }
-
-    @Test
-    public void test81() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test81");
-        brain.ga.Genome genome0 = new brain.ga.Genome();
-        java.lang.Class<?> wildcardClass1 = genome0.getClass();
-        genome0.initialize();
-        genome0.initialize();
-        genome0.initialize();
-        genome0.initialize();
-        genome0.initialize();
-        java.lang.Class<?> wildcardClass7 = genome0.getClass();
-        java.lang.Class<?> wildcardClass8 = genome0.getClass();
-        brain.ga.Evaluator evaluator9 = genome0.getEvaluator();
-        brain.ga.Evaluator evaluator10 = genome0.getEvaluator();
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass7);
-        org.junit.Assert.assertNotNull(wildcardClass8);
-        org.junit.Assert.assertNull(evaluator9);
-        org.junit.Assert.assertNull(evaluator10);
-    }
-
-    @Test
-    public void test82() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test82");
-        brain.ga.Genome genome0 = new brain.ga.Genome();
-        brain.ga.Evaluator evaluator1 = genome0.getEvaluator();
-        java.lang.Class<?> wildcardClass2 = genome0.getClass();
-        java.lang.Class<?> wildcardClass3 = genome0.getClass();
-        brain.ga.Evaluator evaluator4 = genome0.getEvaluator();
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNotNull(wildcardClass2);
-        org.junit.Assert.assertNotNull(wildcardClass3);
-        org.junit.Assert.assertNull(evaluator4);
-    }
-
-    @Test
-    public void test83() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test83");
-        brain.ga.Genome genome0 = new brain.ga.Genome();
-        java.lang.Class<?> wildcardClass1 = genome0.getClass();
-        java.lang.Class<?> wildcardClass2 = genome0.getClass();
-        brain.ga.Evaluator evaluator3 = genome0.getEvaluator();
-        brain.ga.Evaluator evaluator4 = genome0.getEvaluator();
-        genome0.initialize();
-        brain.ga.Evaluator evaluator6 = genome0.getEvaluator();
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass2);
-        org.junit.Assert.assertNull(evaluator3);
-        org.junit.Assert.assertNull(evaluator4);
-        org.junit.Assert.assertNull(evaluator6);
     }
 }
 

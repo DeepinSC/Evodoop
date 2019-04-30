@@ -1199,6 +1199,20 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test073");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
+        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
+        int int2 = vectorGenome0.getGenesCount();
+        int int3 = vectorGenome0.getGenesCount();
+        vectorGenome0.initialize();
+        org.junit.Assert.assertNull(evaluator1);
+        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
+        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 0 + "'", int3 == 0);
+    }
+
+    @Test
+    public void test074() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test074");
+        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         vectorGenome0.initialize();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
         brain.ga.Evaluator evaluator3 = vectorGenome0.getEvaluator();
@@ -1212,9 +1226,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test074() throws Throwable {
+    public void test075() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test074");
+            System.out.format("%n%s%n", "RegressionTest0.test075");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         vectorGenome0.initialize();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
@@ -1231,9 +1245,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test075() throws Throwable {
+    public void test076() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test075");
+            System.out.format("%n%s%n", "RegressionTest0.test076");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1251,9 +1265,22 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test076() throws Throwable {
+    public void test077() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test076");
+            System.out.format("%n%s%n", "RegressionTest0.test077");
+        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
+        int int1 = vectorGenome0.getGenesCount();
+        int int2 = vectorGenome0.getGenesCount();
+        java.lang.Class<?> wildcardClass3 = vectorGenome0.getClass();
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 0 + "'", int1 == 0);
+        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
+        org.junit.Assert.assertNotNull(wildcardClass3);
+    }
+
+    @Test
+    public void test078() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test078");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1268,9 +1295,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test077() throws Throwable {
+    public void test079() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test077");
+            System.out.format("%n%s%n", "RegressionTest0.test079");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         int int1 = vectorGenome0.getGenesCount();
         int int2 = vectorGenome0.getGenesCount();
@@ -1287,9 +1314,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test078() throws Throwable {
+    public void test080() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test078");
+            System.out.format("%n%s%n", "RegressionTest0.test080");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         int int1 = vectorGenome0.getGenesCount();
         int int2 = vectorGenome0.getGenesCount();
@@ -1303,9 +1330,19 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test079() throws Throwable {
+    public void test081() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test079");
+            System.out.format("%n%s%n", "RegressionTest0.test081");
+        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
+        vectorGenome0.initialize();
+        int int2 = vectorGenome0.getGenesCount();
+        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
+    }
+
+    @Test
+    public void test082() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test082");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1321,9 +1358,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test080() throws Throwable {
+    public void test083() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test080");
+            System.out.format("%n%s%n", "RegressionTest0.test083");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
         int int2 = vectorGenome0.getGenesCount();
@@ -1338,9 +1375,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test081() throws Throwable {
+    public void test084() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test081");
+            System.out.format("%n%s%n", "RegressionTest0.test084");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         try {
             int int2 = vectorGenome0.compareTo((java.lang.Object) "");
@@ -1350,9 +1387,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test082() throws Throwable {
+    public void test085() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test082");
+            System.out.format("%n%s%n", "RegressionTest0.test085");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1370,9 +1407,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test083() throws Throwable {
+    public void test086() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test083");
+            System.out.format("%n%s%n", "RegressionTest0.test086");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1388,9 +1425,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test084() throws Throwable {
+    public void test087() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test084");
+            System.out.format("%n%s%n", "RegressionTest0.test087");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1402,9 +1439,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test085() throws Throwable {
+    public void test088() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test085");
+            System.out.format("%n%s%n", "RegressionTest0.test088");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         vectorGenome0.initialize();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
@@ -1419,9 +1456,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test086() throws Throwable {
+    public void test089() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test086");
+            System.out.format("%n%s%n", "RegressionTest0.test089");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1433,9 +1470,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test087() throws Throwable {
+    public void test090() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test087");
+            System.out.format("%n%s%n", "RegressionTest0.test090");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         int int1 = vectorGenome0.getGenesCount();
         java.util.Vector vector2 = null;
@@ -1454,9 +1491,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test088() throws Throwable {
+    public void test091() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test088");
+            System.out.format("%n%s%n", "RegressionTest0.test091");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
         try {
@@ -1468,9 +1505,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test089() throws Throwable {
+    public void test092() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test089");
+            System.out.format("%n%s%n", "RegressionTest0.test092");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
@@ -1490,9 +1527,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test090() throws Throwable {
+    public void test093() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test090");
+            System.out.format("%n%s%n", "RegressionTest0.test093");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
@@ -1515,9 +1552,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test091() throws Throwable {
+    public void test094() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test091");
+            System.out.format("%n%s%n", "RegressionTest0.test094");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
@@ -1531,9 +1568,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test092() throws Throwable {
+    public void test095() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test092");
+            System.out.format("%n%s%n", "RegressionTest0.test095");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         int int1 = vectorGenome0.getGenesCount();
         java.lang.Class<?> wildcardClass2 = vectorGenome0.getClass();
@@ -1542,9 +1579,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test093() throws Throwable {
+    public void test096() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test093");
+            System.out.format("%n%s%n", "RegressionTest0.test096");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         vectorGenome0.initialize();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
@@ -1562,9 +1599,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test094() throws Throwable {
+    public void test097() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test094");
+            System.out.format("%n%s%n", "RegressionTest0.test097");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
         int int2 = vectorGenome0.getGenesCount();
@@ -1582,9 +1619,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test095() throws Throwable {
+    public void test098() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test095");
+            System.out.format("%n%s%n", "RegressionTest0.test098");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         int int1 = vectorGenome0.getGenesCount();
         int int2 = vectorGenome0.getGenesCount();
@@ -1598,9 +1635,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test096() throws Throwable {
+    public void test099() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test096");
+            System.out.format("%n%s%n", "RegressionTest0.test099");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         int int1 = vectorGenome0.getGenesCount();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
@@ -1614,9 +1651,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test097() throws Throwable {
+    public void test100() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test097");
+            System.out.format("%n%s%n", "RegressionTest0.test100");
+        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
+        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
+        int int2 = vectorGenome0.getGenesCount();
+        java.lang.Class<?> wildcardClass3 = vectorGenome0.getClass();
+        int int4 = vectorGenome0.getGenesCount();
+        int int5 = vectorGenome0.getGenesCount();
+        org.junit.Assert.assertNull(evaluator1);
+        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
+        org.junit.Assert.assertNotNull(wildcardClass3);
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
+    }
+
+    @Test
+    public void test101() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test101");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
@@ -1636,9 +1690,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test098() throws Throwable {
+    public void test102() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test098");
+            System.out.format("%n%s%n", "RegressionTest0.test102");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
         int int2 = vectorGenome0.getGenesCount();
@@ -1651,9 +1705,24 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test099() throws Throwable {
+    public void test103() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test099");
+            System.out.format("%n%s%n", "RegressionTest0.test103");
+        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
+        int int1 = vectorGenome0.getGenesCount();
+        brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
+        brain.ga.Evaluator evaluator3 = vectorGenome0.getEvaluator();
+        brain.ga.Evaluator evaluator4 = vectorGenome0.getEvaluator();
+        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 0 + "'", int1 == 0);
+        org.junit.Assert.assertNull(evaluator2);
+        org.junit.Assert.assertNull(evaluator3);
+        org.junit.Assert.assertNull(evaluator4);
+    }
+
+    @Test
+    public void test104() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test104");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1676,9 +1745,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test100() throws Throwable {
+    public void test105() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test100");
+            System.out.format("%n%s%n", "RegressionTest0.test105");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1696,9 +1765,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test101() throws Throwable {
+    public void test106() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test101");
+            System.out.format("%n%s%n", "RegressionTest0.test106");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         vectorGenome0.initialize();
         brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
@@ -1711,9 +1780,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test102() throws Throwable {
+    public void test107() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test102");
+            System.out.format("%n%s%n", "RegressionTest0.test107");
         java.util.Vector vector0 = null;
         brain.ga.Evaluator evaluator1 = null;
         brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
@@ -1727,9 +1796,26 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test103() throws Throwable {
+    public void test108() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test103");
+            System.out.format("%n%s%n", "RegressionTest0.test108");
+        java.util.Vector vector0 = null;
+        brain.ga.Evaluator evaluator1 = null;
+        brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
+        brain.ga.Evaluator evaluator3 = vectorGenome2.getEvaluator();
+        vectorGenome2.initialize();
+        vectorGenome2.initialize();
+        brain.ga.Evaluator evaluator6 = vectorGenome2.getEvaluator();
+        java.lang.Class<?> wildcardClass7 = vectorGenome2.getClass();
+        org.junit.Assert.assertNull(evaluator3);
+        org.junit.Assert.assertNull(evaluator6);
+        org.junit.Assert.assertNotNull(wildcardClass7);
+    }
+
+    @Test
+    public void test109() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test109");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         try {
             vectorGenome0.setGene((int) (short) 1, (java.lang.Object) ' ');
@@ -1739,9 +1825,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test104() throws Throwable {
+    public void test110() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test104");
+            System.out.format("%n%s%n", "RegressionTest0.test110");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         java.util.Vector vector1 = null;
         brain.ga.Evaluator evaluator2 = null;
@@ -1761,9 +1847,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test105() throws Throwable {
+    public void test111() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test105");
+            System.out.format("%n%s%n", "RegressionTest0.test111");
         brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
         brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
         int int2 = vectorGenome0.getGenesCount();
@@ -1775,413 +1861,6 @@ public class RegressionTest0 {
         }
         org.junit.Assert.assertNull(evaluator1);
         org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-    }
-
-    @Test
-    public void test106() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test106");
-        java.util.Vector vector0 = null;
-        brain.ga.Evaluator evaluator1 = null;
-        brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
-        vectorGenome2.initialize();
-        vectorGenome2.initialize();
-        try {
-            int int6 = vectorGenome2.compareTo((java.lang.Object) (-1.0f));
-            org.junit.Assert.fail("Expected exception of type java.lang.ClassCastException; message: java.lang.Float cannot be cast to brain.ga.Genome");
-        } catch (java.lang.ClassCastException e) {
-        }
-    }
-
-    @Test
-    public void test107() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test107");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        vectorGenome0.initialize();
-        brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
-        int int3 = vectorGenome0.getGenesCount();
-        brain.ga.Evaluator evaluator4 = vectorGenome0.getEvaluator();
-        try {
-            java.lang.Object obj6 = vectorGenome0.getGene((int) '4');
-            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Array index out of range: 52");
-        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-        }
-        org.junit.Assert.assertNull(evaluator2);
-        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 0 + "'", int3 == 0);
-        org.junit.Assert.assertNull(evaluator4);
-    }
-
-    @Test
-    public void test108() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test108");
-        java.util.Vector vector0 = null;
-        brain.ga.Evaluator evaluator1 = null;
-        brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
-        vectorGenome2.initialize();
-        vectorGenome2.initialize();
-        java.lang.Class<?> wildcardClass5 = vectorGenome2.getClass();
-        try {
-            vectorGenome2.setGene(0, (java.lang.Object) (short) 10);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNotNull(wildcardClass5);
-    }
-
-    @Test
-    public void test109() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test109");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
-        java.lang.Class<?> wildcardClass2 = vectorGenome0.getClass();
-        java.lang.Object obj3 = null;
-        try {
-            int int4 = vectorGenome0.compareTo(obj3);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNotNull(wildcardClass2);
-    }
-
-    @Test
-    public void test110() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test110");
-        java.util.Vector vector0 = null;
-        brain.ga.Evaluator evaluator1 = null;
-        brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
-        brain.ga.Evaluator evaluator3 = vectorGenome2.getEvaluator();
-        vectorGenome2.initialize();
-        vectorGenome2.initialize();
-        brain.ga.Evaluator evaluator6 = vectorGenome2.getEvaluator();
-        java.lang.Class<?> wildcardClass7 = vectorGenome2.getClass();
-        try {
-            java.lang.Object obj9 = vectorGenome2.getGene(1);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNull(evaluator3);
-        org.junit.Assert.assertNull(evaluator6);
-        org.junit.Assert.assertNotNull(wildcardClass7);
-    }
-
-    @Test
-    public void test111() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test111");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        int int1 = vectorGenome0.getGenesCount();
-        vectorGenome0.initialize();
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 0 + "'", int1 == 0);
-    }
-
-    @Test
-    public void test112() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test112");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
-        int int2 = vectorGenome0.getGenesCount();
-        vectorGenome0.initialize();
-        brain.ga.VectorGenome vectorGenome5 = new brain.ga.VectorGenome();
-        int int6 = vectorGenome5.getGenesCount();
-        int int7 = vectorGenome5.getGenesCount();
-        java.lang.Class<?> wildcardClass8 = vectorGenome5.getClass();
-        try {
-            vectorGenome0.setGene((int) '4', (java.lang.Object) wildcardClass8);
-            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Array index out of range: 52");
-        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 0 + "'", int6 == 0);
-        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
-        org.junit.Assert.assertNotNull(wildcardClass8);
-    }
-
-    @Test
-    public void test113() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test113");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        int int1 = vectorGenome0.getGenesCount();
-        brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
-        brain.ga.Evaluator evaluator3 = vectorGenome0.getEvaluator();
-        brain.ga.Evaluator evaluator4 = vectorGenome0.getEvaluator();
-        brain.ga.VectorGenome vectorGenome6 = new brain.ga.VectorGenome();
-        int int7 = vectorGenome6.getGenesCount();
-        try {
-            vectorGenome0.setGene(100, (java.lang.Object) int7);
-            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Array index out of range: 100");
-        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-        }
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 0 + "'", int1 == 0);
-        org.junit.Assert.assertNull(evaluator2);
-        org.junit.Assert.assertNull(evaluator3);
-        org.junit.Assert.assertNull(evaluator4);
-        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
-    }
-
-    @Test
-    public void test114() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test114");
-        java.util.Vector vector0 = null;
-        brain.ga.Evaluator evaluator1 = null;
-        brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
-        brain.ga.Evaluator evaluator3 = vectorGenome2.getEvaluator();
-        vectorGenome2.initialize();
-        try {
-            java.lang.Object obj6 = vectorGenome2.getGene((int) 'a');
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNull(evaluator3);
-    }
-
-    @Test
-    public void test115() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test115");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
-        brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
-        int int3 = vectorGenome0.getGenesCount();
-        brain.ga.Evaluator evaluator4 = vectorGenome0.getEvaluator();
-        brain.ga.Evaluator evaluator5 = vectorGenome0.getEvaluator();
-        brain.ga.VectorGenome vectorGenome6 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator7 = vectorGenome6.getEvaluator();
-        int int8 = vectorGenome6.getGenesCount();
-        java.lang.Class<?> wildcardClass9 = vectorGenome6.getClass();
-        int int10 = vectorGenome6.getGenesCount();
-        try {
-            int int11 = vectorGenome0.compareTo((java.lang.Object) int10);
-            org.junit.Assert.fail("Expected exception of type java.lang.ClassCastException; message: java.lang.Integer cannot be cast to brain.ga.Genome");
-        } catch (java.lang.ClassCastException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(evaluator2);
-        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 0 + "'", int3 == 0);
-        org.junit.Assert.assertNull(evaluator4);
-        org.junit.Assert.assertNull(evaluator5);
-        org.junit.Assert.assertNull(evaluator7);
-        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 0 + "'", int8 == 0);
-        org.junit.Assert.assertNotNull(wildcardClass9);
-        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 0 + "'", int10 == 0);
-    }
-
-    @Test
-    public void test116() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test116");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        vectorGenome0.initialize();
-        brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
-        brain.ga.Evaluator evaluator3 = vectorGenome0.getEvaluator();
-        vectorGenome0.initialize();
-        java.lang.Class<?> wildcardClass5 = vectorGenome0.getClass();
-        brain.ga.Evaluator evaluator6 = vectorGenome0.getEvaluator();
-        org.junit.Assert.assertNull(evaluator2);
-        org.junit.Assert.assertNull(evaluator3);
-        org.junit.Assert.assertNotNull(wildcardClass5);
-        org.junit.Assert.assertNull(evaluator6);
-    }
-
-    @Test
-    public void test117() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test117");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
-        int int2 = vectorGenome0.getGenesCount();
-        java.lang.Class<?> wildcardClass3 = vectorGenome0.getClass();
-        int int4 = vectorGenome0.getGenesCount();
-        try {
-            java.lang.Object obj6 = vectorGenome0.getGene((-1));
-            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -1");
-        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-        org.junit.Assert.assertNotNull(wildcardClass3);
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
-    }
-
-    @Test
-    public void test118() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test118");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
-        int int2 = vectorGenome0.getGenesCount();
-        java.lang.Class<?> wildcardClass3 = vectorGenome0.getClass();
-        int int4 = vectorGenome0.getGenesCount();
-        int int5 = vectorGenome0.getGenesCount();
-        try {
-            vectorGenome0.setGene((int) (short) 0, (java.lang.Object) (short) 100);
-            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Array index out of range: 0");
-        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-        org.junit.Assert.assertNotNull(wildcardClass3);
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
-        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
-    }
-
-    @Test
-    public void test119() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test119");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
-        int int2 = vectorGenome0.getGenesCount();
-        int int3 = vectorGenome0.getGenesCount();
-        vectorGenome0.initialize();
-        int int5 = vectorGenome0.getGenesCount();
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 0 + "'", int3 == 0);
-        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 0 + "'", int5 == 0);
-    }
-
-    @Test
-    public void test120() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test120");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        vectorGenome0.initialize();
-        int int2 = vectorGenome0.getGenesCount();
-        int int3 = vectorGenome0.getGenesCount();
-        int int4 = vectorGenome0.getGenesCount();
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 0 + "'", int3 == 0);
-        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 0 + "'", int4 == 0);
-    }
-
-    @Test
-    public void test121() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test121");
-        java.util.Vector vector0 = null;
-        brain.ga.Evaluator evaluator1 = null;
-        brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
-        brain.ga.Evaluator evaluator3 = vectorGenome2.getEvaluator();
-        vectorGenome2.initialize();
-        vectorGenome2.initialize();
-        brain.ga.Evaluator evaluator6 = vectorGenome2.getEvaluator();
-        try {
-            int int8 = vectorGenome2.compareTo((java.lang.Object) (-1));
-            org.junit.Assert.fail("Expected exception of type java.lang.ClassCastException; message: java.lang.Integer cannot be cast to brain.ga.Genome");
-        } catch (java.lang.ClassCastException e) {
-        }
-        org.junit.Assert.assertNull(evaluator3);
-        org.junit.Assert.assertNull(evaluator6);
-    }
-
-    @Test
-    public void test122() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test122");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        int int1 = vectorGenome0.getGenesCount();
-        brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
-        vectorGenome0.initialize();
-        vectorGenome0.initialize();
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 0 + "'", int1 == 0);
-        org.junit.Assert.assertNull(evaluator2);
-    }
-
-    @Test
-    public void test123() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test123");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        vectorGenome0.initialize();
-        int int2 = vectorGenome0.getGenesCount();
-        brain.ga.Evaluator evaluator3 = vectorGenome0.getEvaluator();
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-        org.junit.Assert.assertNull(evaluator3);
-    }
-
-    @Test
-    public void test124() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test124");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        int int1 = vectorGenome0.getGenesCount();
-        int int2 = vectorGenome0.getGenesCount();
-        java.lang.Class<?> wildcardClass3 = vectorGenome0.getClass();
-        brain.ga.Evaluator evaluator4 = vectorGenome0.getEvaluator();
-        org.junit.Assert.assertTrue("'" + int1 + "' != '" + 0 + "'", int1 == 0);
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-        org.junit.Assert.assertNotNull(wildcardClass3);
-        org.junit.Assert.assertNull(evaluator4);
-    }
-
-    @Test
-    public void test125() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test125");
-        java.util.Vector vector0 = null;
-        brain.ga.Evaluator evaluator1 = null;
-        brain.ga.VectorGenome vectorGenome2 = new brain.ga.VectorGenome(vector0, evaluator1);
-        brain.ga.Evaluator evaluator3 = vectorGenome2.getEvaluator();
-        vectorGenome2.initialize();
-        vectorGenome2.initialize();
-        brain.ga.Evaluator evaluator6 = vectorGenome2.getEvaluator();
-        java.lang.Class<?> wildcardClass7 = vectorGenome2.getClass();
-        brain.ga.VectorGenome vectorGenome8 = new brain.ga.VectorGenome();
-        vectorGenome8.initialize();
-        try {
-            int int10 = vectorGenome2.compareTo((java.lang.Object) vectorGenome8);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNull(evaluator3);
-        org.junit.Assert.assertNull(evaluator6);
-        org.junit.Assert.assertNotNull(wildcardClass7);
-    }
-
-    @Test
-    public void test126() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test126");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        brain.ga.Evaluator evaluator1 = vectorGenome0.getEvaluator();
-        int int2 = vectorGenome0.getGenesCount();
-        java.lang.Class<?> wildcardClass3 = vectorGenome0.getClass();
-        try {
-            vectorGenome0.setGene((int) (byte) -1, (java.lang.Object) (short) 100);
-            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -1");
-        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertTrue("'" + int2 + "' != '" + 0 + "'", int2 == 0);
-        org.junit.Assert.assertNotNull(wildcardClass3);
-    }
-
-    @Test
-    public void test127() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test127");
-        brain.ga.VectorGenome vectorGenome0 = new brain.ga.VectorGenome();
-        vectorGenome0.initialize();
-        brain.ga.Evaluator evaluator2 = vectorGenome0.getEvaluator();
-        int int3 = vectorGenome0.getGenesCount();
-        brain.ga.VectorGenome vectorGenome5 = new brain.ga.VectorGenome();
-        vectorGenome5.initialize();
-        try {
-            vectorGenome0.setGene((int) 'a', (java.lang.Object) vectorGenome5);
-            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: Array index out of range: 97");
-        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
-        }
-        org.junit.Assert.assertNull(evaluator2);
-        org.junit.Assert.assertTrue("'" + int3 + "' != '" + 0 + "'", int3 == 0);
     }
 }
 

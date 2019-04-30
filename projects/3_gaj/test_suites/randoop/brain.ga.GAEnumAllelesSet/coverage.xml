@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.07142857142857142" branch-rate="0.0" lines-covered="8" lines-valid="112" branches-covered="0" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556160444580">
+<coverage line-rate="0.07142857142857142" branch-rate="0.0" lines-covered="8" lines-valid="112" branches-covered="0" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556578093924">
 	<sources>
 		<source>--source</source>
 		<source>/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java</source>
@@ -131,42 +131,42 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="11" hits="137" branch="false"/>
-								<line number="14" hits="137" branch="false"/>
-								<line number="16" hits="137" branch="false"/>
+								<line number="11" hits="128" branch="false"/>
+								<line number="14" hits="128" branch="false"/>
+								<line number="16" hits="128" branch="false"/>
 							</lines>
 						</method>
 						<method name="allele" signature="()Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="19" hits="29" branch="false"/>
+								<line number="19" hits="28" branch="false"/>
 							</lines>
 						</method>
 						<method name="allele" signature="(I)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="23" hits="62" branch="false"/>
+								<line number="23" hits="58" branch="false"/>
 							</lines>
 						</method>
 						<method name="setAlleles" signature="(Ljava/util/Vector;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="27" hits="448" branch="false"/>
-								<line number="28" hits="448" branch="false"/>
+								<line number="27" hits="402" branch="false"/>
+								<line number="28" hits="402" branch="false"/>
 							</lines>
 						</method>
 						<method name="size" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="31" hits="33" branch="false"/>
+								<line number="31" hits="31" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="11" hits="137" branch="false"/>
-						<line number="14" hits="137" branch="false"/>
-						<line number="16" hits="137" branch="false"/>
-						<line number="19" hits="29" branch="false"/>
-						<line number="23" hits="62" branch="false"/>
-						<line number="27" hits="448" branch="false"/>
-						<line number="28" hits="448" branch="false"/>
-						<line number="31" hits="33" branch="false"/>
+						<line number="11" hits="128" branch="false"/>
+						<line number="14" hits="128" branch="false"/>
+						<line number="16" hits="128" branch="false"/>
+						<line number="19" hits="28" branch="false"/>
+						<line number="23" hits="58" branch="false"/>
+						<line number="27" hits="402" branch="false"/>
+						<line number="28" hits="402" branch="false"/>
+						<line number="31" hits="31" branch="false"/>
 					</lines>
 				</class>
 				<class name="brain.ga.GAUtilities" filename="brain/ga/GAUtilities.java" line-rate="0.0" branch-rate="0.0" complexity="2.0">

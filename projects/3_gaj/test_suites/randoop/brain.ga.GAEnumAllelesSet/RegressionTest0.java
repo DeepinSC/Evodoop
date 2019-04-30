@@ -2760,6 +2760,35 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test118");
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
+        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
+        java.util.Vector vector2 = null;
+        gAEnumAllelesSet0.setAlleles(vector2);
+        java.util.Vector vector4 = null;
+        gAEnumAllelesSet0.setAlleles(vector4);
+        java.util.Vector vector6 = null;
+        gAEnumAllelesSet0.setAlleles(vector6);
+        java.lang.Class<?> wildcardClass8 = gAEnumAllelesSet0.getClass();
+        java.lang.Class<?> wildcardClass9 = gAEnumAllelesSet0.getClass();
+        java.lang.Class<?> wildcardClass10 = gAEnumAllelesSet0.getClass();
+        java.lang.Class<?> wildcardClass11 = gAEnumAllelesSet0.getClass();
+        java.util.Vector vector12 = null;
+        gAEnumAllelesSet0.setAlleles(vector12);
+        java.lang.Class<?> wildcardClass14 = gAEnumAllelesSet0.getClass();
+        java.util.Vector vector15 = null;
+        gAEnumAllelesSet0.setAlleles(vector15);
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNotNull(wildcardClass8);
+        org.junit.Assert.assertNotNull(wildcardClass9);
+        org.junit.Assert.assertNotNull(wildcardClass10);
+        org.junit.Assert.assertNotNull(wildcardClass11);
+        org.junit.Assert.assertNotNull(wildcardClass14);
+    }
+
+    @Test
+    public void test119() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test119");
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
         java.util.Vector vector1 = null;
         gAEnumAllelesSet0.setAlleles(vector1);
         java.lang.Class<?> wildcardClass3 = gAEnumAllelesSet0.getClass();
@@ -2772,9 +2801,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test119() throws Throwable {
+    public void test120() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test119");
+            System.out.format("%n%s%n", "RegressionTest0.test120");
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
         java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
         java.util.Vector vector2 = null;
@@ -2802,285 +2831,6 @@ public class RegressionTest0 {
         org.junit.Assert.assertNotNull(wildcardClass14);
         org.junit.Assert.assertNotNull(wildcardClass15);
         org.junit.Assert.assertNotNull(wildcardClass18);
-    }
-
-    @Test
-    public void test120() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test120");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.util.Vector vector4 = null;
-        gAEnumAllelesSet0.setAlleles(vector4);
-        java.util.Vector vector6 = null;
-        gAEnumAllelesSet0.setAlleles(vector6);
-        java.util.Vector vector8 = null;
-        gAEnumAllelesSet0.setAlleles(vector8);
-        java.util.Vector vector10 = null;
-        gAEnumAllelesSet0.setAlleles(vector10);
-        java.util.Vector vector12 = null;
-        gAEnumAllelesSet0.setAlleles(vector12);
-        try {
-            java.lang.Object obj14 = gAEnumAllelesSet0.allele();
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNotNull(wildcardClass1);
-    }
-
-    @Test
-    public void test121() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test121");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.util.Vector vector4 = null;
-        gAEnumAllelesSet0.setAlleles(vector4);
-        java.util.Vector vector6 = null;
-        gAEnumAllelesSet0.setAlleles(vector6);
-        java.util.Vector vector8 = null;
-        gAEnumAllelesSet0.setAlleles(vector8);
-        java.util.Vector vector10 = null;
-        gAEnumAllelesSet0.setAlleles(vector10);
-        java.util.Vector vector12 = null;
-        gAEnumAllelesSet0.setAlleles(vector12);
-        try {
-            java.lang.Object obj15 = gAEnumAllelesSet0.allele((-1));
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNotNull(wildcardClass1);
-    }
-
-    @Test
-    public void test122() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test122");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.util.Vector vector4 = null;
-        gAEnumAllelesSet0.setAlleles(vector4);
-        java.util.Vector vector6 = null;
-        gAEnumAllelesSet0.setAlleles(vector6);
-        java.util.Vector vector8 = null;
-        gAEnumAllelesSet0.setAlleles(vector8);
-        java.lang.Class<?> wildcardClass10 = gAEnumAllelesSet0.getClass();
-        try {
-            int int11 = gAEnumAllelesSet0.size();
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass10);
-    }
-
-    @Test
-    public void test123() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test123");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.util.Vector vector4 = null;
-        gAEnumAllelesSet0.setAlleles(vector4);
-        java.util.Vector vector6 = null;
-        gAEnumAllelesSet0.setAlleles(vector6);
-        java.lang.Class<?> wildcardClass8 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass9 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass10 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass11 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector12 = null;
-        gAEnumAllelesSet0.setAlleles(vector12);
-        java.util.Vector vector14 = null;
-        gAEnumAllelesSet0.setAlleles(vector14);
-        try {
-            java.lang.Object obj17 = gAEnumAllelesSet0.allele((int) (short) 0);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass8);
-        org.junit.Assert.assertNotNull(wildcardClass9);
-        org.junit.Assert.assertNotNull(wildcardClass10);
-        org.junit.Assert.assertNotNull(wildcardClass11);
-    }
-
-    @Test
-    public void test124() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test124");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.util.Vector vector4 = null;
-        gAEnumAllelesSet0.setAlleles(vector4);
-        java.util.Vector vector6 = null;
-        gAEnumAllelesSet0.setAlleles(vector6);
-        java.lang.Class<?> wildcardClass8 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass9 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass10 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass11 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector12 = null;
-        gAEnumAllelesSet0.setAlleles(vector12);
-        java.lang.Class<?> wildcardClass14 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector15 = null;
-        gAEnumAllelesSet0.setAlleles(vector15);
-        java.util.Vector vector17 = null;
-        gAEnumAllelesSet0.setAlleles(vector17);
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass8);
-        org.junit.Assert.assertNotNull(wildcardClass9);
-        org.junit.Assert.assertNotNull(wildcardClass10);
-        org.junit.Assert.assertNotNull(wildcardClass11);
-        org.junit.Assert.assertNotNull(wildcardClass14);
-    }
-
-    @Test
-    public void test125() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test125");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.util.Vector vector4 = null;
-        gAEnumAllelesSet0.setAlleles(vector4);
-        java.util.Vector vector6 = null;
-        gAEnumAllelesSet0.setAlleles(vector6);
-        java.lang.Class<?> wildcardClass8 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass9 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector10 = null;
-        gAEnumAllelesSet0.setAlleles(vector10);
-        java.util.Vector vector12 = null;
-        gAEnumAllelesSet0.setAlleles(vector12);
-        java.util.Vector vector14 = null;
-        gAEnumAllelesSet0.setAlleles(vector14);
-        try {
-            java.lang.Object obj17 = gAEnumAllelesSet0.allele(0);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass8);
-        org.junit.Assert.assertNotNull(wildcardClass9);
-    }
-
-    @Test
-    public void test126() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test126");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.util.Vector vector4 = null;
-        gAEnumAllelesSet0.setAlleles(vector4);
-        java.util.Vector vector6 = null;
-        gAEnumAllelesSet0.setAlleles(vector6);
-        java.lang.Class<?> wildcardClass8 = gAEnumAllelesSet0.getClass();
-        try {
-            java.lang.Object obj10 = gAEnumAllelesSet0.allele((-1));
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass8);
-    }
-
-    @Test
-    public void test127() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test127");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.util.Vector vector4 = null;
-        gAEnumAllelesSet0.setAlleles(vector4);
-        java.util.Vector vector6 = null;
-        gAEnumAllelesSet0.setAlleles(vector6);
-        java.lang.Class<?> wildcardClass8 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass9 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector10 = null;
-        gAEnumAllelesSet0.setAlleles(vector10);
-        java.util.Vector vector12 = null;
-        gAEnumAllelesSet0.setAlleles(vector12);
-        java.util.Vector vector14 = null;
-        gAEnumAllelesSet0.setAlleles(vector14);
-        java.lang.Class<?> wildcardClass16 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass17 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector18 = null;
-        gAEnumAllelesSet0.setAlleles(vector18);
-        java.lang.Class<?> wildcardClass20 = gAEnumAllelesSet0.getClass();
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass8);
-        org.junit.Assert.assertNotNull(wildcardClass9);
-        org.junit.Assert.assertNotNull(wildcardClass16);
-        org.junit.Assert.assertNotNull(wildcardClass17);
-        org.junit.Assert.assertNotNull(wildcardClass20);
-    }
-
-    @Test
-    public void test128() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test128");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.util.Vector vector4 = null;
-        gAEnumAllelesSet0.setAlleles(vector4);
-        java.util.Vector vector6 = null;
-        gAEnumAllelesSet0.setAlleles(vector6);
-        java.lang.Class<?> wildcardClass8 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass9 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass10 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass11 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector12 = null;
-        gAEnumAllelesSet0.setAlleles(vector12);
-        java.lang.Class<?> wildcardClass14 = gAEnumAllelesSet0.getClass();
-        java.lang.Class<?> wildcardClass15 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector16 = null;
-        gAEnumAllelesSet0.setAlleles(vector16);
-        try {
-            int int18 = gAEnumAllelesSet0.size();
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass8);
-        org.junit.Assert.assertNotNull(wildcardClass9);
-        org.junit.Assert.assertNotNull(wildcardClass10);
-        org.junit.Assert.assertNotNull(wildcardClass11);
-        org.junit.Assert.assertNotNull(wildcardClass14);
-        org.junit.Assert.assertNotNull(wildcardClass15);
-    }
-
-    @Test
-    public void test129() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test129");
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet0 = new brain.ga.GAEnumAllelesSet();
-        java.lang.Class<?> wildcardClass1 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector2 = null;
-        gAEnumAllelesSet0.setAlleles(vector2);
-        java.lang.Class<?> wildcardClass4 = gAEnumAllelesSet0.getClass();
-        java.util.Vector vector5 = null;
-        gAEnumAllelesSet0.setAlleles(vector5);
-        java.util.Vector vector7 = null;
-        gAEnumAllelesSet0.setAlleles(vector7);
-        java.lang.Class<?> wildcardClass9 = gAEnumAllelesSet0.getClass();
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass4);
-        org.junit.Assert.assertNotNull(wildcardClass9);
     }
 }
 

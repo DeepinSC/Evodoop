@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
 
-<coverage line-rate="0.16964285714285715" branch-rate="0.045454545454545456" lines-covered="19" lines-valid="112" branches-covered="1" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556160335442">
+<coverage line-rate="0.16964285714285715" branch-rate="0.045454545454545456" lines-covered="19" lines-valid="112" branches-covered="1" branches-valid="22" complexity="1.2115384615384615" version="2.1.1" timestamp="1556577982465">
 	<sources>
 		<source>--source</source>
 		<source>/home/tinghui/Downloads/evodoop/projects/3_gaj/src/main/java</source>
@@ -217,15 +217,15 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="6" hits="173" branch="false"/>
-								<line number="10" hits="173" branch="false"/>
-								<line number="12" hits="173" branch="false"/>
+								<line number="6" hits="147" branch="false"/>
+								<line number="10" hits="147" branch="false"/>
+								<line number="12" hits="147" branch="false"/>
 							</lines>
 						</method>
 						<method name="compareTo" signature="(Ljava/lang/Object;)I" line-rate="0.4" branch-rate="0.0" complexity="0">
 							<lines>
-								<line number="34" hits="39" branch="false"/>
-								<line number="35" hits="17" branch="true" condition-coverage="0% (0/2)">
+								<line number="34" hits="32" branch="false"/>
+								<line number="35" hits="13" branch="true" condition-coverage="0% (0/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="0%"/>
 									</conditions>
@@ -241,43 +241,43 @@
 						</method>
 						<method name="getEvaluator" signature="()Lbrain/ga/Evaluator;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="15" hits="156" branch="false"/>
+								<line number="15" hits="129" branch="false"/>
 							</lines>
 						</method>
 						<method name="getScore" signature="()D" line-rate="0.5" branch-rate="0.5" complexity="0">
 							<lines>
-								<line number="23" hits="35" branch="true" condition-coverage="50% (1/2)">
+								<line number="23" hits="30" branch="true" condition-coverage="50% (1/2)">
 									<conditions>
 										<condition number="0" type="jump" coverage="50%"/>
 									</conditions>
 								</line>
-								<line number="25" hits="35" branch="false"/>
+								<line number="25" hits="30" branch="false"/>
 								<line number="26" hits="0" branch="false"/>
 								<line number="28" hits="0" branch="false"/>
 							</lines>
 						</method>
 						<method name="initialize" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="20" hits="118" branch="false"/>
+								<line number="20" hits="98" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="6" hits="173" branch="false"/>
-						<line number="10" hits="173" branch="false"/>
-						<line number="12" hits="173" branch="false"/>
-						<line number="15" hits="156" branch="false"/>
-						<line number="20" hits="118" branch="false"/>
-						<line number="23" hits="35" branch="true" condition-coverage="50% (1/2)">
+						<line number="6" hits="147" branch="false"/>
+						<line number="10" hits="147" branch="false"/>
+						<line number="12" hits="147" branch="false"/>
+						<line number="15" hits="129" branch="false"/>
+						<line number="20" hits="98" branch="false"/>
+						<line number="23" hits="30" branch="true" condition-coverage="50% (1/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="50%"/>
 							</conditions>
 						</line>
-						<line number="25" hits="35" branch="false"/>
+						<line number="25" hits="30" branch="false"/>
 						<line number="26" hits="0" branch="false"/>
 						<line number="28" hits="0" branch="false"/>
-						<line number="34" hits="39" branch="false"/>
-						<line number="35" hits="17" branch="true" condition-coverage="0% (0/2)">
+						<line number="34" hits="32" branch="false"/>
+						<line number="35" hits="13" branch="true" condition-coverage="0% (0/2)">
 							<conditions>
 								<condition number="0" type="jump" coverage="0%"/>
 							</conditions>
@@ -563,48 +563,48 @@
 					<methods>
 						<method name="&lt;init&gt;" signature="()V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="7" hits="111" branch="false"/>
-								<line number="9" hits="111" branch="false"/>
-								<line number="10" hits="111" branch="false"/>
+								<line number="7" hits="90" branch="false"/>
+								<line number="9" hits="90" branch="false"/>
+								<line number="10" hits="90" branch="false"/>
 							</lines>
 						</method>
 						<method name="&lt;init&gt;" signature="(Ljava/util/Vector;Lbrain/ga/Evaluator;)V" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="13" hits="62" branch="false"/>
-								<line number="14" hits="62" branch="false"/>
-								<line number="15" hits="62" branch="false"/>
-								<line number="18" hits="62" branch="false"/>
+								<line number="13" hits="57" branch="false"/>
+								<line number="14" hits="57" branch="false"/>
+								<line number="15" hits="57" branch="false"/>
+								<line number="18" hits="57" branch="false"/>
 							</lines>
 						</method>
 						<method name="getGene" signature="(I)Ljava/lang/Object;" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="29" hits="42" branch="false"/>
+								<line number="29" hits="38" branch="false"/>
 							</lines>
 						</method>
 						<method name="getGenesCount" signature="()I" line-rate="1.0" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="21" hits="107" branch="false"/>
+								<line number="21" hits="82" branch="false"/>
 							</lines>
 						</method>
 						<method name="setGene" signature="(ILjava/lang/Object;)V" line-rate="0.5" branch-rate="1.0" complexity="0">
 							<lines>
-								<line number="25" hits="25" branch="false"/>
+								<line number="25" hits="19" branch="false"/>
 								<line number="26" hits="0" branch="false"/>
 							</lines>
 						</method>
 					</methods>
 					<lines>
-						<line number="7" hits="111" branch="false"/>
-						<line number="9" hits="111" branch="false"/>
-						<line number="10" hits="111" branch="false"/>
-						<line number="13" hits="62" branch="false"/>
-						<line number="14" hits="62" branch="false"/>
-						<line number="15" hits="62" branch="false"/>
-						<line number="18" hits="62" branch="false"/>
-						<line number="21" hits="107" branch="false"/>
-						<line number="25" hits="25" branch="false"/>
+						<line number="7" hits="90" branch="false"/>
+						<line number="9" hits="90" branch="false"/>
+						<line number="10" hits="90" branch="false"/>
+						<line number="13" hits="57" branch="false"/>
+						<line number="14" hits="57" branch="false"/>
+						<line number="15" hits="57" branch="false"/>
+						<line number="18" hits="57" branch="false"/>
+						<line number="21" hits="82" branch="false"/>
+						<line number="25" hits="19" branch="false"/>
 						<line number="26" hits="0" branch="false"/>
-						<line number="29" hits="42" branch="false"/>
+						<line number="29" hits="38" branch="false"/>
 					</lines>
 				</class>
 			</classes>

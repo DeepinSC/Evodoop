@@ -2189,33 +2189,6 @@ public class RegressionTest0 {
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
         sectMutator0.setAllelesSet(gAEnumAllelesSet2);
-        java.lang.Class<?> wildcardClass4 = sectMutator0.getClass();
-        java.lang.Class<?> wildcardClass5 = sectMutator0.getClass();
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet6 = null;
-        sectMutator0.setAllelesSet(gAEnumAllelesSet6);
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet8 = null;
-        sectMutator0.setAllelesSet(gAEnumAllelesSet8);
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet10 = null;
-        sectMutator0.setAllelesSet(gAEnumAllelesSet10);
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet12 = null;
-        sectMutator0.setAllelesSet(gAEnumAllelesSet12);
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet14 = null;
-        sectMutator0.setAllelesSet(gAEnumAllelesSet14);
-        java.lang.Class<?> wildcardClass16 = sectMutator0.getClass();
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass4);
-        org.junit.Assert.assertNotNull(wildcardClass5);
-        org.junit.Assert.assertNotNull(wildcardClass16);
-    }
-
-    @Test
-    public void test096() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test096");
-        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
-        java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
-        brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
-        sectMutator0.setAllelesSet(gAEnumAllelesSet2);
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet4 = null;
         sectMutator0.setAllelesSet(gAEnumAllelesSet4);
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet6 = null;
@@ -2234,9 +2207,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test097() throws Throwable {
+    public void test096() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test097");
+            System.out.format("%n%s%n", "RegressionTest0.test096");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2261,9 +2234,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test098() throws Throwable {
+    public void test097() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test098");
+            System.out.format("%n%s%n", "RegressionTest0.test097");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2288,9 +2261,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test099() throws Throwable {
+    public void test098() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test099");
+            System.out.format("%n%s%n", "RegressionTest0.test098");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2315,9 +2288,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test100() throws Throwable {
+    public void test099() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test100");
+            System.out.format("%n%s%n", "RegressionTest0.test099");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2344,9 +2317,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test101() throws Throwable {
+    public void test100() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test101");
+            System.out.format("%n%s%n", "RegressionTest0.test100");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2365,9 +2338,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test102() throws Throwable {
+    public void test101() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test102");
+            System.out.format("%n%s%n", "RegressionTest0.test101");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2396,9 +2369,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test103() throws Throwable {
+    public void test102() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test103");
+            System.out.format("%n%s%n", "RegressionTest0.test102");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2423,9 +2396,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test104() throws Throwable {
+    public void test103() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test104");
+            System.out.format("%n%s%n", "RegressionTest0.test103");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2450,9 +2423,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test105() throws Throwable {
+    public void test104() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test105");
+            System.out.format("%n%s%n", "RegressionTest0.test104");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2477,9 +2450,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test106() throws Throwable {
+    public void test105() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test106");
+            System.out.format("%n%s%n", "RegressionTest0.test105");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2502,22 +2475,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test107() throws Throwable {
+    public void test106() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test107");
-        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
-        java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
-        java.lang.Class<?> wildcardClass2 = sectMutator0.getClass();
-        java.lang.Class<?> wildcardClass3 = sectMutator0.getClass();
-        org.junit.Assert.assertNotNull(wildcardClass1);
-        org.junit.Assert.assertNotNull(wildcardClass2);
-        org.junit.Assert.assertNotNull(wildcardClass3);
-    }
-
-    @Test
-    public void test108() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test108");
+            System.out.format("%n%s%n", "RegressionTest0.test106");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2544,9 +2504,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test109() throws Throwable {
+    public void test107() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test109");
+            System.out.format("%n%s%n", "RegressionTest0.test107");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2567,9 +2527,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test110() throws Throwable {
+    public void test108() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test110");
+            System.out.format("%n%s%n", "RegressionTest0.test108");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2596,9 +2556,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test111() throws Throwable {
+    public void test109() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test111");
+            System.out.format("%n%s%n", "RegressionTest0.test109");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2619,9 +2579,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test112() throws Throwable {
+    public void test110() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test112");
+            System.out.format("%n%s%n", "RegressionTest0.test110");
         brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
         java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
         brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
@@ -2647,6 +2607,196 @@ public class RegressionTest0 {
         org.junit.Assert.assertNotNull(wildcardClass11);
         org.junit.Assert.assertNotNull(wildcardClass14);
         org.junit.Assert.assertNotNull(wildcardClass19);
+    }
+
+    @Test
+    public void test111() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test111");
+        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet1 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet1);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet3 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet3);
+        java.lang.Class<?> wildcardClass5 = sectMutator0.getClass();
+        brain.ga.Genome genome6 = null;
+        try {
+            int int8 = sectMutator0.mutate(genome6, (double) 'a');
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        }
+        org.junit.Assert.assertNotNull(wildcardClass5);
+    }
+
+    @Test
+    public void test112() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test112");
+        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
+        java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet2);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet4 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet4);
+        java.lang.Class<?> wildcardClass6 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass7 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass8 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet9 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet9);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet11 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet11);
+        brain.ga.Genome genome13 = null;
+        try {
+            int int15 = sectMutator0.mutate(genome13, (double) '4');
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        }
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNotNull(wildcardClass6);
+        org.junit.Assert.assertNotNull(wildcardClass7);
+        org.junit.Assert.assertNotNull(wildcardClass8);
+    }
+
+    @Test
+    public void test113() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test113");
+        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
+        java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass2 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass3 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass4 = sectMutator0.getClass();
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNotNull(wildcardClass2);
+        org.junit.Assert.assertNotNull(wildcardClass3);
+        org.junit.Assert.assertNotNull(wildcardClass4);
+    }
+
+    @Test
+    public void test114() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test114");
+        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
+        java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet2);
+        java.lang.Class<?> wildcardClass4 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass5 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet6 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet6);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet8 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet8);
+        java.lang.Class<?> wildcardClass10 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet11 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet11);
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNotNull(wildcardClass4);
+        org.junit.Assert.assertNotNull(wildcardClass5);
+        org.junit.Assert.assertNotNull(wildcardClass10);
+    }
+
+    @Test
+    public void test115() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test115");
+        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
+        java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet2);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet4 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet4);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet6 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet6);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet8 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet8);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet10 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet10);
+        java.lang.Class<?> wildcardClass12 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet13 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet13);
+        brain.ga.Genome genome15 = null;
+        try {
+            int int17 = sectMutator0.mutate(genome15, 0.0d);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        }
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNotNull(wildcardClass12);
+    }
+
+    @Test
+    public void test116() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test116");
+        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
+        java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet2);
+        java.lang.Class<?> wildcardClass4 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass5 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet6 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet6);
+        java.lang.Class<?> wildcardClass8 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass9 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet10 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet10);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet12 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet12);
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNotNull(wildcardClass4);
+        org.junit.Assert.assertNotNull(wildcardClass5);
+        org.junit.Assert.assertNotNull(wildcardClass8);
+        org.junit.Assert.assertNotNull(wildcardClass9);
+    }
+
+    @Test
+    public void test117() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test117");
+        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
+        java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet2);
+        java.lang.Class<?> wildcardClass4 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass5 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet6 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet6);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet8 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet8);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet10 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet10);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet12 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet12);
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet14 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet14);
+        java.lang.Class<?> wildcardClass16 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass17 = sectMutator0.getClass();
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNotNull(wildcardClass4);
+        org.junit.Assert.assertNotNull(wildcardClass5);
+        org.junit.Assert.assertNotNull(wildcardClass16);
+        org.junit.Assert.assertNotNull(wildcardClass17);
+    }
+
+    @Test
+    public void test118() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test118");
+        brain.ga.SectMutator sectMutator0 = new brain.ga.SectMutator();
+        java.lang.Class<?> wildcardClass1 = sectMutator0.getClass();
+        brain.ga.GAEnumAllelesSet gAEnumAllelesSet2 = null;
+        sectMutator0.setAllelesSet(gAEnumAllelesSet2);
+        java.lang.Class<?> wildcardClass4 = sectMutator0.getClass();
+        java.lang.Class<?> wildcardClass5 = sectMutator0.getClass();
+        brain.ga.Genome genome6 = null;
+        try {
+            int int8 = sectMutator0.mutate(genome6, 100.0d);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        }
+        org.junit.Assert.assertNotNull(wildcardClass1);
+        org.junit.Assert.assertNotNull(wildcardClass4);
+        org.junit.Assert.assertNotNull(wildcardClass5);
     }
 }
 

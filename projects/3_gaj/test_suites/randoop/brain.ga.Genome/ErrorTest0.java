@@ -595,20 +595,5 @@ public class ErrorTest0 {
         java.lang.Class<?> wildcardClass8 = genome0.getClass();
         double double9 = genome0.getScore();
     }
-
-    @Test
-    public void test45() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "ErrorTest0.test45");
-        brain.ga.Genome genome0 = new brain.ga.Genome();
-        java.lang.Class<?> wildcardClass1 = genome0.getClass();
-        genome0.initialize();
-        genome0.initialize();
-        genome0.initialize();
-        genome0.initialize();
-        genome0.initialize();
-        java.lang.Class<?> wildcardClass7 = genome0.getClass();
-        double double8 = genome0.getScore();
-    }
 }
 

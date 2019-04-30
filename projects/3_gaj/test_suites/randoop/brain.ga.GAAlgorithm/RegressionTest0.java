@@ -255,6 +255,25 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test014");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
+        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
+        brain.ga.SexualCrossover sexualCrossover2 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
+        brain.ga.SexualCrossover sexualCrossover4 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
+        brain.ga.SexualCrossover sexualCrossover6 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover6);
+        brain.ga.Evaluator evaluator8 = gAAlgorithm0.getEvaluator();
+        brain.ga.SexualCrossover sexualCrossover9 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover9);
+        org.junit.Assert.assertNull(evaluator1);
+        org.junit.Assert.assertNull(evaluator8);
+    }
+
+    @Test
+    public void test015() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test015");
+        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = gAAlgorithm0.getMutator();
         java.lang.Class<?> wildcardClass2 = gAAlgorithm0.getClass();
         brain.ga.Selector selector3 = null;
@@ -268,9 +287,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test015() throws Throwable {
+    public void test016() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test015");
+            System.out.format("%n%s%n", "RegressionTest0.test016");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         gAAlgorithm0.evolve();
@@ -288,9 +307,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test016() throws Throwable {
+    public void test017() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test016");
+            System.out.format("%n%s%n", "RegressionTest0.test017");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -311,9 +330,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test017() throws Throwable {
+    public void test018() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test017");
+            System.out.format("%n%s%n", "RegressionTest0.test018");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -332,9 +351,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test018() throws Throwable {
+    public void test019() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test018");
+            System.out.format("%n%s%n", "RegressionTest0.test019");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -350,9 +369,25 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test019() throws Throwable {
+    public void test020() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test019");
+            System.out.format("%n%s%n", "RegressionTest0.test020");
+        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
+        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
+        brain.ga.SexualCrossover sexualCrossover2 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
+        brain.ga.Evaluator evaluator4 = gAAlgorithm0.getEvaluator();
+        brain.ga.SexualCrossover sexualCrossover5 = gAAlgorithm0.getCrossoverOperator();
+        gAAlgorithm0.evolve();
+        org.junit.Assert.assertNull(evaluator1);
+        org.junit.Assert.assertNull(evaluator4);
+        org.junit.Assert.assertNull(sexualCrossover5);
+    }
+
+    @Test
+    public void test021() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test021");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -367,9 +402,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test020() throws Throwable {
+    public void test022() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test020");
+            System.out.format("%n%s%n", "RegressionTest0.test022");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = gAAlgorithm0.getMutator();
         gAAlgorithm0.evolve();
@@ -383,9 +418,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test021() throws Throwable {
+    public void test023() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test021");
+            System.out.format("%n%s%n", "RegressionTest0.test023");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -401,9 +436,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test022() throws Throwable {
+    public void test024() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test022");
+            System.out.format("%n%s%n", "RegressionTest0.test024");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -426,9 +461,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test023() throws Throwable {
+    public void test025() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test023");
+            System.out.format("%n%s%n", "RegressionTest0.test025");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -446,9 +481,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test024() throws Throwable {
+    public void test026() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test024");
+            System.out.format("%n%s%n", "RegressionTest0.test026");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -471,9 +506,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test025() throws Throwable {
+    public void test027() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test025");
+            System.out.format("%n%s%n", "RegressionTest0.test027");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Selector selector1 = null;
         try {
@@ -484,9 +519,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test026() throws Throwable {
+    public void test028() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test026");
+            System.out.format("%n%s%n", "RegressionTest0.test028");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -503,9 +538,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test027() throws Throwable {
+    public void test029() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test027");
+            System.out.format("%n%s%n", "RegressionTest0.test029");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -519,9 +554,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test028() throws Throwable {
+    public void test030() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test028");
+            System.out.format("%n%s%n", "RegressionTest0.test030");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -542,9 +577,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test029() throws Throwable {
+    public void test031() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test029");
+            System.out.format("%n%s%n", "RegressionTest0.test031");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -565,9 +600,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test030() throws Throwable {
+    public void test032() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test030");
+            System.out.format("%n%s%n", "RegressionTest0.test032");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         gAAlgorithm0.evolve();
@@ -587,9 +622,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test031() throws Throwable {
+    public void test033() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test031");
+            System.out.format("%n%s%n", "RegressionTest0.test033");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -608,9 +643,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test032() throws Throwable {
+    public void test034() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test032");
+            System.out.format("%n%s%n", "RegressionTest0.test034");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = gAAlgorithm0.getMutator();
         brain.ga.Mutator mutator2 = null;
@@ -621,9 +656,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test033() throws Throwable {
+    public void test035() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test033");
+            System.out.format("%n%s%n", "RegressionTest0.test035");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -641,9 +676,34 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test034() throws Throwable {
+    public void test036() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test034");
+            System.out.format("%n%s%n", "RegressionTest0.test036");
+        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
+        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
+        brain.ga.SexualCrossover sexualCrossover2 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
+        brain.ga.SexualCrossover sexualCrossover4 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
+        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
+        brain.ga.SexualCrossover sexualCrossover7 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover7);
+        brain.ga.Mutator mutator9 = null;
+        gAAlgorithm0.setMutator(mutator9);
+        brain.ga.Mutator mutator11 = null;
+        gAAlgorithm0.setMutator(mutator11);
+        brain.ga.Mutator mutator13 = null;
+        gAAlgorithm0.setMutator(mutator13);
+        brain.ga.SexualCrossover sexualCrossover15 = gAAlgorithm0.getCrossoverOperator();
+        org.junit.Assert.assertNull(evaluator1);
+        org.junit.Assert.assertNull(selector6);
+        org.junit.Assert.assertNull(sexualCrossover15);
+    }
+
+    @Test
+    public void test037() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test037");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -661,9 +721,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test035() throws Throwable {
+    public void test038() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test035");
+            System.out.format("%n%s%n", "RegressionTest0.test038");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -674,9 +734,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test036() throws Throwable {
+    public void test039() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test036");
+            System.out.format("%n%s%n", "RegressionTest0.test039");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -690,9 +750,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test037() throws Throwable {
+    public void test040() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test037");
+            System.out.format("%n%s%n", "RegressionTest0.test040");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -705,9 +765,37 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test038() throws Throwable {
+    public void test041() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test038");
+            System.out.format("%n%s%n", "RegressionTest0.test041");
+        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
+        gAAlgorithm0.evolve();
+    }
+
+    @Test
+    public void test042() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test042");
+        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
+        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
+        brain.ga.SexualCrossover sexualCrossover2 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
+        brain.ga.SexualCrossover sexualCrossover4 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
+        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
+        brain.ga.SexualCrossover sexualCrossover7 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover7);
+        brain.ga.Evaluator evaluator9 = gAAlgorithm0.getEvaluator();
+        gAAlgorithm0.evolve();
+        org.junit.Assert.assertNull(evaluator1);
+        org.junit.Assert.assertNull(selector6);
+        org.junit.Assert.assertNull(evaluator9);
+    }
+
+    @Test
+    public void test043() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test043");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -732,9 +820,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test039() throws Throwable {
+    public void test044() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test039");
+            System.out.format("%n%s%n", "RegressionTest0.test044");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         gAAlgorithm0.evolve();
@@ -748,9 +836,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test040() throws Throwable {
+    public void test045() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test040");
+            System.out.format("%n%s%n", "RegressionTest0.test045");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -779,9 +867,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test041() throws Throwable {
+    public void test046() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test041");
+            System.out.format("%n%s%n", "RegressionTest0.test046");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -802,9 +890,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test042() throws Throwable {
+    public void test047() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test042");
+            System.out.format("%n%s%n", "RegressionTest0.test047");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -831,9 +919,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test043() throws Throwable {
+    public void test048() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test043");
+            System.out.format("%n%s%n", "RegressionTest0.test048");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -860,9 +948,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test044() throws Throwable {
+    public void test049() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test044");
+            System.out.format("%n%s%n", "RegressionTest0.test049");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -885,9 +973,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test045() throws Throwable {
+    public void test050() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test045");
+            System.out.format("%n%s%n", "RegressionTest0.test050");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -913,9 +1001,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test046() throws Throwable {
+    public void test051() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test046");
+            System.out.format("%n%s%n", "RegressionTest0.test051");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -934,9 +1022,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test047() throws Throwable {
+    public void test052() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test047");
+            System.out.format("%n%s%n", "RegressionTest0.test052");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = gAAlgorithm0.getMutator();
         brain.ga.Selector selector2 = null;
@@ -949,9 +1037,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test048() throws Throwable {
+    public void test053() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test048");
+            System.out.format("%n%s%n", "RegressionTest0.test053");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = gAAlgorithm0.getMutator();
         java.lang.Class<?> wildcardClass2 = gAAlgorithm0.getClass();
@@ -962,9 +1050,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test049() throws Throwable {
+    public void test054() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test049");
+            System.out.format("%n%s%n", "RegressionTest0.test054");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -983,9 +1071,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test050() throws Throwable {
+    public void test055() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test050");
+            System.out.format("%n%s%n", "RegressionTest0.test055");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -998,9 +1086,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test051() throws Throwable {
+    public void test056() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test051");
+            System.out.format("%n%s%n", "RegressionTest0.test056");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = gAAlgorithm0.getMutator();
         gAAlgorithm0.evolve();
@@ -1014,9 +1102,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test052() throws Throwable {
+    public void test057() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test052");
+            System.out.format("%n%s%n", "RegressionTest0.test057");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         gAAlgorithm0.evolve();
@@ -1032,9 +1120,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test053() throws Throwable {
+    public void test058() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test053");
+            System.out.format("%n%s%n", "RegressionTest0.test058");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1057,9 +1145,42 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test054() throws Throwable {
+    public void test059() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test054");
+            System.out.format("%n%s%n", "RegressionTest0.test059");
+        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
+        brain.ga.Mutator mutator1 = gAAlgorithm0.getMutator();
+        java.lang.Class<?> wildcardClass2 = gAAlgorithm0.getClass();
+        brain.ga.Mutator mutator3 = null;
+        gAAlgorithm0.setMutator(mutator3);
+        org.junit.Assert.assertNull(mutator1);
+        org.junit.Assert.assertNotNull(wildcardClass2);
+    }
+
+    @Test
+    public void test060() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test060");
+        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
+        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
+        brain.ga.SexualCrossover sexualCrossover2 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
+        brain.ga.SexualCrossover sexualCrossover4 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
+        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
+        gAAlgorithm0.evolve();
+        brain.ga.Mutator mutator8 = gAAlgorithm0.getMutator();
+        brain.ga.Selector selector9 = gAAlgorithm0.getSelector();
+        org.junit.Assert.assertNull(evaluator1);
+        org.junit.Assert.assertNull(selector6);
+        org.junit.Assert.assertNull(mutator8);
+        org.junit.Assert.assertNull(selector9);
+    }
+
+    @Test
+    public void test061() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test061");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1084,9 +1205,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test055() throws Throwable {
+    public void test062() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test055");
+            System.out.format("%n%s%n", "RegressionTest0.test062");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1109,9 +1230,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test056() throws Throwable {
+    public void test063() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test056");
+            System.out.format("%n%s%n", "RegressionTest0.test063");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1136,9 +1257,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test057() throws Throwable {
+    public void test064() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test057");
+            System.out.format("%n%s%n", "RegressionTest0.test064");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -1153,9 +1274,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test058() throws Throwable {
+    public void test065() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test058");
+            System.out.format("%n%s%n", "RegressionTest0.test065");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -1172,9 +1293,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test059() throws Throwable {
+    public void test066() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test059");
+            System.out.format("%n%s%n", "RegressionTest0.test066");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1199,9 +1320,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test060() throws Throwable {
+    public void test067() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test060");
+            System.out.format("%n%s%n", "RegressionTest0.test067");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1218,9 +1339,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test061() throws Throwable {
+    public void test068() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test061");
+            System.out.format("%n%s%n", "RegressionTest0.test068");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1245,9 +1366,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test062() throws Throwable {
+    public void test069() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test062");
+            System.out.format("%n%s%n", "RegressionTest0.test069");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -1256,9 +1377,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test063() throws Throwable {
+    public void test070() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test063");
+            System.out.format("%n%s%n", "RegressionTest0.test070");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1285,9 +1406,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test064() throws Throwable {
+    public void test071() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test064");
+            System.out.format("%n%s%n", "RegressionTest0.test071");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1312,9 +1433,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test065() throws Throwable {
+    public void test072() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test065");
+            System.out.format("%n%s%n", "RegressionTest0.test072");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1335,9 +1456,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test066() throws Throwable {
+    public void test073() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test066");
+            System.out.format("%n%s%n", "RegressionTest0.test073");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1361,9 +1482,34 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test067() throws Throwable {
+    public void test074() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test067");
+            System.out.format("%n%s%n", "RegressionTest0.test074");
+        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
+        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
+        brain.ga.SexualCrossover sexualCrossover2 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
+        brain.ga.SexualCrossover sexualCrossover4 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
+        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
+        brain.ga.SexualCrossover sexualCrossover7 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover7);
+        brain.ga.Mutator mutator9 = gAAlgorithm0.getMutator();
+        brain.ga.Selector selector10 = gAAlgorithm0.getSelector();
+        brain.ga.Selector selector11 = gAAlgorithm0.getSelector();
+        brain.ga.SexualCrossover sexualCrossover12 = gAAlgorithm0.getCrossoverOperator();
+        org.junit.Assert.assertNull(evaluator1);
+        org.junit.Assert.assertNull(selector6);
+        org.junit.Assert.assertNull(mutator9);
+        org.junit.Assert.assertNull(selector10);
+        org.junit.Assert.assertNull(selector11);
+        org.junit.Assert.assertNull(sexualCrossover12);
+    }
+
+    @Test
+    public void test075() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test075");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         gAAlgorithm0.evolve();
@@ -1375,9 +1521,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test068() throws Throwable {
+    public void test076() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test068");
+            System.out.format("%n%s%n", "RegressionTest0.test076");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1396,9 +1542,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test069() throws Throwable {
+    public void test077() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test069");
+            System.out.format("%n%s%n", "RegressionTest0.test077");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -1417,18 +1563,18 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test070() throws Throwable {
+    public void test078() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test070");
+            System.out.format("%n%s%n", "RegressionTest0.test078");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         java.lang.Class<?> wildcardClass1 = gAAlgorithm0.getClass();
         org.junit.Assert.assertNotNull(wildcardClass1);
     }
 
     @Test
-    public void test071() throws Throwable {
+    public void test079() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test071");
+            System.out.format("%n%s%n", "RegressionTest0.test079");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = gAAlgorithm0.getMutator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1437,9 +1583,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test072() throws Throwable {
+    public void test080() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test072");
+            System.out.format("%n%s%n", "RegressionTest0.test080");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -1460,9 +1606,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test073() throws Throwable {
+    public void test081() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test073");
+            System.out.format("%n%s%n", "RegressionTest0.test081");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -1477,9 +1623,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test074() throws Throwable {
+    public void test082() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test074");
+            System.out.format("%n%s%n", "RegressionTest0.test082");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -1500,9 +1646,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test075() throws Throwable {
+    public void test083() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test075");
+            System.out.format("%n%s%n", "RegressionTest0.test083");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1525,9 +1671,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test076() throws Throwable {
+    public void test084() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test076");
+            System.out.format("%n%s%n", "RegressionTest0.test084");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1556,9 +1702,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test077() throws Throwable {
+    public void test085() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test077");
+            System.out.format("%n%s%n", "RegressionTest0.test085");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1581,9 +1727,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test078() throws Throwable {
+    public void test086() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test078");
+            System.out.format("%n%s%n", "RegressionTest0.test086");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1600,9 +1746,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test079() throws Throwable {
+    public void test087() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test079");
+            System.out.format("%n%s%n", "RegressionTest0.test087");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -1613,9 +1759,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test080() throws Throwable {
+    public void test088() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test080");
+            System.out.format("%n%s%n", "RegressionTest0.test088");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1630,9 +1776,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test081() throws Throwable {
+    public void test089() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test081");
+            System.out.format("%n%s%n", "RegressionTest0.test089");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Mutator mutator1 = null;
         gAAlgorithm0.setMutator(mutator1);
@@ -1644,9 +1790,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test082() throws Throwable {
+    public void test090() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test082");
+            System.out.format("%n%s%n", "RegressionTest0.test090");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1665,9 +1811,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test083() throws Throwable {
+    public void test091() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test083");
+            System.out.format("%n%s%n", "RegressionTest0.test091");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1697,9 +1843,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test084() throws Throwable {
+    public void test092() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test084");
+            System.out.format("%n%s%n", "RegressionTest0.test092");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1722,9 +1868,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test085() throws Throwable {
+    public void test093() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test085");
+            System.out.format("%n%s%n", "RegressionTest0.test093");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1746,9 +1892,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test086() throws Throwable {
+    public void test094() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test086");
+            System.out.format("%n%s%n", "RegressionTest0.test094");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1772,9 +1918,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test087() throws Throwable {
+    public void test095() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test087");
+            System.out.format("%n%s%n", "RegressionTest0.test095");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1787,18 +1933,38 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test088() throws Throwable {
+    public void test096() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test088");
+            System.out.format("%n%s%n", "RegressionTest0.test096");
+        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
+        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
+        brain.ga.SexualCrossover sexualCrossover2 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
+        brain.ga.SexualCrossover sexualCrossover4 = null;
+        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
+        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
+        gAAlgorithm0.evolve();
+        brain.ga.Mutator mutator8 = gAAlgorithm0.getMutator();
+        brain.ga.Evaluator evaluator9 = gAAlgorithm0.getEvaluator();
+        org.junit.Assert.assertNull(evaluator1);
+        org.junit.Assert.assertNull(selector6);
+        org.junit.Assert.assertNull(mutator8);
+        org.junit.Assert.assertNull(evaluator9);
+    }
+
+    @Test
+    public void test097() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test097");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Selector selector1 = gAAlgorithm0.getSelector();
         org.junit.Assert.assertNull(selector1);
     }
 
     @Test
-    public void test089() throws Throwable {
+    public void test098() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test089");
+            System.out.format("%n%s%n", "RegressionTest0.test098");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1821,9 +1987,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test090() throws Throwable {
+    public void test099() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test090");
+            System.out.format("%n%s%n", "RegressionTest0.test099");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1844,9 +2010,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test091() throws Throwable {
+    public void test100() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test091");
+            System.out.format("%n%s%n", "RegressionTest0.test100");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         gAAlgorithm0.evolve();
@@ -1860,9 +2026,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test092() throws Throwable {
+    public void test101() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test092");
+            System.out.format("%n%s%n", "RegressionTest0.test101");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1885,9 +2051,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test093() throws Throwable {
+    public void test102() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test093");
+            System.out.format("%n%s%n", "RegressionTest0.test102");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         gAAlgorithm0.evolve();
@@ -1899,9 +2065,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test094() throws Throwable {
+    public void test103() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test094");
+            System.out.format("%n%s%n", "RegressionTest0.test103");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1921,9 +2087,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test095() throws Throwable {
+    public void test104() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test095");
+            System.out.format("%n%s%n", "RegressionTest0.test104");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1948,9 +2114,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test096() throws Throwable {
+    public void test105() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test096");
+            System.out.format("%n%s%n", "RegressionTest0.test105");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1969,9 +2135,9 @@ public class RegressionTest0 {
     }
 
     @Test
-    public void test097() throws Throwable {
+    public void test106() throws Throwable {
         if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test097");
+            System.out.format("%n%s%n", "RegressionTest0.test106");
         brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
         brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
         brain.ga.SexualCrossover sexualCrossover2 = null;
@@ -1986,419 +2152,6 @@ public class RegressionTest0 {
         org.junit.Assert.assertNull(evaluator1);
         org.junit.Assert.assertNull(selector6);
         org.junit.Assert.assertNull(evaluator10);
-    }
-
-    @Test
-    public void test098() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test098");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        brain.ga.SexualCrossover sexualCrossover7 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover7);
-        brain.ga.Mutator mutator9 = gAAlgorithm0.getMutator();
-        brain.ga.Selector selector10 = gAAlgorithm0.getSelector();
-        brain.ga.Selector selector11 = gAAlgorithm0.getSelector();
-        brain.ga.SexualCrossover sexualCrossover12 = gAAlgorithm0.getCrossoverOperator();
-        brain.ga.Evaluator evaluator13 = null;
-        try {
-            gAAlgorithm0.setEvaluator(evaluator13);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNull(mutator9);
-        org.junit.Assert.assertNull(selector10);
-        org.junit.Assert.assertNull(selector11);
-        org.junit.Assert.assertNull(sexualCrossover12);
-    }
-
-    @Test
-    public void test099() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test099");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.SexualCrossover sexualCrossover6 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover6);
-        brain.ga.Evaluator evaluator8 = gAAlgorithm0.getEvaluator();
-        brain.ga.Mutator mutator9 = null;
-        gAAlgorithm0.setMutator(mutator9);
-        brain.ga.SexualCrossover sexualCrossover11 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover11);
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(evaluator8);
-    }
-
-    @Test
-    public void test100() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test100");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.SexualCrossover sexualCrossover6 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover6);
-        java.lang.Class<?> wildcardClass8 = gAAlgorithm0.getClass();
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNotNull(wildcardClass8);
-    }
-
-    @Test
-    public void test101() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test101");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        gAAlgorithm0.evolve();
-        brain.ga.SexualCrossover sexualCrossover8 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover8);
-        brain.ga.Mutator mutator10 = gAAlgorithm0.getMutator();
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNull(mutator10);
-    }
-
-    @Test
-    public void test102() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test102");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.Evaluator evaluator4 = gAAlgorithm0.getEvaluator();
-        brain.ga.Mutator mutator5 = null;
-        gAAlgorithm0.setMutator(mutator5);
-        brain.ga.Selector selector7 = null;
-        try {
-            gAAlgorithm0.setSelector(selector7);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(evaluator4);
-    }
-
-    @Test
-    public void test103() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test103");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.Evaluator evaluator4 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover5 = gAAlgorithm0.getCrossoverOperator();
-        gAAlgorithm0.evolve();
-        brain.ga.Selector selector7 = gAAlgorithm0.getSelector();
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(evaluator4);
-        org.junit.Assert.assertNull(sexualCrossover5);
-        org.junit.Assert.assertNull(selector7);
-    }
-
-    @Test
-    public void test104() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test104");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.Evaluator evaluator4 = gAAlgorithm0.getEvaluator();
-        brain.ga.Mutator mutator5 = null;
-        gAAlgorithm0.setMutator(mutator5);
-        java.lang.Class<?> wildcardClass7 = gAAlgorithm0.getClass();
-        gAAlgorithm0.evolve();
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(evaluator4);
-        org.junit.Assert.assertNotNull(wildcardClass7);
-    }
-
-    @Test
-    public void test105() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test105");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        gAAlgorithm0.evolve();
-        brain.ga.Evaluator evaluator2 = null;
-        try {
-            gAAlgorithm0.setEvaluator(evaluator2);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-    }
-
-    @Test
-    public void test106() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test106");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.SexualCrossover sexualCrossover6 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover6);
-        brain.ga.Evaluator evaluator8 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover9 = gAAlgorithm0.getCrossoverOperator();
-        brain.ga.SexualCrossover sexualCrossover10 = gAAlgorithm0.getCrossoverOperator();
-        brain.ga.SexualCrossover sexualCrossover11 = gAAlgorithm0.getCrossoverOperator();
-        brain.ga.SexualCrossover sexualCrossover12 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover12);
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(evaluator8);
-        org.junit.Assert.assertNull(sexualCrossover9);
-        org.junit.Assert.assertNull(sexualCrossover10);
-        org.junit.Assert.assertNull(sexualCrossover11);
-    }
-
-    @Test
-    public void test107() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test107");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        gAAlgorithm0.evolve();
-        brain.ga.Mutator mutator8 = gAAlgorithm0.getMutator();
-        brain.ga.Selector selector9 = gAAlgorithm0.getSelector();
-        brain.ga.Evaluator evaluator10 = null;
-        try {
-            gAAlgorithm0.setEvaluator(evaluator10);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNull(mutator8);
-        org.junit.Assert.assertNull(selector9);
-    }
-
-    @Test
-    public void test108() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test108");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Mutator mutator1 = gAAlgorithm0.getMutator();
-        java.lang.Class<?> wildcardClass2 = gAAlgorithm0.getClass();
-        brain.ga.Mutator mutator3 = null;
-        gAAlgorithm0.setMutator(mutator3);
-        brain.ga.Evaluator evaluator5 = gAAlgorithm0.getEvaluator();
-        org.junit.Assert.assertNull(mutator1);
-        org.junit.Assert.assertNotNull(wildcardClass2);
-        org.junit.Assert.assertNull(evaluator5);
-    }
-
-    @Test
-    public void test109() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test109");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        gAAlgorithm0.evolve();
-        brain.ga.Mutator mutator8 = gAAlgorithm0.getMutator();
-        brain.ga.Mutator mutator9 = null;
-        gAAlgorithm0.setMutator(mutator9);
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNull(mutator8);
-    }
-
-    @Test
-    public void test110() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test110");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        brain.ga.SexualCrossover sexualCrossover7 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover7);
-        brain.ga.Evaluator evaluator9 = gAAlgorithm0.getEvaluator();
-        gAAlgorithm0.evolve();
-        brain.ga.Selector selector11 = gAAlgorithm0.getSelector();
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNull(evaluator9);
-        org.junit.Assert.assertNull(selector11);
-    }
-
-    @Test
-    public void test111() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test111");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        gAAlgorithm0.evolve();
-        brain.ga.Mutator mutator8 = gAAlgorithm0.getMutator();
-        brain.ga.Evaluator evaluator9 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover10 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover10);
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNull(mutator8);
-        org.junit.Assert.assertNull(evaluator9);
-    }
-
-    @Test
-    public void test112() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test112");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.SexualCrossover sexualCrossover6 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover6);
-        brain.ga.Evaluator evaluator8 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover9 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover9);
-        brain.ga.SexualCrossover sexualCrossover11 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover11);
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(evaluator8);
-    }
-
-    @Test
-    public void test113() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test113");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        brain.ga.SexualCrossover sexualCrossover7 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover7);
-        brain.ga.Mutator mutator9 = null;
-        gAAlgorithm0.setMutator(mutator9);
-        brain.ga.Mutator mutator11 = null;
-        gAAlgorithm0.setMutator(mutator11);
-        brain.ga.Mutator mutator13 = null;
-        gAAlgorithm0.setMutator(mutator13);
-        brain.ga.SexualCrossover sexualCrossover15 = gAAlgorithm0.getCrossoverOperator();
-        brain.ga.Mutator mutator16 = gAAlgorithm0.getMutator();
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNull(sexualCrossover15);
-        org.junit.Assert.assertNull(mutator16);
-    }
-
-    @Test
-    public void test114() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test114");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        gAAlgorithm0.evolve();
-        brain.ga.SexualCrossover sexualCrossover8 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover8);
-        gAAlgorithm0.evolve();
-        brain.ga.Selector selector11 = gAAlgorithm0.getSelector();
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNull(selector11);
-    }
-
-    @Test
-    public void test115() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test115");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        brain.ga.SexualCrossover sexualCrossover7 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover7);
-        brain.ga.Mutator mutator9 = null;
-        gAAlgorithm0.setMutator(mutator9);
-        brain.ga.Mutator mutator11 = null;
-        gAAlgorithm0.setMutator(mutator11);
-        java.lang.Class<?> wildcardClass13 = gAAlgorithm0.getClass();
-        brain.ga.SexualCrossover sexualCrossover14 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover14);
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNotNull(wildcardClass13);
-    }
-
-    @Test
-    public void test116() throws Throwable {
-        if (debug)
-            System.out.format("%n%s%n", "RegressionTest0.test116");
-        brain.ga.GAAlgorithm gAAlgorithm0 = new brain.ga.GAAlgorithm();
-        brain.ga.Evaluator evaluator1 = gAAlgorithm0.getEvaluator();
-        brain.ga.SexualCrossover sexualCrossover2 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover2);
-        brain.ga.SexualCrossover sexualCrossover4 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover4);
-        brain.ga.Selector selector6 = gAAlgorithm0.getSelector();
-        brain.ga.SexualCrossover sexualCrossover7 = null;
-        gAAlgorithm0.setCrossoverOperator(sexualCrossover7);
-        brain.ga.Mutator mutator9 = null;
-        gAAlgorithm0.setMutator(mutator9);
-        brain.ga.Mutator mutator11 = null;
-        gAAlgorithm0.setMutator(mutator11);
-        java.lang.Class<?> wildcardClass13 = gAAlgorithm0.getClass();
-        brain.ga.Selector selector14 = null;
-        try {
-            gAAlgorithm0.setSelector(selector14);
-            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
-        } catch (java.lang.NullPointerException e) {
-        }
-        org.junit.Assert.assertNull(evaluator1);
-        org.junit.Assert.assertNull(selector6);
-        org.junit.Assert.assertNotNull(wildcardClass13);
     }
 }
 
