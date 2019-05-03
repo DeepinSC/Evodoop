@@ -1,0 +1,14 @@
+brain.ga.GAAlgorithm
+brain.ga.Selector
+brain.ga.VectorAllelesGenome
+brain.ga.UniformCrossover
+brain.ga.SectMutator
+brain.ga.GAUtilities
+brain.ga.VectorGenome
+brain.ga.Genome
+brain.ga.Evaluator
+brain.ga.RankSelector
+brain.ga.SexualCrossover
+brain.ga.Mutator
+brain.ga.Population
+brain.ga.GAEnumAllelesSet

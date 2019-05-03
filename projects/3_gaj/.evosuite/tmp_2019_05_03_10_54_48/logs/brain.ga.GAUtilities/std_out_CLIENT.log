@@ -1,0 +1,76 @@
+* Starting client
+* Connecting to master process on port 17632
+* Analyzing classpath: 
+  - /home/elvicius/Documents/Evodoop/projects/3_gaj/target/classes
+  - /home/elvicius/.m2/repository/com/wutka/jox/1.16/jox-1.16.jar
+  - /home/elvicius/.m2/repository/com/wutka/dtdparser/1.21/dtdparser-1.21.jar
+  - /home/elvicius/.m2/repository/junit/junit/4.12/junit-4.12.jar
+  - /home/elvicius/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+* Finished analyzing classpath
+* Generating tests for class brain.ga.GAUtilities
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Setting up search algorithm for whole suite generation
+* Loaded 8 tests from /home/elvicius/Documents/Evodoop/projects/3_gaj/.evosuite/evosuite-seeds/brain.ga.GAUtilities.seed
+* Total number of test goals: 
+  - Line 5
+  - Branch 6
+  - Exception 0
+  - MutationFactory 89
+  - Output 5
+  - Method 3
+  - MethodNoException 3
+  - CBranchFitnessFactory 6
+* Using seed 1556899114292
+* Starting evolution
+* Search finished after 86s and 1305 generations, 279355 statements, best individual has fitness: 2.5
+* Writing sequences to pool
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 100%
+* Total number of goals: 5
+* Number of covered goals: 5
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 6
+* Number of covered goals: 6
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 1
+* Number of covered goals: 1
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 100%
+* Total number of goals: 89
+* Number of covered goals: 89
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 60%
+* Total number of goals: 5
+* Number of covered goals: 3
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 100%
+* Total number of goals: 6
+* Number of covered goals: 6
+* Generated 7 tests with total length 8
+* Resulting test suite's coverage: 95% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 90%
+* Compiling and checking tests
+* Writing JUnit test case 'GAUtilities_ESTest' to /home/elvicius/Documents/Evodoop/projects/3_gaj/.evosuite/tmp_2019_05_03_10_54_48/tests
+* Done!
+

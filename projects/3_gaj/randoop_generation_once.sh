@@ -1,10 +1,9 @@
 src_dir=$(dirname $(head -n 1 all_class_names_temp.txt))
 test_dir=${src_dir/src\/main\/java/src\/test\/java}
 
-cur_date=$(date +"%Y-%m-%d_%T")
 while read p; do
 
-  dir_name="${p}_$cur_date"
+  dir_name="${p}_$1"
   mkdir -p ./test_suites/randoop/$dir_name
   echo $p > ./test_suites/randoop/$dir_name/$p.txt
 
