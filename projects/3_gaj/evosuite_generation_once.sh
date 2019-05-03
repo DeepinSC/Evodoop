@@ -1,10 +1,11 @@
 src_dir=$(dirname $(head -n 1 all_class_names_temp.txt))
 test_dir=${src_dir/src\/main\/java/src\/test\/java}
 
-cur_date=$(date +%d-%m-%y)
+cur_date=$(date +"%Y-%m-%d_%T")
 while read p; do
 
-  mkdir -p ./test_suites/evosuite/$p_$cur_date
+  dir_name="${p}_$cur_date"
+  mkdir -p ./test_suites/evosuite/$dir_name
 
 done < all_class_names.txt
 
@@ -19,12 +20,13 @@ mvn clean
 rm -rf ./target
 mvn cobertura:cobertura
 
-cp ./target/site/cobertura/coverage.xml ./test_suites/evosuite
+mv ./target/site/cobertura/coverage.xml ./test_suites/evosuite/coverage_$cur_date.xml
 
 while read p; do
 
-  mv $test_dir/${p##*.}_ESTest.java ./test_suites/evosuite/$p_$cur_date 1>/dev/null 2>&1
-  mv $test_dir/${p##*.}_ESTest_scaffolding.java ./test_suites/evosuite/$p_$cur_date 1>/dev/null 2>&1
+  dir_name="${p}_$cur_date"
+  mv $test_dir/${p##*.}_ESTest.java ./test_suites/evosuite/$dir_name 1>/dev/null 2>&1
+  mv $test_dir/${p##*.}_ESTest_scaffolding.java ./test_suites/evosuite/$dir_name 1>/dev/null 2>&1
 
 done < all_class_names.txt
 

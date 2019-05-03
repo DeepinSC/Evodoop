@@ -9,6 +9,9 @@ while read p; do
   echo "${p_striped//\//.}" >> all_class_names.txt
 
 done < all_class_names_temp.txt
-rm -f all_class_names_temp.txt
+# rm -f all_class_names_temp.txt
 
 rm -rf ./test_suites
+
+./randoop_generation_once.sh
+./evosuite_generation_once.sh
