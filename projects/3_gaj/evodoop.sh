@@ -24,3 +24,5 @@ do
   ./evosuite_generation_once.sh $i
 done
 rm -f all_class_names_temp.txt
+
+python3 ./minimize_test_suite.py $1

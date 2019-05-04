@@ -9,10 +9,6 @@ class MinimizeTestSuite:
         return
 
     def tool_version_class_line_hit(self):
-        #
-        sys.argv.append(1)
-        #
-
         cur_dir = os.path.dirname(os.path.abspath(__file__))
 
         tool_version_class_line_hit = {"randoop": {}, "evosuite": {}}
@@ -22,6 +18,8 @@ class MinimizeTestSuite:
                 self.class_line_hit(cur_dir + "/test_suites/randoop/coverage_" + str(i + 1) + ".xml")
             tool_version_class_line_hit["evosuite"][str(i + 1)] = \
                 self.class_line_hit(cur_dir + "/test_suites/randoop/coverage_" + str(i + 1) + ".xml")
+
+        return tool_version_class_line_hit
 
     def class_line_hit(self, path_of_xml):
         class_line_hit = {}
