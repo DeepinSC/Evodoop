@@ -1,7 +1,7 @@
-import xml.etree.ElementTree as ET
 import os
 import sys
 import subprocess
+import xml.etree.ElementTree as ET
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 

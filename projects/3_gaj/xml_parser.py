@@ -1,3 +1,5 @@
+import os
+import sys
 import xml.etree.ElementTree as ET
 
 
@@ -5,6 +7,21 @@ class xml_parser:
 
     def __init__(self):
         return
+
+    def tool_version_class_line_hit(self):
+        #
+        sys.argv.append(1)
+        #
+
+        cur_dir = os.path.dirname(os.path.abspath(__file__))
+
+        tool_version_class_line_hit = {"randoop": {}, "evosuite": {}}
+
+        for i in range(int(sys.argv[1])):
+            tool_version_class_line_hit["randoop"][str(i + 1)] = \
+                self.class_line_hit(cur_dir + "/test_suites/randoop/coverage_" + str(i + 1) + ".xml")
+            tool_version_class_line_hit["evosuite"][str(i + 1)] = \
+                self.class_line_hit(cur_dir + "/test_suites/randoop/coverage_" + str(i + 1) + ".xml")
 
     def class_line_hit(self, path_of_xml):
         class_line_hit = {}
@@ -21,7 +38,6 @@ class xml_parser:
         return class_line_hit
 
     def minimize_test_suite(self, line_hit):
-        res = []
         valid_hit = {}
         for c in line_hit:
             temp = {}
@@ -60,5 +76,5 @@ class xml_parser:
 
 if __name__ == "__main__":
     xml_parser = xml_parser()
-    line_hit = xml_parser.class_line_hit("./test_suites/coverage.xml")
-    print(xml_parser.minimize_test_suite(line_hit))
+    tool_version_class_line_hit = xml_parser.tool_version_class_line_hit()
+    print(tool_version_class_line_hit)
