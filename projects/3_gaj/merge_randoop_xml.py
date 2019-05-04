@@ -18,8 +18,7 @@ for class_name, xml_path in class_names_xml_paths.items():
     if os.path.isfile(xml_path):
         if is_first_xml:
             is_first_xml = False
-            to_path = cur_dir + "/test_suites/randoop/coverage_" + sys.argv[1] + ".xml"
-            subprocess.Popen(["cp", xml_path, to_path])
+            subprocess.call(["cp", xml_path, cur_dir + "/test_suites/randoop/coverage_" + sys.argv[1] + ".xml"])
         else:
             all_classes_tree = ET.parse(cur_dir + "/test_suites/randoop/coverage_" + sys.argv[1] + ".xml")
             all_classes_root = all_classes_tree.getroot()
@@ -28,13 +27,13 @@ for class_name, xml_path in class_names_xml_paths.items():
 
             classes = next(this_class_root.iter("classes"))
             for class_under_test in classes.findall("class"):
-                if class_under_test.get("name") == class_name:
+                if class_under_test.get("name") == class_name.strip():
                     class_to_insert = class_under_test
                     break
 
             classes = next(all_classes_root.iter("classes"))
             for class_under_test in classes.findall("class"):
-                if class_under_test.get("name") == class_name:
+                if class_under_test.get("name") == class_name.strip():
                     classes.remove(class_under_test)
                     classes.append(class_to_insert)
                     break
