@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 
 
 class xml_parser:
+
     def __init__(self):
         return
 

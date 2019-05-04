@@ -1,0 +1,16 @@
+<coverage branch-rate="0.045454545454545456" branches-covered="1" branches-valid="22" complexity="1.2115384615384615" line-rate="0.16964285714285715" lines-covered="19" lines-valid="112" timestamp="1556898878189" version="2.1.1">
+	<sources>
+		<source>--source</source>
+		<source>/home/elvicius/Documents/Evodoop/projects/3_gaj/src/main/java</source>
+	</sources>
+	<packages>
+		<package branch-rate="0.045454545454545456" complexity="1.2115384615384615" line-rate="0.16964285714285715" name="brain.ga">
+			<classes>
+				<class branch-rate="1.0" complexity="1.0" filename="brain/ga/Evaluator.java" line-rate="1.0" name="brain.ga.Evaluator">
+					<methods />
+					<lines />
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
