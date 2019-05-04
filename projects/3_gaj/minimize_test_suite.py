@@ -3,7 +3,7 @@ import sys
 import xml.etree.ElementTree as ET
 
 
-class xml_parser:
+class MinimizeTestSuite:
 
     def __init__(self):
         return
@@ -75,6 +75,6 @@ class xml_parser:
 
 
 if __name__ == "__main__":
-    xml_parser = xml_parser()
-    tool_version_class_line_hit = xml_parser.tool_version_class_line_hit()
+    minimize_test_suite = MinimizeTestSuite()
+    tool_version_class_line_hit = minimize_test_suite.tool_version_class_line_hit()
     print(tool_version_class_line_hit)
