@@ -17,11 +17,11 @@ done < all_class_names_temp.txt
 
 rm -rf ./test_suites
 
-for i in {1..$1}
+for (( i=1; i<=$1; i++ ))
 do
-  ./randoop_generation_once.sh $i
+  ./generation_once_randoop.sh $i
   python3 ./merge_randoop_xml.py $i
-  ./evosuite_generation_once.sh $i
+  ./generation_once_evosuite.sh $i
 done
 rm -f all_class_names_temp.txt
 

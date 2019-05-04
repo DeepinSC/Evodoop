@@ -1,0 +1,610 @@
+<coverage branch-rate="0.045454545454545456" branches-covered="1" branches-valid="22" complexity="1.2115384615384615" line-rate="0.16964285714285715" lines-covered="19" lines-valid="112" timestamp="1556947407296" version="2.1.1">
+	<sources>
+		<source>--source</source>
+		<source>/home/elvicius/Documents/Evodoop/projects/3_gaj/src/main/java</source>
+	</sources>
+	<packages>
+		<package branch-rate="0.045454545454545456" complexity="1.2115384615384615" line-rate="0.16964285714285715" name="brain.ga">
+			<classes>
+				<class branch-rate="1.0" complexity="1.0" filename="brain/ga/Evaluator.java" line-rate="1.0" name="brain.ga.Evaluator">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class branch-rate="0.5" complexity="1.0769230769230769" filename="brain/ga/GAAlgorithm.java" line-rate="0.8260869565217391" name="brain.ga.GAAlgorithm">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="171" number="6" />
+								<line branch="false" hits="171" number="7" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="done" signature="()Z">
+							<lines>
+								<line branch="false" hits="71" number="34" />
+							</lines>
+						</method>
+						<method branch-rate="0.5" complexity="0" line-rate="0.75" name="evolve" signature="()V">
+							<lines>
+								<line branch="false" hits="71" number="17" />
+								<line branch="true" condition-coverage="50% (1/2)" hits="71" number="18">
+									<conditions>
+										<condition coverage="50%" number="0" type="jump" />
+									</conditions>
+								</line>
+								<line branch="false" hits="0" number="20" />
+								<line branch="false" hits="71" number="22" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getCrossoverOperator" signature="()Lbrain/ga/SexualCrossover;">
+							<lines>
+								<line branch="false" hits="48" number="73" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getEvaluator" signature="()Lbrain/ga/Evaluator;">
+							<lines>
+								<line branch="false" hits="221" number="63" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getMutator" signature="()Lbrain/ga/Mutator;">
+							<lines>
+								<line branch="false" hits="101" number="53" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getSelector" signature="()Lbrain/ga/Selector;">
+							<lines>
+								<line branch="false" hits="133" number="45" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="initialize" signature="()V">
+							<lines>
+								<line branch="false" hits="71" number="26" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="setCrossoverOperator" signature="(Lbrain/ga/SexualCrossover;)V">
+							<lines>
+								<line branch="false" hits="310" number="68" />
+								<line branch="false" hits="310" number="69" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="0.6666666666666666" name="setEvaluator" signature="(Lbrain/ga/Evaluator;)V">
+							<lines>
+								<line branch="false" hits="41" number="57" />
+								<line branch="false" hits="41" number="58" />
+								<line branch="false" hits="0" number="59" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="setMutator" signature="(Lbrain/ga/Mutator;)V">
+							<lines>
+								<line branch="false" hits="137" number="49" />
+								<line branch="false" hits="137" number="50" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="0.6666666666666666" name="setSelector" signature="(Lbrain/ga/Selector;)V">
+							<lines>
+								<line branch="false" hits="35" number="39" />
+								<line branch="false" hits="35" number="40" />
+								<line branch="false" hits="0" number="41" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="0.0" name="step" signature="()V">
+							<lines>
+								<line branch="false" hits="0" number="30" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="171" number="6" />
+						<line branch="false" hits="171" number="7" />
+						<line branch="false" hits="71" number="17" />
+						<line branch="true" condition-coverage="50% (1/2)" hits="71" number="18">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump" />
+							</conditions>
+						</line>
+						<line branch="false" hits="0" number="20" />
+						<line branch="false" hits="71" number="22" />
+						<line branch="false" hits="71" number="26" />
+						<line branch="false" hits="0" number="30" />
+						<line branch="false" hits="71" number="34" />
+						<line branch="false" hits="35" number="39" />
+						<line branch="false" hits="35" number="40" />
+						<line branch="false" hits="0" number="41" />
+						<line branch="false" hits="133" number="45" />
+						<line branch="false" hits="137" number="49" />
+						<line branch="false" hits="137" number="50" />
+						<line branch="false" hits="101" number="53" />
+						<line branch="false" hits="41" number="57" />
+						<line branch="false" hits="41" number="58" />
+						<line branch="false" hits="0" number="59" />
+						<line branch="false" hits="221" number="63" />
+						<line branch="false" hits="310" number="68" />
+						<line branch="false" hits="310" number="69" />
+						<line branch="false" hits="48" number="73" />
+					</lines>
+				</class>
+				<class branch-rate="1.0" complexity="1.0" filename="brain/ga/Mutator.java" line-rate="1.0" name="brain.ga.Mutator">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class branch-rate="1.0" complexity="1.0" filename="brain/ga/Selector.java" line-rate="1.0" name="brain.ga.Selector">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class branch-rate="1.0" complexity="1.0" filename="brain/ga/SexualCrossover.java" line-rate="1.0" name="brain.ga.SexualCrossover">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class branch-rate="1.0" complexity="0.0" filename="brain/ga/VectorAllelesGenome.java" line-rate="1.0" name="brain.ga.VectorAllelesGenome">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="239" number="3" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="239" number="3" />
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="2.0" filename="brain/ga/UniformCrossover.java" line-rate="0.7" name="brain.ga.UniformCrossover">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="71" number="9" />
+								<line branch="false" hits="71" number="10" />
+								<line branch="false" hits="71" number="11" />
+							</lines>
+						</method>
+						<method branch-rate="0.0" complexity="0" line-rate="0.5714285714285714" name="cross" signature="(Lbrain/ga/Genome;Lbrain/ga/Genome;)Lbrain/ga/Genome;">
+							<lines>
+								<line branch="false" hits="71" number="15" />
+								<line branch="false" hits="71" number="16" />
+								<line branch="false" hits="71" number="17" />
+								<line branch="true" condition-coverage="0% (0/2)" hits="71" number="18">
+									<conditions>
+										<condition coverage="0%" number="0" type="jump" />
+									</conditions>
+								</line>
+								<line branch="true" condition-coverage="0% (0/2)" hits="0" number="20">
+									<conditions>
+										<condition coverage="0%" number="0" type="jump" />
+									</conditions>
+								</line>
+								<line branch="false" hits="0" number="22" />
+								<line branch="false" hits="0" number="23" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="71" number="9" />
+						<line branch="false" hits="71" number="10" />
+						<line branch="false" hits="71" number="11" />
+						<line branch="false" hits="71" number="15" />
+						<line branch="false" hits="71" number="16" />
+						<line branch="false" hits="71" number="17" />
+						<line branch="true" condition-coverage="0% (0/2)" hits="71" number="18">
+							<conditions>
+								<condition coverage="0%" number="0" type="jump" />
+							</conditions>
+						</line>
+						<line branch="true" condition-coverage="0% (0/2)" hits="0" number="20">
+							<conditions>
+								<condition coverage="0%" number="0" type="jump" />
+							</conditions>
+						</line>
+						<line branch="false" hits="0" number="22" />
+						<line branch="false" hits="0" number="23" />
+					</lines>
+				</class>
+				<class branch-rate="0.0" complexity="2.0" filename="brain/ga/SectMutator.java" line-rate="0.6" name="brain.ga.SectMutator">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="156" number="5" />
+								<line branch="false" hits="156" number="7" />
+							</lines>
+						</method>
+						<method branch-rate="0.0" complexity="0" line-rate="0.3333333333333333" name="mutate" signature="(Lbrain/ga/Genome;D)I">
+							<lines>
+								<line branch="false" hits="129" number="18" />
+								<line branch="true" condition-coverage="0% (0/2)" hits="129" number="19">
+									<conditions>
+										<condition coverage="0%" number="0" type="jump" />
+									</conditions>
+								</line>
+								<line branch="false" hits="0" number="21" />
+								<line branch="true" condition-coverage="0% (0/2)" hits="0" number="22">
+									<conditions>
+										<condition coverage="0%" number="0" type="jump" />
+									</conditions>
+								</line>
+								<line branch="false" hits="0" number="24" />
+								<line branch="false" hits="0" number="27" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="setAllelesSet" signature="(Lbrain/ga/GAEnumAllelesSet;)V">
+							<lines>
+								<line branch="false" hits="542" number="11" />
+								<line branch="false" hits="542" number="12" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="156" number="5" />
+						<line branch="false" hits="156" number="7" />
+						<line branch="false" hits="542" number="11" />
+						<line branch="false" hits="542" number="12" />
+						<line branch="false" hits="129" number="18" />
+						<line branch="true" condition-coverage="0% (0/2)" hits="129" number="19">
+							<conditions>
+								<condition coverage="0%" number="0" type="jump" />
+							</conditions>
+						</line>
+						<line branch="false" hits="0" number="21" />
+						<line branch="true" condition-coverage="0% (0/2)" hits="0" number="22">
+							<conditions>
+								<condition coverage="0%" number="0" type="jump" />
+							</conditions>
+						</line>
+						<line branch="false" hits="0" number="24" />
+						<line branch="false" hits="0" number="27" />
+					</lines>
+				</class>
+				<class branch-rate="1.0" complexity="2.0" filename="brain/ga/GAUtilities.java" line-rate="1.0" name="brain.ga.GAUtilities">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;clinit&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="1" number="6" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="1" number="4" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="flipCoin" signature="(D)Z">
+							<lines>
+								<line branch="false" hits="53" number="11" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="nextPos" signature="(I)I">
+							<lines>
+								<line branch="false" hits="38" number="18" />
+								<line branch="true" condition-coverage="100% (4/4)" hits="32" number="21">
+									<conditions>
+										<condition coverage="100%" number="0" type="jump" />
+										<condition coverage="100%" number="1" type="jump" />
+									</conditions>
+								</line>
+								<line branch="false" hits="32" number="22" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="1" number="4" />
+						<line branch="false" hits="1" number="6" />
+						<line branch="false" hits="53" number="11" />
+						<line branch="false" hits="38" number="18" />
+						<line branch="true" condition-coverage="100% (4/4)" hits="32" number="21">
+							<conditions>
+								<condition coverage="100%" number="0" type="jump" />
+								<condition coverage="100%" number="1" type="jump" />
+							</conditions>
+						</line>
+						<line branch="false" hits="32" number="22" />
+					</lines>
+				</class>
+				<class branch-rate="1.0" complexity="1.0" filename="brain/ga/VectorGenome.java" line-rate="0.9090909090909091" name="brain.ga.VectorGenome">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="210" number="7" />
+								<line branch="false" hits="210" number="9" />
+								<line branch="false" hits="210" number="10" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="(Ljava/util/Vector;Lbrain/ga/Evaluator;)V">
+							<lines>
+								<line branch="false" hits="93" number="13" />
+								<line branch="false" hits="93" number="14" />
+								<line branch="false" hits="93" number="15" />
+								<line branch="false" hits="93" number="18" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getGene" signature="(I)Ljava/lang/Object;">
+							<lines>
+								<line branch="false" hits="65" number="29" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getGenesCount" signature="()I">
+							<lines>
+								<line branch="false" hits="266" number="21" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="0.5" name="setGene" signature="(ILjava/lang/Object;)V">
+							<lines>
+								<line branch="false" hits="48" number="25" />
+								<line branch="false" hits="0" number="26" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="210" number="7" />
+						<line branch="false" hits="210" number="9" />
+						<line branch="false" hits="210" number="10" />
+						<line branch="false" hits="93" number="13" />
+						<line branch="false" hits="93" number="14" />
+						<line branch="false" hits="93" number="15" />
+						<line branch="false" hits="93" number="18" />
+						<line branch="false" hits="266" number="21" />
+						<line branch="false" hits="48" number="25" />
+						<line branch="false" hits="0" number="26" />
+						<line branch="false" hits="65" number="29" />
+					</lines>
+				</class>
+			<class branch-rate="0.16666666666666666" complexity="1.6" filename="brain/ga/Genome.java" line-rate="0.6428571428571429" name="brain.ga.Genome">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="275" number="6" />
+								<line branch="false" hits="275" number="10" />
+								<line branch="false" hits="275" number="12" />
+							</lines>
+						</method>
+						<method branch-rate="0.0" complexity="0" line-rate="0.4" name="compareTo" signature="(Ljava/lang/Object;)I">
+							<lines>
+								<line branch="false" hits="94" number="34" />
+								<line branch="true" condition-coverage="0% (0/2)" hits="44" number="35">
+									<conditions>
+										<condition coverage="0%" number="0" type="jump" />
+									</conditions>
+								</line>
+								<line branch="false" hits="0" number="36" />
+								<line branch="true" condition-coverage="0% (0/2)" hits="0" number="38">
+									<conditions>
+										<condition coverage="0%" number="0" type="jump" />
+									</conditions>
+								</line>
+								<line branch="false" hits="0" number="39" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getEvaluator" signature="()Lbrain/ga/Evaluator;">
+							<lines>
+								<line branch="false" hits="404" number="15" />
+							</lines>
+						</method>
+						<method branch-rate="0.5" complexity="0" line-rate="0.5" name="getScore" signature="()D">
+							<lines>
+								<line branch="true" condition-coverage="50% (1/2)" hits="109" number="23">
+									<conditions>
+										<condition coverage="50%" number="0" type="jump" />
+									</conditions>
+								</line>
+								<line branch="false" hits="109" number="25" />
+								<line branch="false" hits="0" number="26" />
+								<line branch="false" hits="0" number="28" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="initialize" signature="()V">
+							<lines>
+								<line branch="false" hits="576" number="20" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="275" number="6" />
+						<line branch="false" hits="275" number="10" />
+						<line branch="false" hits="275" number="12" />
+						<line branch="false" hits="404" number="15" />
+						<line branch="false" hits="576" number="20" />
+						<line branch="true" condition-coverage="50% (1/2)" hits="109" number="23">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump" />
+							</conditions>
+						</line>
+						<line branch="false" hits="109" number="25" />
+						<line branch="false" hits="0" number="26" />
+						<line branch="false" hits="0" number="28" />
+						<line branch="false" hits="94" number="34" />
+						<line branch="true" condition-coverage="0% (0/2)" hits="44" number="35">
+							<conditions>
+								<condition coverage="0%" number="0" type="jump" />
+							</conditions>
+						</line>
+						<line branch="false" hits="0" number="36" />
+						<line branch="true" condition-coverage="0% (0/2)" hits="0" number="38">
+							<conditions>
+								<condition coverage="0%" number="0" type="jump" />
+							</conditions>
+						</line>
+						<line branch="false" hits="0" number="39" />
+					</lines>
+				</class>
+				<class branch-rate="1.0" complexity="1.0" filename="brain/ga/RankSelector.java" line-rate="0.5" name="brain.ga.RankSelector">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="67" number="4" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="0.3333333333333333" name="select" signature="(Lbrain/ga/Population;)Lbrain/ga/Genome;">
+							<lines>
+								<line branch="false" hits="66" number="13" />
+								<line branch="false" hits="0" number="14" />
+								<line branch="false" hits="0" number="15" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="67" number="4" />
+						<line branch="false" hits="66" number="13" />
+						<line branch="false" hits="0" number="14" />
+						<line branch="false" hits="0" number="15" />
+					</lines>
+				</class>
+				<class branch-rate="0.5" complexity="1.0833333333333333" filename="brain/ga/Population.java" line-rate="0.88" name="brain.ga.Population">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="183" number="7" />
+								<line branch="false" hits="183" number="10" />
+								<line branch="false" hits="183" number="12" />
+								<line branch="false" hits="183" number="13" />
+								<line branch="false" hits="183" number="14" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="get" signature="(I)Lbrain/ga/Genome;">
+							<lines>
+								<line branch="false" hits="24" number="45" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getEvaluator" signature="()Lbrain/ga/Evaluator;">
+							<lines>
+								<line branch="false" hits="36" number="40" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getGenomeSize" signature="()I">
+							<lines>
+								<line branch="false" hits="120" number="69" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getSelector" signature="()Lbrain/ga/Selector;">
+							<lines>
+								<line branch="false" hits="93" number="30" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="getSize" signature="()I">
+							<lines>
+								<line branch="false" hits="38" number="49" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="initialize" signature="(Lbrain/ga/GAEnumAllelesSet;)V">
+							<lines>
+								<line branch="false" hits="33" number="18" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="selectNextGenome" signature="()Lbrain/ga/Genome;">
+							<lines>
+								<line branch="false" hits="25" number="21" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="setEvaluator" signature="(Lbrain/ga/Evaluator;)V">
+							<lines>
+								<line branch="false" hits="91" number="35" />
+								<line branch="false" hits="91" number="36" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="setGenomeSize" signature="(I)V">
+							<lines>
+								<line branch="false" hits="50" number="64" />
+								<line branch="false" hits="50" number="65" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="setSelector" signature="(Lbrain/ga/Selector;)V">
+							<lines>
+								<line branch="false" hits="95" number="25" />
+								<line branch="false" hits="95" number="26" />
+							</lines>
+						</method>
+						<method branch-rate="0.5" complexity="0" line-rate="0.5714285714285714" name="sort" signature="()V">
+							<lines>
+								<line branch="false" hits="51" number="53" />
+								<line branch="false" hits="51" number="54" />
+								<line branch="true" condition-coverage="50% (1/2)" hits="51" number="55">
+									<conditions>
+										<condition coverage="50%" number="0" type="jump" />
+									</conditions>
+								</line>
+								<line branch="false" hits="0" number="56" />
+								<line branch="false" hits="0" number="57" />
+								<line branch="false" hits="0" number="58" />
+								<line branch="false" hits="51" number="60" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="183" number="7" />
+						<line branch="false" hits="183" number="10" />
+						<line branch="false" hits="183" number="12" />
+						<line branch="false" hits="183" number="13" />
+						<line branch="false" hits="183" number="14" />
+						<line branch="false" hits="33" number="18" />
+						<line branch="false" hits="25" number="21" />
+						<line branch="false" hits="95" number="25" />
+						<line branch="false" hits="95" number="26" />
+						<line branch="false" hits="93" number="30" />
+						<line branch="false" hits="91" number="35" />
+						<line branch="false" hits="91" number="36" />
+						<line branch="false" hits="36" number="40" />
+						<line branch="false" hits="24" number="45" />
+						<line branch="false" hits="38" number="49" />
+						<line branch="false" hits="51" number="53" />
+						<line branch="false" hits="51" number="54" />
+						<line branch="true" condition-coverage="50% (1/2)" hits="51" number="55">
+							<conditions>
+								<condition coverage="50%" number="0" type="jump" />
+							</conditions>
+						</line>
+						<line branch="false" hits="0" number="56" />
+						<line branch="false" hits="0" number="57" />
+						<line branch="false" hits="0" number="58" />
+						<line branch="false" hits="51" number="60" />
+						<line branch="false" hits="50" number="64" />
+						<line branch="false" hits="50" number="65" />
+						<line branch="false" hits="120" number="69" />
+					</lines>
+				</class>
+				<class branch-rate="1.0" complexity="1.0" filename="brain/ga/GAEnumAllelesSet.java" line-rate="1.0" name="brain.ga.GAEnumAllelesSet">
+					<methods>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="&lt;init&gt;" signature="()V">
+							<lines>
+								<line branch="false" hits="234" number="11" />
+								<line branch="false" hits="234" number="14" />
+								<line branch="false" hits="234" number="16" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="allele" signature="()Ljava/lang/Object;">
+							<lines>
+								<line branch="false" hits="49" number="19" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="allele" signature="(I)Ljava/lang/Object;">
+							<lines>
+								<line branch="false" hits="121" number="23" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="setAlleles" signature="(Ljava/util/Vector;)V">
+							<lines>
+								<line branch="false" hits="857" number="27" />
+								<line branch="false" hits="857" number="28" />
+							</lines>
+						</method>
+						<method branch-rate="1.0" complexity="0" line-rate="1.0" name="size" signature="()I">
+							<lines>
+								<line branch="false" hits="52" number="31" />
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line branch="false" hits="234" number="11" />
+						<line branch="false" hits="234" number="14" />
+						<line branch="false" hits="234" number="16" />
+						<line branch="false" hits="49" number="19" />
+						<line branch="false" hits="121" number="23" />
+						<line branch="false" hits="857" number="27" />
+						<line branch="false" hits="857" number="28" />
+						<line branch="false" hits="52" number="31" />
+					</lines>
+				</class>
+				</classes>
+		</package>
+	</packages>
+</coverage>

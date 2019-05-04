@@ -16,7 +16,8 @@ while read p; do
   dir_name="${p}_$1"
 
   java -classpath ../../randoop/randoop-all-4.1.1.jar:$jar_file \
-    randoop.main.Main gentests --classlist=$p --time-limit=5 --flaky-test-behavior=DISCARD --junit-output-dir=./test_suites/randoop/$dir_name
+    randoop.main.Main gentests --classlist=./test_suites/randoop/$dir_name/${p}.txt --time-limit=5 \
+    --flaky-test-behavior=DISCARD --junit-output-dir=./test_suites/randoop/$dir_name
 
   if ls ./test_suites/randoop/$dir_name/*.java 1>/dev/null 2>&1; then
 
