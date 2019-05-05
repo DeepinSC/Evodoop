@@ -36,23 +36,24 @@ class MinimizeTestSuite:
         return class_line_hit
 
     def minimize_test_suite(self, line_hit):
-        valid_hit = {}
-        for c in line_hit:
-            temp = {}
-            for key in line_hit[c]:
-                if line_hit[c][key] != '0':
-                    temp[key] = int(line_hit[c][key])
 
-            if temp:
-                valid_hit[c] = temp
+        def flat_map(line_hit):
+            flatten_map = {}
+            for tool in line_hit:
+                for version in line_hit[tool]:
+                    key = tool + "_" + version
+                    flatten_map[key] = line_hit[tool][version]
+
+            return flatten_map
 
         def dfs(hits, res, hit_lines):
+            # print(hits)
             best_key = None
             best_count = 0
             for key in hits:
                 count = 0
                 for line in hits[key]:
-                    if line not in hit_lines:
+                    if line not in hit_lines and hits[key][line] != '0':
                         count += 1
                 if count > best_count:
                     best_key = key
@@ -66,13 +67,24 @@ class MinimizeTestSuite:
 
                 del hits[best_key]
                 return dfs(hits, res, hit_lines)
+            return res
 
-            return res, len(hit_lines)
+        flatten_map = flat_map(line_hit)
 
-        return dfs(valid_hit, [], [])
+        classes = [key for key in flatten_map["evosuite_1"]]
+        result = {}
+        for c in classes:
+            hits = {}
+            for suite in flatten_map:
+                hits[suite] = flatten_map[suite][c]
+
+            result[c] = dfs(hits, [], [])
+
+        return result
 
 
 if __name__ == "__main__":
     minimize_test_suite = MinimizeTestSuite()
     tool_version_class_line_hit = minimize_test_suite.tool_version_class_line_hit()
-    print(tool_version_class_line_hit)
+    # print(tool_version_class_line_hit)
+    print(minimize_test_suite.minimize_test_suite(tool_version_class_line_hit))
