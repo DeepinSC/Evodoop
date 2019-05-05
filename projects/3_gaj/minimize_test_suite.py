@@ -47,7 +47,6 @@ class MinimizeTestSuite:
             return flatten_map
 
         def dfs(hits, res, hit_lines):
-            # print(hits)
             best_key = None
             best_count = 0
             for key in hits:
@@ -62,7 +61,7 @@ class MinimizeTestSuite:
             if best_key:
                 res.append(best_key)
                 for line in hits[best_key]:
-                    if line not in hit_lines:
+                    if line not in hit_lines and hits[key][line] != '0':
                         hit_lines.append(line)
 
                 del hits[best_key]
@@ -83,8 +82,31 @@ class MinimizeTestSuite:
         return result
 
 
+def random_data(test_suite=2, classes=5, lines=5):
+    import random
+    tools = ['evosuite', 'randoop']
+    res = {}
+    for tool in tools:
+        val = {}
+        for i in range(test_suite):
+            val[str(i)] = {}
+            for j in range(classes):
+                key = 'c' + str(j)
+                val[str(i)][key] = {}
+                for k in range(lines):
+                    val[str(i)][key][k] = str(random.randint(0, 1))
+        res[tool] = val
+
+    return res
+
+
 if __name__ == "__main__":
     minimize_test_suite = MinimizeTestSuite()
     tool_version_class_line_hit = minimize_test_suite.tool_version_class_line_hit()
     # print(tool_version_class_line_hit)
+
+    # data = random_data()
+    # print(data)
+    # print(minimize_test_suite.minimize_test_suite(data))
+
     print(minimize_test_suite.minimize_test_suite(tool_version_class_line_hit))
