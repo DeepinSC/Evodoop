@@ -1,6 +1,6 @@
 .idea/
 .vscode/
 .evosuite/
+.settings/
 .classpath
 .project
-.settings/
