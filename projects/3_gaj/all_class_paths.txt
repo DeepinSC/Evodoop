@@ -1,0 +1,14 @@
+./src/main/java/brain/ga/Evaluator.java
+./src/main/java/brain/ga/GAAlgorithm.java
+./src/main/java/brain/ga/GAEnumAllelesSet.java
+./src/main/java/brain/ga/GAUtilities.java
+./src/main/java/brain/ga/Genome.java
+./src/main/java/brain/ga/Mutator.java
+./src/main/java/brain/ga/Population.java
+./src/main/java/brain/ga/RankSelector.java
+./src/main/java/brain/ga/SectMutator.java
+./src/main/java/brain/ga/Selector.java
+./src/main/java/brain/ga/SexualCrossover.java
+./src/main/java/brain/ga/UniformCrossover.java
+./src/main/java/brain/ga/VectorAllelesGenome.java
+./src/main/java/brain/ga/VectorGenome.java
