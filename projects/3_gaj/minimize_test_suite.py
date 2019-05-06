@@ -130,4 +130,5 @@ if __name__ == "__main__":
     output_test_suite(class_tool_version)
     print("The final test suite has been generated.")
 
-    subprocess.call(["run_last_cobertura.sh"])
+    cur_dir = os.path.dirname(os.path.abspath(__file__))
+    # subprocess.call([cur_dir + "/run_last_cobertura.sh"])
