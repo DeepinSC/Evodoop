@@ -129,3 +129,5 @@ if __name__ == "__main__":
 
     output_test_suite(class_tool_version)
     print("The final test suite has been generated.")
+
+    subprocess.call(["run_last_cobertura.sh"])

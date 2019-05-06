@@ -1,4 +1,4 @@
-src_dir=$(dirname $(head -n 1 all_class_names_temp.txt))
+src_dir=$(dirname $(head -n 1 all_class_paths.txt))
 test_dir=${src_dir/src\/main\/java/src\/test\/java}
 : ${test_dir:=/nonexistant}
 

@@ -1,6 +1,6 @@
-find ./src/main/java -type f > all_class_names_temp.txt
+find ./src/main/java -type f > all_class_paths.txt
 
-src_dir=$(dirname $(head -n 1 all_class_names_temp.txt))
+src_dir=$(dirname $(head -n 1 all_class_paths.txt))
 test_dir=${src_dir/src\/main\/java/src\/test\/java}
 
 rm -f all_class_names.txt
@@ -11,8 +11,8 @@ while read p; do
 
   echo "${p_striped//\//.}" >> all_class_names.txt
 
-done < all_class_names_temp.txt
-rm -f all_class_names_temp.txt
+done < all_class_paths.txt
+rm -f all_class_paths.txt
 
 rm -rf ./test_suites
 while read p; do

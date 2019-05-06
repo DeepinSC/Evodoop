@@ -3,7 +3,7 @@ if [[ ! $# -eq 1 ]] ; then
     exit 1
 fi
 
-find ./src/main/java -type f > all_class_names_temp.txt
+find ./src/main/java -type f > all_class_paths.txt
 
 rm -f all_class_names.txt
 while read p; do
@@ -13,7 +13,7 @@ while read p; do
 
   echo "${p_striped//\//.}" >> all_class_names.txt
 
-done < all_class_names_temp.txt
+done < all_class_paths.txt
 
 rm -rf ./test_suites
 
@@ -23,6 +23,5 @@ do
   python3 ./merge_randoop_xml.py $i
   ./generation_once_evosuite.sh $i
 done
-rm -f all_class_names_temp.txt
 
 python3 ./minimize_test_suite.py $1
