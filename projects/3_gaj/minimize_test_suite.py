@@ -1,5 +1,6 @@
 import os
 import sys
+import subprocess
 import xml.etree.ElementTree as ET
 
 
@@ -100,13 +101,31 @@ def random_data(test_suite=2, classes=5, lines=5):
     return res
 
 
+def output_test_suite(class_tool_version):
+    import glob
+
+    subprocess.call(["mkdir", "-p", "./test_suites/evodoop"])
+
+    for class_name, tool_versions in class_tool_version.items():
+        index = 1
+        for tool_version in tool_versions:
+            tool, version = tool_version.split("_")
+            for file_path in glob.glob("./test_suites/" + tool + "/" + class_name + "_" + version + "/*.java"):
+                subprocess.call(["cp", file_path, "./test_suites/evodoop/" + class_name + "_" + str(index) + ".java"])
+                index += 1
+
+
 if __name__ == "__main__":
     minimize_test_suite = MinimizeTestSuite()
+
     tool_version_class_line_hit = minimize_test_suite.tool_version_class_line_hit()
-    # print(tool_version_class_line_hit)
+    print(tool_version_class_line_hit)
 
     # data = random_data()
     # print(data)
     # print(minimize_test_suite.minimize_test_suite(data))
+    class_tool_version = minimize_test_suite.minimize_test_suite(tool_version_class_line_hit)
+    print(class_tool_version)
 
-    print(minimize_test_suite.minimize_test_suite(tool_version_class_line_hit))
+    output_test_suite(class_tool_version)
+    print("The final test suite has been generated.")

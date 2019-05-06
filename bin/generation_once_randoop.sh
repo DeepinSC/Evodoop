@@ -1,5 +1,6 @@
 src_dir=$(dirname $(head -n 1 all_class_names_temp.txt))
 test_dir=${src_dir/src\/main\/java/src\/test\/java}
+: ${test_dir:=/nonexistant}
 
 while read p; do
 
